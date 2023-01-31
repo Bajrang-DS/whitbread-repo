@@ -1,0 +1,16 @@
+{
+	"location": [
+		"locations__en-GB__330ca5e922ac96a107bf9871c4ba9321.json",
+		"locations__en-GB__fd84703139da6e4b9cc90cc7c53cefbe.json",
+		"locations__en-GB__799262c5f8b1b703a736de0bb6279287.json",
+		"locations__en-GB__c926c9e22f9bfca6c0773fa288e4c2e1.json",
+		"locations__en-GB__346534c2495e6dfd43b85bbd56bc8c78.json",
+		"locations__en-GB__14009ad69e7ffc69dbb82392520b9c96.json"
+	],
+	"locator": [
+		"Locator__en-GB__e90cdd65af1f34cfb113f896e6284fab.json"
+	],
+	"robots": [
+		"cog-internal-feature-static-file-generation-robots__en__cfcd208495d565ef66e7dff9f98764da.json"
+	]
+}

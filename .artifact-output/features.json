@@ -1,0 +1,99 @@
+{
+  "features": [
+    {
+      "name": "404",
+      "streamId": "404",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "location",
+      "streamId": "locations",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "locator",
+      "streamId": "Locator",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "robots",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    }
+  ],
+  "streams": [
+    {
+      "$id": "404",
+      "fields": [
+        "name"
+      ],
+      "filter": {
+        "entityIds": [
+          "global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "locations",
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "address",
+        "mainPhone",
+        "hours",
+        "slug",
+        "timezone",
+        "yextDisplayCoordinate",
+        "displayCoordinate",
+        "cityCoordinate"
+      ],
+      "filter": {
+        "entityTypes": [
+          "location"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "Locator",
+      "fields": [
+        "name"
+      ],
+      "filter": {
+        "entityIds": [
+          "gd-1"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    }
+  ]
+}

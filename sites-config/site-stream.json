@@ -1,0 +1,28 @@
+{
+  "$id": "site-entity",
+  "filter": {
+    "entityIds": ["gd-1"] 
+  },
+  "source": "knowledgeGraph",
+  "fields": [
+    "id",
+    "uid",
+    "meta",
+    "name",
+    "c_matalanLogo",
+    "c_headerLink",
+    "c_description",
+    "c_socials",
+    "c_footerLogo",
+    "c_customerServices",
+    "c_aboutMatalan",
+    "c_ourWebsites",
+    "c_appSectionText",
+    "c_appIcons",
+    "c_faqs"
+  ],
+  "localization": {
+    "locales": ["en_GB"],
+    "primary": false
+  }
+}

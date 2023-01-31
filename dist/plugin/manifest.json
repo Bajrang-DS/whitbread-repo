@@ -1,0 +1,235 @@
+{
+  "bundlePaths": {
+    "404": "assets/server/404.28389816.js",
+    "location": "assets/server/location.5c298f61.js",
+    "locator": "assets/server/locator.440ecb62.js",
+    "robots": "assets/server/robots.e11014cc.js"
+  },
+  "projectFilepaths": {
+    "templatesRoot": "src/templates",
+    "distRoot": "dist",
+    "hydrationBundleOutputRoot": "dist/hydration_templates",
+    "serverBundleOutputRoot": "dist/assets/server"
+  },
+  "bundlerManifest": {
+    "node_modules/@yext/pages/dist/vite-plugin/build/buildStart/rendering/renderer.js": {
+      "file": "assets/renderer/templateRenderer.js",
+      "src": "node_modules/@yext/pages/dist/vite-plugin/build/buildStart/rendering/renderer.js",
+      "isEntry": true,
+      "imports": [
+        "_preload-helper-094304c8.js",
+        "_index-993ef81c.js",
+        "_server.browser-2bc7664e.js"
+      ]
+    },
+    "src/images/map.svg": {
+      "file": "assets/static/map-05379a2e.svg",
+      "src": "src/images/map.svg"
+    },
+    "src/images/phone.svg": {
+      "file": "assets/static/phone-057118a0.svg",
+      "src": "src/images/phone.svg"
+    },
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-0521d029.svg",
+      "src": "src/images/MGMpin.svg"
+    },
+    "src/images/watch-icn.svg": {
+      "file": "assets/static/watch-icn-12e4a5d9.svg",
+      "src": "src/images/watch-icn.svg"
+    },
+    "src/images/red-map.svg": {
+      "file": "assets/static/red-map-55834b8a.svg",
+      "src": "src/images/red-map.svg"
+    },
+    "src/images/MGMhover1.svg": {
+      "file": "assets/static/MGMhover1-bbbef0ea.svg",
+      "src": "src/images/MGMhover1.svg"
+    },
+    "src/images/map-center.svg": {
+      "file": "assets/static/map-center-30f9adc5.svg",
+      "src": "src/images/map-center.svg"
+    },
+    "src/images/plus-sym.svg": {
+      "file": "assets/static/plus-sym-e2bf518e.svg",
+      "src": "src/images/plus-sym.svg"
+    },
+    "src/images/minus-sym.svg": {
+      "file": "assets/static/minus-sym-f0f517fd.svg",
+      "src": "src/images/minus-sym.svg"
+    },
+    "src/images/dots.svg": {
+      "file": "assets/static/dots-c532748f.svg",
+      "src": "src/images/dots.svg"
+    },
+    "src/images/shape-b.svg": {
+      "file": "assets/static/shape-b-bdecdd2a.svg",
+      "src": "src/images/shape-b.svg"
+    },
+    "src/images/shape-t.svg": {
+      "file": "assets/static/shape-t-4e865b2a.svg",
+      "src": "src/images/shape-t.svg"
+    },
+    "src/images/newsletter-bg.png": {
+      "file": "assets/static/newsletter-bg-6b390772.png",
+      "src": "src/images/newsletter-bg.png"
+    },
+    "dist/hydration_templates/404.tsx": {
+      "file": "assets/hydrate/404.78733016.js",
+      "src": "dist/hydration_templates/404.tsx",
+      "isEntry": true,
+      "imports": [
+        "_index-e960b8dd.js",
+        "src/templates/404.tsx",
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js",
+        "_global-c9b2facd.js"
+      ]
+    },
+    "src/templates/404.tsx": {
+      "file": "assets/server/404.28389816.js",
+      "src": "src/templates/404.tsx",
+      "isEntry": true,
+      "imports": [
+        "_global-c9b2facd.js",
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js"
+      ]
+    },
+    "dist/hydration_templates/location.tsx": {
+      "file": "assets/hydrate/location.77e286a6.js",
+      "src": "dist/hydration_templates/location.tsx",
+      "isEntry": true,
+      "imports": [
+        "_index-e960b8dd.js",
+        "src/templates/location.tsx",
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js",
+        "_answersHeadlessConfig-7ac80358.js",
+        "_global-c9b2facd.js",
+        "_preload-helper-094304c8.js"
+      ]
+    },
+    "src/templates/location.tsx": {
+      "file": "assets/server/location.5c298f61.js",
+      "src": "src/templates/location.tsx",
+      "isEntry": true,
+      "imports": [
+        "_index-993ef81c.js",
+        "_PageLayout-f658b93d.js",
+        "_answersHeadlessConfig-7ac80358.js",
+        "_index-e960b8dd.js",
+        "_global-c9b2facd.js",
+        "_preload-helper-094304c8.js"
+      ],
+      "dynamicImports": [
+        "_answersHeadlessConfig-7ac80358.js"
+      ],
+      "assets": [
+        "assets/static/map-05379a2e.svg",
+        "assets/static/phone-057118a0.svg"
+      ]
+    },
+    "dist/hydration_templates/locator.tsx": {
+      "file": "assets/hydrate/locator.cf2356b8.js",
+      "src": "dist/hydration_templates/locator.tsx",
+      "isEntry": true,
+      "imports": [
+        "_index-e960b8dd.js",
+        "src/templates/locator.tsx",
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js",
+        "_answersHeadlessConfig-7ac80358.js",
+        "_global-c9b2facd.js",
+        "_server.browser-2bc7664e.js"
+      ]
+    },
+    "src/templates/locator.tsx": {
+      "file": "assets/server/locator.440ecb62.js",
+      "src": "src/templates/locator.tsx",
+      "isEntry": true,
+      "imports": [
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js",
+        "_answersHeadlessConfig-7ac80358.js",
+        "_server.browser-2bc7664e.js",
+        "_global-c9b2facd.js"
+      ],
+      "css": [
+        "assets/static/locator-7e1d7cb8.css"
+      ],
+      "assets": [
+        "assets/static/red-map-55834b8a.svg",
+        "assets/static/watch-icn-12e4a5d9.svg",
+        "assets/static/MGMhover1-bbbef0ea.svg",
+        "assets/static/map-center-30f9adc5.svg"
+      ]
+    },
+    "src/templates/robots.ts": {
+      "file": "assets/server/robots.e11014cc.js",
+      "src": "src/templates/robots.ts",
+      "isEntry": true,
+      "imports": [
+        "_global-c9b2facd.js"
+      ]
+    },
+    "_preload-helper-094304c8.js": {
+      "file": "assets/static/preload-helper-094304c8.js"
+    },
+    "_index-993ef81c.js": {
+      "file": "assets/static/index-993ef81c.js"
+    },
+    "_server.browser-2bc7664e.js": {
+      "file": "assets/static/server.browser-2bc7664e.js",
+      "imports": [
+        "_index-993ef81c.js"
+      ]
+    },
+    "_index-e960b8dd.js": {
+      "file": "assets/static/index-e960b8dd.js",
+      "imports": [
+        "_index-993ef81c.js"
+      ]
+    },
+    "_PageLayout-f658b93d.js": {
+      "file": "assets/static/PageLayout-f658b93d.js",
+      "imports": [
+        "_index-993ef81c.js"
+      ],
+      "css": [
+        "assets/static/PageLayout-b9d74a90.css"
+      ],
+      "assets": [
+        "assets/static/dots-c532748f.svg",
+        "assets/static/plus-sym-e2bf518e.svg",
+        "assets/static/minus-sym-f0f517fd.svg",
+        "assets/static/newsletter-bg-6b390772.png",
+        "assets/static/shape-t-4e865b2a.svg",
+        "assets/static/shape-b-bdecdd2a.svg"
+      ]
+    },
+    "_global-c9b2facd.js": {
+      "file": "assets/static/global-c9b2facd.js"
+    },
+    "_answersHeadlessConfig-7ac80358.js": {
+      "file": "assets/static/answersHeadlessConfig-7ac80358.js",
+      "isDynamicEntry": true,
+      "imports": [
+        "_PageLayout-f658b93d.js",
+        "_index-993ef81c.js",
+        "_global-c9b2facd.js"
+      ],
+      "assets": [
+        "assets/static/MGMpin-0521d029.svg"
+      ]
+    },
+    "src/templates/locator.css": {
+      "file": "assets/static/locator-7e1d7cb8.css",
+      "src": "src/templates/locator.css"
+    },
+    "PageLayout.css": {
+      "file": "assets/static/PageLayout-b9d74a90.css",
+      "src": "PageLayout.css"
+    }
+  }
+}
