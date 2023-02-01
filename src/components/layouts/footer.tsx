@@ -28,7 +28,7 @@ const Footer = (props: any) => {
     <  footer className="site-footer">
      
 
-        <div style={{background:"green"}} className="container">
+        <div className="container">
         < section className="footer-panel ">
           
             <div  className="grid grid-cols-5 gap-x-10 gap-y-10 pt-4">
