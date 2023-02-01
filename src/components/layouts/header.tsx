@@ -25,18 +25,18 @@ const Header = (props: any) => {
       <div className="o-nav__container">
         <div style={{ background: "white" }} id="header" className="header-nav">
 
-          <div className="o-nav__container pl-4 pr-4 pt-4 pb-2">
+          <div className="o-header__container pl-4 pr-4 pt-2 pb-2">
 
 
             <div className="grid grid-cols-2 gap-x-5 gap-y-5">
-              <div>
-                <div className="logo">
+             
+                <div className="col-12@xs u-font-lh-0 u-font-ta-c@md-down">
                   {
-                   <a href="#"> <img style={{ marginBottom: "1px" }} src={props._site.c_matalanLogo.url} /></a>
+                    <img style={{ marginBottom: "1px" }} src={props._site.c_matalanLogo.url} />
                   }
 
                 </div>
-              </div>
+           
 
               <div className="hidden@md-down u-pad-r-0" style={{ color: "black" }} >
                 <ul className="text-right">

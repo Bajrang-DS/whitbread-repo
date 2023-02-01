@@ -25,12 +25,14 @@ import ResultsCount from "./ResultsCount";
 import useFetchResults from "../../hooks/useFetchResults";
 import { Link } from "@mui/material";
 import { AnswerExperienceConfig } from "../../config/answersHeadlessConfig";
+import PageLayout from "../layouts/PageLayout";
 
 var params1: any = { latitude: center_latitude, longitude:center_longitude }
 var mapzoom = 8;
 var centerLatitude = center_latitude;
 var centerLongitude = center_longitude;
 const SearchLayout = (props: any): JSX.Element => {
+
   const [isLoading, setIsloading] = React.useState(true);
   const [check, setCheck] = useState(false);
   type FilterHandle = React.ElementRef<typeof FilterSearch>;
@@ -55,7 +57,6 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
   var target;
 
   var firstTimeRunners = true;
-
 
   const FirstLoad = () => {
     setCheck(true);
@@ -223,7 +224,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
 
   return (
     <>
-
+ 
       {/* {loader} */}
       <div className="breadcrumb">
         <div className="container-custom">
@@ -370,7 +371,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
 
       </div>
 
-
+      
     </>
   );
 };

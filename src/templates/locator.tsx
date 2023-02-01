@@ -23,6 +23,8 @@ import {
   AnalyticsScopeProvider,
 } from "@yext/pages/components";
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
+import Header from "../components/layouts/header";
+import Footer from "../components/layouts/footer";
 
 export const config: TemplateConfig = {
   stream: {
@@ -177,7 +179,7 @@ const Locator: Template<TemplateRenderProps>= ({
   var Api="a047eef1e2852d278bbac99473b39cce";  
   return (
     <>
-    <PageLayout _site={_site}>
+    
     <JsonLd<locator>
         item={{
           "@context": "https://schema.org",
@@ -187,15 +189,17 @@ const Locator: Template<TemplateRenderProps>= ({
           logo: favicon,
         }}
       />
-      
+     
           <AnalyticsProvider
         templateData={templateData}
         enableDebugging={AnalyticsEnableDebugging} 
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
+        
         {" "}
         <AnalyticsScopeProvider name={""}>
-      
+          
+        <Header _site={_site}/>
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}
@@ -209,12 +213,13 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
-      
-   
+        <Footer _site={_site} />
+       
      
       </AnalyticsScopeProvider>
+    
       </AnalyticsProvider>
-      </PageLayout>
+     
     </>
   );
 };

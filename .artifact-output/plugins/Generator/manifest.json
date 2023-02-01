@@ -1,8 +1,8 @@
 {
   "bundlePaths": {
-    "404": "assets/server/404.28389816.js",
-    "location": "assets/server/location.5c298f61.js",
-    "locator": "assets/server/locator.440ecb62.js",
+    "404": "assets/server/404.867f4fd3.js",
+    "location": "assets/server/location.23db84ca.js",
+    "locator": "assets/server/locator.d643239c.js",
     "robots": "assets/server/robots.e11014cc.js"
   },
   "projectFilepaths": {
@@ -34,29 +34,25 @@
       "file": "assets/static/MGMpin-0521d029.svg",
       "src": "src/images/MGMpin.svg"
     },
-    "src/images/watch-icn.svg": {
-      "file": "assets/static/watch-icn-12e4a5d9.svg",
-      "src": "src/images/watch-icn.svg"
-    },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-55834b8a.svg",
       "src": "src/images/red-map.svg"
     },
-    "src/images/MGMhover1.svg": {
-      "file": "assets/static/MGMhover1-bbbef0ea.svg",
-      "src": "src/images/MGMhover1.svg"
+    "src/images/watch-icn.svg": {
+      "file": "assets/static/watch-icn-12e4a5d9.svg",
+      "src": "src/images/watch-icn.svg"
     },
     "src/images/map-center.svg": {
       "file": "assets/static/map-center-30f9adc5.svg",
       "src": "src/images/map-center.svg"
     },
+    "src/images/MGMhover1.svg": {
+      "file": "assets/static/MGMhover1-bbbef0ea.svg",
+      "src": "src/images/MGMhover1.svg"
+    },
     "src/images/plus-sym.svg": {
       "file": "assets/static/plus-sym-e2bf518e.svg",
       "src": "src/images/plus-sym.svg"
-    },
-    "src/images/minus-sym.svg": {
-      "file": "assets/static/minus-sym-f0f517fd.svg",
-      "src": "src/images/minus-sym.svg"
     },
     "src/images/dots.svg": {
       "file": "assets/static/dots-c532748f.svg",
@@ -70,60 +66,68 @@
       "file": "assets/static/shape-t-4e865b2a.svg",
       "src": "src/images/shape-t.svg"
     },
+    "src/images/minus-sym.svg": {
+      "file": "assets/static/minus-sym-f0f517fd.svg",
+      "src": "src/images/minus-sym.svg"
+    },
     "src/images/newsletter-bg.png": {
       "file": "assets/static/newsletter-bg-6b390772.png",
       "src": "src/images/newsletter-bg.png"
     },
     "dist/hydration_templates/404.tsx": {
-      "file": "assets/hydrate/404.78733016.js",
+      "file": "assets/hydrate/404.65529968.js",
       "src": "dist/hydration_templates/404.tsx",
       "isEntry": true,
       "imports": [
         "_index-e960b8dd.js",
         "src/templates/404.tsx",
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
         "_index-993ef81c.js",
-        "_global-c9b2facd.js"
+        "_global-c9b2facd.js",
+        "_PageLayout-43ad99ac.js"
       ]
     },
     "src/templates/404.tsx": {
-      "file": "assets/server/404.28389816.js",
+      "file": "assets/server/404.867f4fd3.js",
       "src": "src/templates/404.tsx",
       "isEntry": true,
       "imports": [
         "_global-c9b2facd.js",
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
+        "_PageLayout-43ad99ac.js",
         "_index-993ef81c.js"
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.77e286a6.js",
+      "file": "assets/hydrate/location.b4224831.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
         "_index-e960b8dd.js",
         "src/templates/location.tsx",
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
         "_index-993ef81c.js",
-        "_answersHeadlessConfig-7ac80358.js",
+        "_answersHeadlessConfig-93a20014.js",
         "_global-c9b2facd.js",
+        "_PageLayout-43ad99ac.js",
         "_preload-helper-094304c8.js"
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.5c298f61.js",
+      "file": "assets/server/location.23db84ca.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
         "_index-993ef81c.js",
-        "_PageLayout-f658b93d.js",
-        "_answersHeadlessConfig-7ac80358.js",
+        "_header-7237ecce.js",
+        "_answersHeadlessConfig-93a20014.js",
         "_index-e960b8dd.js",
         "_global-c9b2facd.js",
+        "_PageLayout-43ad99ac.js",
         "_preload-helper-094304c8.js"
       ],
       "dynamicImports": [
-        "_answersHeadlessConfig-7ac80358.js"
+        "_answersHeadlessConfig-93a20014.js"
       ],
       "assets": [
         "assets/static/map-05379a2e.svg",
@@ -131,27 +135,27 @@
       ]
     },
     "dist/hydration_templates/locator.tsx": {
-      "file": "assets/hydrate/locator.cf2356b8.js",
+      "file": "assets/hydrate/locator.c4e0e63b.js",
       "src": "dist/hydration_templates/locator.tsx",
       "isEntry": true,
       "imports": [
         "_index-e960b8dd.js",
         "src/templates/locator.tsx",
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
         "_index-993ef81c.js",
-        "_answersHeadlessConfig-7ac80358.js",
+        "_answersHeadlessConfig-93a20014.js",
         "_global-c9b2facd.js",
         "_server.browser-2bc7664e.js"
       ]
     },
     "src/templates/locator.tsx": {
-      "file": "assets/server/locator.440ecb62.js",
+      "file": "assets/server/locator.d643239c.js",
       "src": "src/templates/locator.tsx",
       "isEntry": true,
       "imports": [
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
         "_index-993ef81c.js",
-        "_answersHeadlessConfig-7ac80358.js",
+        "_answersHeadlessConfig-93a20014.js",
         "_server.browser-2bc7664e.js",
         "_global-c9b2facd.js"
       ],
@@ -191,13 +195,13 @@
         "_index-993ef81c.js"
       ]
     },
-    "_PageLayout-f658b93d.js": {
-      "file": "assets/static/PageLayout-f658b93d.js",
+    "_header-7237ecce.js": {
+      "file": "assets/static/header-7237ecce.js",
       "imports": [
         "_index-993ef81c.js"
       ],
       "css": [
-        "assets/static/PageLayout-b9d74a90.css"
+        "assets/static/header-ac7378a8.css"
       ],
       "assets": [
         "assets/static/dots-c532748f.svg",
@@ -211,11 +215,17 @@
     "_global-c9b2facd.js": {
       "file": "assets/static/global-c9b2facd.js"
     },
-    "_answersHeadlessConfig-7ac80358.js": {
-      "file": "assets/static/answersHeadlessConfig-7ac80358.js",
+    "_PageLayout-43ad99ac.js": {
+      "file": "assets/static/PageLayout-43ad99ac.js",
+      "imports": [
+        "_header-7237ecce.js"
+      ]
+    },
+    "_answersHeadlessConfig-93a20014.js": {
+      "file": "assets/static/answersHeadlessConfig-93a20014.js",
       "isDynamicEntry": true,
       "imports": [
-        "_PageLayout-f658b93d.js",
+        "_header-7237ecce.js",
         "_index-993ef81c.js",
         "_global-c9b2facd.js"
       ],
@@ -227,9 +237,9 @@
       "file": "assets/static/locator-7e1d7cb8.css",
       "src": "src/templates/locator.css"
     },
-    "PageLayout.css": {
-      "file": "assets/static/PageLayout-b9d74a90.css",
-      "src": "PageLayout.css"
+    "header.css": {
+      "file": "assets/static/header-ac7378a8.css",
+      "src": "header.css"
     }
   }
 }

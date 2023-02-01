@@ -25,12 +25,13 @@ const Footer = (props: any) => {
     </a>
   ));
   return (
-    <footer style={{ background: "white", height: "330px" }} className="footer1 pt-6">
-      <section className="footer-panel ">
+    <footer className="site-footer">
+     
 
         <div className="container">
-          <div className="row o-footer__menu">
-            <div style={{ padding: "15px" }} className="grid grid-cols-5 gap-x-10 gap-y-10">
+        <section className="footer-panel ">
+          
+            <div  className="grid grid-cols-5 gap-x-10 gap-y-10 pt-4">
               <div className="u-mar-t-medium col-12@lg col-6@xs">
               {props._site.c_faqs.map((res: any) => {
                         return (
@@ -118,16 +119,18 @@ const Footer = (props: any) => {
                     </div><br />
 
                     <div className="col-12@xs u-font-lh-0 u-font-ta-c@md-down">
-                      <img style={{ }} src={props._site.c_footerLogo.url} alt="footer logo" />
+                     <a href="#"><img style={{ }} src={props._site.c_footerLogo.url} alt="footer logo" /></a> 
                     </div>
 
                  
                 </div>
               </div>
+          
             </div>
-          </div>
+            </section>
         </div>
-      </section>
+        
+     
     </footer >
   );
 };
