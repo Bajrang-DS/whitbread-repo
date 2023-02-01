@@ -25,11 +25,11 @@ const Footer = (props: any) => {
     </a>
   ));
   return (
-    <footer className="site-footer">
+    <  footer className="site-footer">
      
 
-        <div className="container">
-        <section className="footer-panel ">
+        <div style={{background:"green"}} className="container">
+        < section className="footer-panel ">
           
             <div  className="grid grid-cols-5 gap-x-10 gap-y-10 pt-4">
               <div className="u-mar-t-medium col-12@lg col-6@xs">
