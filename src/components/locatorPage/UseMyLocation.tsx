@@ -37,6 +37,7 @@ export default function UseMyLocation(){
         <>
         
         <button
+        
               className="font-nexa_boldregular relative search-location-arrow text-[#024B58] text-xs sm:text-sm"
               title="Search using your current location!"
               id="useLocation"
@@ -57,7 +58,7 @@ export default function UseMyLocation(){
                   fill="#024b58"
                 />
               </svg>
-             UseMyLocation
+            <span style={{color:"blue"}}> UseMyLocation</span>
             </button>
             
          

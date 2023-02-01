@@ -67,7 +67,7 @@ const GetDirection = (props: GetDirection) => {
 
   return (
     <>   
-     <Link
+     <Link style={{color:"blue"}}
                       data-ya-track="getdirections"
                       eventName={`getdirections`}
                       className="btn notHighligh"

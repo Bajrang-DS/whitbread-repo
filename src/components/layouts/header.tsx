@@ -12,7 +12,7 @@ const Header = (props: any) => {
     (document.getElementById("body") as HTMLInputElement).classList.toggle('');
   };
   const linkDoms = props._site.c_headerLink.map((link: any) => (
-    <a style={{ font: "caption", color: "black" }} className="navbar-item" href="#" >
+    <a style={{ font: "small-caption", color: "black" }} className="navbar-item" href="#" >
       <span>{link.label}</span>
     </a>
   ));
@@ -22,15 +22,15 @@ const Header = (props: any) => {
 
   return (
     <>
-      <div className="o-nav__container">
+      <div className="site-header">
         <div style={{ background: "white" }} id="header" className="header-nav">
 
-          <div className="o-header__container pl-4 pr-4 pt-2 pb-2">
+          <div className="header-top p2-4 pr-2">
 
 
             <div className="grid grid-cols-2 gap-x-5 gap-y-5">
              
-                <div className="col-12@xs u-font-lh-0 u-font-ta-c@md-down">
+                <div className="container">
                   {
                     <img style={{ marginBottom: "1px" }} src={props._site.c_matalanLogo.url} />
                   }
@@ -48,9 +48,9 @@ const Header = (props: any) => {
           </div>
 
 
-          <div className="o-nav__container">
+          <div className="o-nav__container pt-2">
             <nav className="navbar">
-              <div className="flex gap-x-16 text-lg font-semibold pl-6">{linkDoms}</div>
+              <div className="flex gap-x-20 text-lg font-semibold pl-8">{linkDoms}</div>
               {/* {props._site.c_headerLink.map((res: any) => {
                         return (
                           <>

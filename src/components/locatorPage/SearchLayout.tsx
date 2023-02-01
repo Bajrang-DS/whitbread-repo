@@ -311,7 +311,7 @@ const SearchLayout = (props: any): JSX.Element => {
             <button className="useMyLocation" title="Search using your current location!" id="useLocation" onClick={onClick}>
               <span className="icon" dangerouslySetInnerHTML={{ __html: UseMylocationsvg }} />
 
-              <span className="underline hover:no-underline"> {StaticData.Usemylocation}</span>
+              <span style={{color:"blue"}} className="underline hover:no-underline"> {StaticData.Usemylocation}</span>
             </button>
 
             <ResultsCount

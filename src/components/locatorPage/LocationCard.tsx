@@ -59,15 +59,15 @@ function opentime(e: any) {
           <div className="lp-param-results lp-subparam-hours">
             <div className="location-name-miles icon-row">
               <div className="icon text-black relative"> <img className=" " src={redmapimage} width="20" height="20"
-                alt={''} /><span className="map-count">D</span></div>
-              <h2><Link className="inline-block notHighlight"
+                alt={''} /><span  className="map-count">M</span></div>
+              <h2 ><Link style={{color:"red"}} className="inline-block notHighlight"
                data-ya-track={`viewDetail -${result.rawData.name}`}
                eventName={`viewDetail -${result.rawData.name}`}
                rel="noopener noreferrer"
                href={`/${result.rawData.id}`}>{result.rawData.name}
               </Link></h2>
               {typeof result.distance != "undefined" ?
-                <div className="distance">
+                <div style={{color:"green"}} className="distance">
                   {metersToMiles(result.distance)} <span>{StaticData.miles}</span>
                 </div>
                 : ''}
@@ -109,7 +109,7 @@ function opentime(e: any) {
             </div>
          
              <div className="button-bx">
-              <Link type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
+              <Link style={{background:"green"}}  type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
               data-ya-track={`viewStore -${result.rawData.name}`}
               eventName={`viewStore -${result.rawData.name}`}
               rel="noopener noreferrer"

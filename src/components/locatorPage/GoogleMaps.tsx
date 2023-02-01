@@ -226,11 +226,11 @@ function UnwrappedGoogleMaps({
       position,
       map,
       icon: Mapicon2,
-      // label: {
-      //   text: String(i),
-      //   color: "white",
-      // },
-      // animation: google.maps.Animation.DROP
+      label: {  //open letter
+        text: String(i),
+        color: "white",
+      },
+      animation: google.maps.Animation.DROP
     });
 
     const location = new google.maps.LatLng(position.lat, position.lng);
@@ -256,7 +256,7 @@ function UnwrappedGoogleMaps({
               text: String(markers?.length),
               color: "white",
             },
-            //  animation: google.maps.Animation.DROP,
+              //animation: google.maps.Animation.DROP, //open letter
           });
         },
       },
@@ -500,7 +500,7 @@ function UnwrappedGoogleMaps({
             {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
         alt="" /></div> */}
             <h2>
-              <a className="inline-block notHighlight" href={`/${result.rawData.id}`}>
+              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${result.rawData.id}`}>
                 {result.rawData.name}
               </a>
             </h2>
@@ -508,15 +508,15 @@ function UnwrappedGoogleMaps({
           <div className="content-col info-window-content">
             <Address address={result.rawData.address} />
             {result.distance ? (
-              <div className="distance">
+              <div style={{color:"green"}} className="distance">
                 {metersToMiles(result.distance ?? 0)}{" "}
-                <span>{StaticData.miles}</span>
+                <span >{StaticData.miles}</span>
               </div>
             ) : (
               ""
             )}
           </div>
-          {/* {result.rawData.mainPhone?
+          {result.rawData.mainPhone?   //open for phone
     <div className="icon-row">
       <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
       </div>
@@ -525,7 +525,7 @@ function UnwrappedGoogleMaps({
         <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
           {result.rawData.mainPhone}</a>
       </div>
-    </div>:''} */}
+    </div>:''}   
 
           {result.rawData.hours && result.rawData.hours.reopenDate ? (
             ""
@@ -560,13 +560,13 @@ function UnwrappedGoogleMaps({
             </div>
           )}
         </div>
-        <div className="button-bx !ml-4 !mb-0">
-          <a type="button" href={`/${result.rawData.id}`} className="btn">
+        <div  className="button-bx !ml-4 !mb-0">
+          <a style={{background:"green"}} type="button" href={`/${result.rawData.id}`} className="btn">
             {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
             {StaticData.StoreDetailbtn}
           </a>
           {result.rawData.displayCoordinate ? (
-            <a
+            <a 
               data-listener="false"
               data-latitude={result.rawData.displayCoordinate.latitude}
               data-longitude={result.rawData.displayCoordinate.longitude}
@@ -580,7 +580,7 @@ function UnwrappedGoogleMaps({
               {StaticData.getDirection}
             </a>
           ) : (
-            <a
+            <a 
               data-listener="false"
               data-latitude={result.rawData.yextDisplayCoordinate.latitude}
               data-longitude={result.rawData.yextDisplayCoordinate.longitude}
@@ -591,7 +591,7 @@ function UnwrappedGoogleMaps({
               rel="noopener noreferrer"
             >
               {/* <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
-              {StaticData.getDirection}
+             <span style={{color:"blue"}}> {StaticData.getDirection}</span>
             </a>
           )}
 
