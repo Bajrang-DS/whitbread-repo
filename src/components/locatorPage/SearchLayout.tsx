@@ -184,7 +184,7 @@ const SearchLayout = (props: any): JSX.Element => {
 
   }
 
-  let bannerimage = props._site.c_locatorBannerImage != undefined ? props._site.c_locatorBannerImage.image.url : '';
+  // let bannerimage = props._site.c_locatorBannerImage != undefined ? props._site.c_locatorBannerImage.image.url : '';
 
 
   // const loader =
@@ -355,7 +355,7 @@ const SearchLayout = (props: any): JSX.Element => {
                     "result-list flex flex-col scroll-smooth  overflow-auto",
 
                 }}
-              // CardComponent={LocationCard}
+              //  CardComponent={LocationCard}
               />
 
 

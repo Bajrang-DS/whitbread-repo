@@ -11,7 +11,7 @@ const Header = (props: any) => {
   const toggle = () => {
     (document.getElementById("body") as HTMLInputElement).classList.toggle('');
   };
-  const linkDoms = props._site.c_headerLink.map((link: any) => (
+  const linkDoms = props._site.c_headerLink?.map((link: any) => (
     <a style={{ font: "small-caption", color: "black" }} className="navbar-item" href="#" >
       <span>{link.label}</span>
     </a>

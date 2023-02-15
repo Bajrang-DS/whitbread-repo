@@ -95,10 +95,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
        type: "link",
        attributes: {
          rel: "canonical",
-         href: `${
-           document._site.c_canonical?document.c_canonical:stagingBaseurl
+        //  href: `${
+        //   //  document._site.c_canonical?document.c_canonical:stagingBaseurl
             
-         }`,
+        //  }`,
        },
      },
  
@@ -106,14 +106,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
        type: "meta",
        attributes: {
          property: "og:description",
-         content: `${document.c_meta_description?document.c_meta_description:`View Matalan Stores near you today at Matalan . We stock high-quality, robust products at competitive rates.`}`,
+        //  content: `${document.c_meta_description?document.c_meta_description:`View Matalan Stores near you today at Matalan . We stock high-quality, robust products at competitive rates.`}`,
        },
      },
      {
        type: "meta",
        attributes: {
          property: "og:title",
-         content: `${document.c_meta_title?document.c_meta_title:`Matalan Stores Near Me - Find MGM Matalan Branch Locator Here.`}`,
+        //  content: `${document.c_meta_title?document.c_meta_title:`Matalan Stores Near Me - Find MGM Matalan Branch Locator Here.`}`,
        },
      },
      {
@@ -134,14 +134,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       type: "meta",
       attributes: {
         name: "twitter:description",
-        content:`${document.c_meta_description?document.c_meta_description:`View Matalan Stores near you today at Matalan . We stock high-quality, robust products at competitive rates.`}`,
+        // content:`${document.c_meta_description?document.c_meta_description:`View Matalan Stores near you today at Matalan . We stock high-quality, robust products at competitive rates.`}`,
       },
     },
     {
       type: "meta",
       attributes: {
         name: "twitter:title",
-        content: `${document.c_meta_title?document.c_meta_title:`Matalan Stores Near Me - Find Matalan Branch Locator Here.`}`,
+        // content: `${document.c_meta_title?document.c_meta_title:`Matalan Stores Near Me - Find Matalan Branch Locator Here.`}`,
       },
     },
     {
@@ -199,7 +199,7 @@ const Locator: Template<TemplateRenderProps>= ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           
-        <Header _site={_site}/>
+        {/* <Header _site={_site}/> */}
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}
@@ -213,7 +213,7 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
-        <Footer _site={_site} />
+        {/* <Footer _site={_site} /> */}
        
      
       </AnalyticsScopeProvider>
