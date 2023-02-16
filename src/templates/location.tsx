@@ -146,7 +146,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "description",
-          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Timber Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Whitbread Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
 
@@ -181,7 +181,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           property: "og:description",
-          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Timber Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Whitbread Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
       {
@@ -223,7 +223,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Timber Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Whitbread Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
       /// twitter tag
