@@ -397,7 +397,9 @@ export default function InputDropdown({
       {(locationResults.length === 0 && allResultsForVertical>0) || (locationResults.length === 0 &&displaymsg && !loading) ? (
         <h4 className="font-bold text-center mt-10 text-[#e11d48]">
           Sorry No result found
+          <p className="text-center text-[#1dbae1]">you can visit below location</p>
         </h4>
+       
       ) : (
         ""
       )}

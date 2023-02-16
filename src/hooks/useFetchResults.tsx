@@ -48,7 +48,7 @@ const useFetchResults = () => {
          mapLocations.push(location);
       }    
     }
-  }
+   }
     
   let mapLocationsResults = mapLocations;  
   // console.log('mapLocationsResults',mapLocationsResults);

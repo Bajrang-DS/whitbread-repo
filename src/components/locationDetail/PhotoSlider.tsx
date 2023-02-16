@@ -9,6 +9,7 @@ const PhotoSlider = (props: any) => {
 	<SplideSlide>
     <div className="slider">
     <img  src={element.image.url}  alt="photoGallery"/>
+    
     </div>
 	</SplideSlide>    
   ));
@@ -17,6 +18,8 @@ const PhotoSlider = (props: any) => {
     <>
      
 	  <Splide aria-label="Photo Slider">
+
+     
           {photos}
       </Splide>
   

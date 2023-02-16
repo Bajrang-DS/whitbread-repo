@@ -119,7 +119,12 @@ function UnwrappedGoogleMaps({
 
   const refLocationResults = useRef({});
 
-  const locationResults = useSearchState(state => state.vertical?.results) || [];
+  // const locationResults = useSearchState(state => state.vertical?.results) || [];
+  const locationResults = useFetchResults() || [];
+
+
+
+
   refLocationResults.current = locationResults;
 
   locationResults.length > 0
@@ -243,24 +248,24 @@ function UnwrappedGoogleMaps({
 
     mapMarkerClusterer = new MarkerClusterer({
       map,
-      markers,
-      renderer: {
-        render: ({ markers, position: position }) => {
-          return new google.maps.Marker({
-            position: {
-              lat: position.lat(),
-              lng: position.lng(),
-            },
-            icon: clustericon,
-            label: {
-              text: String(markers?.length),
-              color: "white",
-            },
-              //animation: google.maps.Animation.DROP, //open letter
-          });
-        },
-      },
-    });
+      markers})
+    //   renderer: {
+    //     render: ({ markers, position: position }) => {
+    //       return new google.maps.Marker({
+    //         position: {
+    //           lat: position.lat(),
+    //           lng: position.lng(),
+    //         },
+    //         icon: clustericon,
+    //         label: {
+    //           text: String(markers?.length),
+    //           color: "white",
+    //         },
+    //           //animation: google.maps.Animation.DROP, //open letter
+    //       });
+    //     },
+    //   },
+    // });
   }
 
   useEffect(() => {

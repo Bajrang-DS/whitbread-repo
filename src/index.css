@@ -372,6 +372,8 @@ img {
   color: #fff;
   background: transparent;
   border: none;
+  display: inline-flex;
+    align-items: center;
 }
 .btn:link, .btn:visited {
   color: #fff;
@@ -713,11 +715,11 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 
 /* hero-banner */
 .hero-section{  @apply relative z-0 overflow-hidden bg-black}
-.hero-section .hero-image{  @apply w-full h-full z-10 object-cover object-center absolute top-0 left-0 opacity-60
+.hero-section .hero-image{  @apply w-full h-[146%] z-10 object-cover object-center absolute top-0 left-0 opacity-60
 }
 .hero-section .hero-content{ @apply relative z-10 text-white text-base md:text-2xl py-6 md:py-14 leading-7 md:leading-10 min-h-[220px] md:min-h-[290px] flex w-full items-center
 }
-.hero-section .hero-content .banner-text{  @apply border-l-2 border-dashed border-white px-7}
+.hero-section .hero-content .banner-text{  @apply border-l-2 border-dashed border-white text-center}
 .hero-section .hero-content h1{  @apply text-3xl md:text-5xl font-normal mb-3}
 .hero-section .hero-content p{@apply max-w-2xl}
 .banner-text h1{ @apply text-red text-[2.4375rem] mb-3  mt-8 font-second-main-font}
@@ -1195,4 +1197,221 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
   {.full-width #content > .blue-cta-box .bg, .side-left .blue-cta-box .bg {
       width: calc(49% - 20px);
   }}
+/* services more about */
 
+@media (min-width: 1024px)
+{.full-width #content > .wp-block-group {
+    padding: 12rem 0;
+}}
+
+@media (min-width: 1024px)
+{.full-width #content > *:first-child {
+    padding-top: 12rem;
+}}
+.full-width #content > .wp-block-group {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5rem 0;
+}
+.full-width #content > *:first-child {
+    padding-top: 5rem;
+}
+.full-width #content > .wp-block-group > div {
+  width: 90%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animate.viewed > div, .viewed .animate > div, .wp-block-group.viewed > div, .viewed .wp-block-group > div {
+  visibility: visible;
+  opacity: 1;
+}
+.animate > div, .wp-block-group > div {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .9s ease-out .15s;
+  transition: opacity .9s ease-out .15s;
+}
+.has-text-align-center {
+  text-align: center;
+}
+p.is-style-intro.has-text-align-center {
+  width: 52%;
+  max-width: 76rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+p.is-style-intro {
+  font-family: "Metropolis-Medium", sans-serif;
+  margin-bottom: 3.5rem;
+  margin-top: -1rem;
+}
+.has-text-align-center {
+  text-align: center;
+}
+@media (min-width: 400px)
+{#content .icon-links {
+    /* display: -webkit-box; */
+    /* display: -ms-flexbox; */
+    display: flex;
+    flex-wrap: wrap;
+    /* -ms-flex-direction: row; */
+    /* -ms-flex-wrap: wrap; */
+    -webkit-box-pack: center;
+    /* -ms-flex-pack: center; */
+    justify-content: center;
+}}
+
+#content .icon-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 0 0;
+}
+@media (min-width: 400px)
+{#content .icon-links .icon-link:first-child, #content .icon-links .icon-link:nth-child(3) {
+    border-right: 1px solid #efefef;
+}}
+
+@media (min-width: 1024px)
+{#content .icon-links .icon-link {
+    -webkit-box-flex: 0;
+    /* -ms-flex: 0 20%; */
+    flex: 0 20%;
+    /* width: 20%; */
+    padding: 30px 2%;
+}}
+@media (min-width: 800px)
+{#content .icon-links .icon-link {
+    padding: 30px;
+}}
+@media (min-width: 600px)
+{#content .icon-links .icon-link {
+    -webkit-box-flex: 0;
+    /* -ms-flex: 0 33.33%; */
+    flex: 0 33.33%;
+    width: 33.33%;
+}}
+@media (min-width: 400px)
+{#content .icon-links .icon-link {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 50%;
+    flex: 0 20%;
+    /* width: 50%; */
+    margin: 0 0 30px 0;
+    border-bottom: none;
+}}
+#content .icon-link {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 2px solid #efefef9f;
+    padding: 30px 10px;
+}
+
+@media (min-width: 1250px)
+{.home #content .icon-link:nth-child(1) img, .home #content .icon-link:nth-child(2) img, .home #content .icon-link:nth-child(4) img, .home #content .icon-link:nth-child(5) img {
+    margin-top: 51px;
+}}
+.home #content .icon-link:nth-child(1) img, .home #content .icon-link:nth-child(2) img, .home #content .icon-link:nth-child(4) img, .home #content .icon-link:nth-child(5) img {
+    margin-top: 33px;
+}
+#content .icon-link img {
+    /* margin: 0 auto 20px auto; */
+}
+.icon-link img.attachment-full.size-full {
+  /* margin-top: 51px; */
+  margin: 0 auto 20px auto;
+  display: block;
+  max-width: 100%;
+  margin-top: 27px;
+  /* margin: 0; */
+  /* width: 85px; */
+  padding: 0;
+  width: 90px;
+  aspect-ratio: auto 45 / 70;
+  height: 70px;
+  border: 0;
+  /* font-size: 100%; */
+  font: inherit;
+  vertical-align: baseline;
+  height: auto;
+}
+
+img.myclass.attachment-full.size-full{
+  height: 177px;
+
+  width: 323px;
+  max-width: 170px;
+  margin-top: 0;
+}
+.wp-block-group__inner-container {
+  margin: 5%;
+}
+.viewed .wp-block-group__inner-container h1 {
+  /* text-align: center; */
+  font-size: 2.5rem;
+  font-family: "system-ui";
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 2.5rem 0;
+  color: #002d72;
+}
+.btn.style-col {
+  color: #fff;
+  background: #72246c;
+  border-color: #72246c;
+  align-items: center;
+}
+.btn.center, .btn.aligncenter {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: inline-flex;
+}
+h1.has-text-align-center:after, h1.border:after, h2.has-text-align-center:after, h2.border:after, h3.has-text-align-center:after, h3.border:after, h4.has-text-align-center:after, h4.border:after, h5.has-text-align-center:after, h5.border:after, h6.has-text-align-center:after, h6.border:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 10px auto 0 auto;
+  background: #ffa400;
+}
+
+/* Brands */
+.brands {
+  margin-top: 3rem;
+  padding: 3rem 10% 0 10%;
+  border-top: 1px solid #e0e0e0;
+}
+.brands h4 {
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3.3rem;
+  color: #646566e0;
+}
+.brands ul {
+  text-align: center;
+  list-style: none;
+  margin: 0 -15px -65px -15px;
+  padding: 0;
+}
+.brands ul li {
+  display: inline-table;
+  width: 98px;
+  height: 98px;
+  background: #fff;
+  margin: 0 4px;
+  margin-right: 0px;
+  top: 0;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 1px solid #0c0c0c;
+}

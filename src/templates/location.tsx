@@ -48,6 +48,8 @@ import FeaturesBrand from "../components/locationDetail/FeaturesBrand";
 import { Fade, Slide } from "react-awesome-reveal";
 import MgmTimber from "../components/locationDetail/MgmTimber";
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
+import MoreAbout from "../components/locationDetail/MoreAbout";
+import Brands from "../components/locationDetail/Brands";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -74,6 +76,8 @@ export const config: TemplateConfig = {
       "c_servicesitems",
       "c_about",
       "c_aboutdatas",
+      "c_servicesimage",
+      "c_brands",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -134,7 +138,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
   return {
-    title: document.c_meta_title ? document.c_meta_title : `${document.name} Store of MGM Timber`,
+    title: document.c_meta_title ? document.c_meta_title : `${document.name} Store of  Whitbread`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -212,7 +216,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:title",
-          content: document.c_meta_title ? document.c_meta_title : `${document.name} Store of MGM Timber`,
+          content: document.c_meta_title ? document.c_meta_title : `${document.name} Store of Whitbread`,
         },
       },
       {
@@ -279,7 +283,10 @@ const Location: Template<ExternalApiRenderData> = ({
     yextDisplayCoordinate,
     displayCoordinate,
     cityCoordinate,
-    name
+    name,
+    c_servicesitems,
+    c_servicesimage,
+    c_brands,
   } = document;
 
   let templateData = { document: document, __meta: __meta };
@@ -475,6 +482,7 @@ const Location: Template<ExternalApiRenderData> = ({
                   </div>
               }
             </div>
+            <MoreAbout c_servicesitems={c_servicesitems} c_servicesimage={c_servicesimage}/>
             <About  c_about={c_about} c_aboutdatas={c_aboutdatas} ></About>
             <div className="nearby-sec">
               <div className="container">
@@ -487,7 +495,7 @@ const Location: Template<ExternalApiRenderData> = ({
               </div>
 
             </div>
-           
+           <Brands c_brands={c_brands}/>
           </PageLayout>
         </AnalyticsScopeProvider>
       </AnalyticsProvider>

@@ -67,7 +67,9 @@
         "photoGallery",
         "c_servicesitems",
         "c_about",
-        "c_aboutdatas"
+        "c_aboutdatas",
+        "c_servicesimage",
+        "c_brands"
       ],
       "filter": {
         "entityTypes": [
