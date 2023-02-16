@@ -395,7 +395,7 @@ export default function InputDropdown({
         </div>
       </div>
       {(locationResults.length === 0 && allResultsForVertical>0) || (locationResults.length === 0 &&displaymsg && !loading) ? (
-        <h4 className="font-bold">
+        <h4 className="font-bold text-center mt-10 text-[#e11d48]">
           Sorry No result found
         </h4>
       ) : (
