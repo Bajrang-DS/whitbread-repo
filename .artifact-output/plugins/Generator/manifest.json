@@ -1,9 +1,9 @@
 {
   "bundlePaths": {
-    "404": "assets/server/404.a9d9232f.js",
-    "location": "assets/server/location.d3cf7825.js",
-    "locator": "assets/server/locator.b9b49522.js",
-    "robots": "assets/server/robots.a328afb5.js"
+    "404": "assets/server/404.7d488127.js",
+    "location": "assets/server/location.1052cb08.js",
+    "locator": "assets/server/locator.83f20887.js",
+    "robots": "assets/server/robots.ac98f524.js"
   },
   "projectFilepaths": {
     "templatesRoot": "src/templates",
@@ -22,10 +22,6 @@
         "_server.browser-9d07d5d1.js"
       ]
     },
-    "src/images/MGMpin.svg": {
-      "file": "assets/static/MGMpin-4be339ed.svg",
-      "src": "src/images/MGMpin.svg"
-    },
     "src/images/map.svg": {
       "file": "assets/static/map-05379a2e.svg",
       "src": "src/images/map.svg"
@@ -34,13 +30,13 @@
       "file": "assets/static/phone-057118a0.svg",
       "src": "src/images/phone.svg"
     },
-    "src/images/MGMhover1.svg": {
-      "file": "assets/static/MGMhover1-bbbef0ea.svg",
-      "src": "src/images/MGMhover1.svg"
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-4be339ed.svg",
+      "src": "src/images/MGMpin.svg"
     },
-    "src/images/map-center.svg": {
-      "file": "assets/static/map-center-990b96bc.svg",
-      "src": "src/images/map-center.svg"
+    "src/images/luxurystore.jpg": {
+      "file": "assets/static/luxurystore-3fa0cd37.jpg",
+      "src": "src/images/luxurystore.jpg"
     },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-55834b8a.svg",
@@ -50,21 +46,29 @@
       "file": "assets/static/watch-icn-12e4a5d9.svg",
       "src": "src/images/watch-icn.svg"
     },
-    "src/images/shape-t.svg": {
-      "file": "assets/static/shape-t-4e865b2a.svg",
-      "src": "src/images/shape-t.svg"
+    "src/images/MGMhover1.svg": {
+      "file": "assets/static/MGMhover1-bbbef0ea.svg",
+      "src": "src/images/MGMhover1.svg"
+    },
+    "src/images/map-center.svg": {
+      "file": "assets/static/map-center-990b96bc.svg",
+      "src": "src/images/map-center.svg"
     },
     "src/images/dots.svg": {
       "file": "assets/static/dots-c532748f.svg",
       "src": "src/images/dots.svg"
     },
-    "src/images/minus-sym.svg": {
-      "file": "assets/static/minus-sym-f0f517fd.svg",
-      "src": "src/images/minus-sym.svg"
-    },
     "src/images/plus-sym.svg": {
       "file": "assets/static/plus-sym-e2bf518e.svg",
       "src": "src/images/plus-sym.svg"
+    },
+    "src/images/shape-t.svg": {
+      "file": "assets/static/shape-t-4e865b2a.svg",
+      "src": "src/images/shape-t.svg"
+    },
+    "src/images/minus-sym.svg": {
+      "file": "assets/static/minus-sym-f0f517fd.svg",
+      "src": "src/images/minus-sym.svg"
     },
     "src/images/shape-b.svg": {
       "file": "assets/static/shape-b-bdecdd2a.svg",
@@ -75,84 +79,91 @@
       "src": "src/images/newsletter-bg.png"
     },
     "dist/hydration_templates/404.tsx": {
-      "file": "assets/hydrate/404.148ee302.js",
+      "file": "assets/hydrate/404.ed0d4619.js",
       "src": "dist/hydration_templates/404.tsx",
       "isEntry": true,
       "imports": [
         "_index-bdcd3d25.js",
         "src/templates/404.tsx",
-        "_index-a9d209e5.js",
+        "_header-8d3dac25.js",
         "_index-12b03496.js",
-        "_global-086be507.js"
+        "_global-01135178.js",
+        "_PageLayout-6b9fd9f5.js"
       ]
     },
     "src/templates/404.tsx": {
-      "file": "assets/server/404.a9d9232f.js",
+      "file": "assets/server/404.7d488127.js",
       "src": "src/templates/404.tsx",
       "isEntry": true,
       "imports": [
-        "_global-086be507.js",
-        "_index-a9d209e5.js",
+        "_global-01135178.js",
+        "_header-8d3dac25.js",
+        "_PageLayout-6b9fd9f5.js",
         "_index-12b03496.js"
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.b8f9a9f6.js",
+      "file": "assets/hydrate/location.a8bc87ed.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
         "_index-bdcd3d25.js",
         "src/templates/location.tsx",
-        "_index-a9d209e5.js",
+        "_header-8d3dac25.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-5e0b36c1.js",
-        "_global-086be507.js",
+        "_answersHeadlessConfig-688e3028.js",
+        "_global-01135178.js",
+        "_PageLayout-6b9fd9f5.js",
         "_preload-helper-094304c8.js"
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.d3cf7825.js",
+      "file": "assets/server/location.1052cb08.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
         "_index-12b03496.js",
-        "_index-a9d209e5.js",
-        "_answersHeadlessConfig-5e0b36c1.js",
+        "_header-8d3dac25.js",
+        "_answersHeadlessConfig-688e3028.js",
         "_index-bdcd3d25.js",
-        "_global-086be507.js",
+        "_global-01135178.js",
+        "_PageLayout-6b9fd9f5.js",
         "_preload-helper-094304c8.js"
       ],
       "dynamicImports": [
-        "_answersHeadlessConfig-5e0b36c1.js"
+        "_answersHeadlessConfig-688e3028.js"
+      ],
+      "css": [
+        "assets/static/location-55d13414.css"
       ],
       "assets": [
         "assets/static/map-05379a2e.svg"
       ]
     },
     "dist/hydration_templates/locator.tsx": {
-      "file": "assets/hydrate/locator.2e5e63ef.js",
+      "file": "assets/hydrate/locator.c26ac676.js",
       "src": "dist/hydration_templates/locator.tsx",
       "isEntry": true,
       "imports": [
         "_index-bdcd3d25.js",
         "src/templates/locator.tsx",
-        "_index-a9d209e5.js",
+        "_header-8d3dac25.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-5e0b36c1.js",
-        "_global-086be507.js",
+        "_answersHeadlessConfig-688e3028.js",
+        "_global-01135178.js",
         "_server.browser-9d07d5d1.js"
       ]
     },
     "src/templates/locator.tsx": {
-      "file": "assets/server/locator.b9b49522.js",
+      "file": "assets/server/locator.83f20887.js",
       "src": "src/templates/locator.tsx",
       "isEntry": true,
       "imports": [
-        "_index-a9d209e5.js",
+        "_header-8d3dac25.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-5e0b36c1.js",
+        "_answersHeadlessConfig-688e3028.js",
         "_server.browser-9d07d5d1.js",
-        "_global-086be507.js"
+        "_global-01135178.js"
       ],
       "css": [
         "assets/static/locator-7e1d7cb8.css"
@@ -161,15 +172,16 @@
         "assets/static/red-map-55834b8a.svg",
         "assets/static/watch-icn-12e4a5d9.svg",
         "assets/static/MGMhover1-bbbef0ea.svg",
-        "assets/static/map-center-990b96bc.svg"
+        "assets/static/map-center-990b96bc.svg",
+        "assets/static/luxurystore-3fa0cd37.jpg"
       ]
     },
     "src/templates/robots.ts": {
-      "file": "assets/server/robots.a328afb5.js",
+      "file": "assets/server/robots.ac98f524.js",
       "src": "src/templates/robots.ts",
       "isEntry": true,
       "imports": [
-        "_global-086be507.js"
+        "_global-01135178.js"
       ]
     },
     "_preload-helper-094304c8.js": {
@@ -190,13 +202,13 @@
         "_index-12b03496.js"
       ]
     },
-    "_index-a9d209e5.js": {
-      "file": "assets/static/index-a9d209e5.js",
+    "_header-8d3dac25.js": {
+      "file": "assets/static/header-8d3dac25.js",
       "imports": [
         "_index-12b03496.js"
       ],
       "css": [
-        "assets/static/index-af4ec357.css"
+        "assets/static/header-3b1dd591.css"
       ],
       "assets": [
         "assets/static/dots-c532748f.svg",
@@ -207,29 +219,39 @@
         "assets/static/shape-b-bdecdd2a.svg"
       ]
     },
-    "_global-086be507.js": {
-      "file": "assets/static/global-086be507.js"
+    "_global-01135178.js": {
+      "file": "assets/static/global-01135178.js"
     },
-    "_answersHeadlessConfig-5e0b36c1.js": {
-      "file": "assets/static/answersHeadlessConfig-5e0b36c1.js",
+    "_PageLayout-6b9fd9f5.js": {
+      "file": "assets/static/PageLayout-6b9fd9f5.js",
+      "imports": [
+        "_header-8d3dac25.js"
+      ]
+    },
+    "_answersHeadlessConfig-688e3028.js": {
+      "file": "assets/static/answersHeadlessConfig-688e3028.js",
       "isDynamicEntry": true,
       "imports": [
-        "_index-a9d209e5.js",
+        "_header-8d3dac25.js",
         "_index-12b03496.js",
-        "_global-086be507.js"
+        "_global-01135178.js"
       ],
       "assets": [
         "assets/static/phone-057118a0.svg",
         "assets/static/MGMpin-4be339ed.svg"
       ]
     },
+    "src/templates/location.css": {
+      "file": "assets/static/location-55d13414.css",
+      "src": "src/templates/location.css"
+    },
     "src/templates/locator.css": {
       "file": "assets/static/locator-7e1d7cb8.css",
       "src": "src/templates/locator.css"
     },
-    "index.css": {
-      "file": "assets/static/index-af4ec357.css",
-      "src": "index.css"
+    "header.css": {
+      "file": "assets/static/header-3b1dd591.css",
+      "src": "header.css"
     }
   }
 }
