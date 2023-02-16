@@ -1,56 +1,48 @@
 import { Link } from "@yext/pages/components";
 import * as React from "react";
-import abbanner from "../../images/ab-banner.jpg"
-import dt12 from "../../images/dtl2.jpg"
+// import abbanner from "../../images/ab-banner.jpg"
+// import dt12 from "../../images/dtl2.jpg"
 import PhotoSlider from "./PhotoSlider"
-import RtfConverter from "@yext/rtf-converter";
 
 export default function About(props: any) {
-  function convertToRtf(rtf:any) {
-    rtf = rtf.replace(/\\par[d]?/g, "");
-    rtf = rtf.replace(/\{\*?\\[^{}]+}|[{}]|\\\n?[A-Za-z]+\n?(?:-?\d+)?[ ]?/g, "")
-    rtf=rtf.replace('/','');
-    rtf=rtf.replace(';','');
-    rtf=rtf.replace('-','');
-    return rtf.replace(/\\'[0-9a-zA-Z]{2}/g, "").trim();
-}
+  const { c_about, c_aboutdatas } = props;
   return (
     <>
-      <div className="about-sec ">
-      <div className="container-custom">
-        <div className="about-inner-sec">
-        <h2 className="for-mob">{props.name}</h2>
 
-          <div className="w-full lg:w-2/5 xl:w-[47%] relative  left-0">
-              <div className="lg:h-full">
-              {props.photoGallery ?
-                    props.photoGallery.map((element:any) => (   
+      <div className="blue-cta-box alignwide img-left viewed">
 
-                        <img height={518} width={658} src={element.url} alt="photo" />
-                  
-                      ))
-                    : ''}
+        <div className="bg">
+          <img src={c_about?.image?.url} />
+        </div>
+        <div className="wrap">
+          <div className="inner">
+            <h3 className="has-california-color has-text-color">{c_about?.heading}</h3>
+            <p className="is-style-light"> {c_about?.description}</p>
+            <div className="is-layout-flex wp-container-5 wp-block-columns">
+              <div className="is-layout-flow wp-block-column">
+                <ul className="icon-list">
+                  {props.c_aboutdatas?.map((item: any, index: number) => (
+                    <li>
+                      <h6>{item.title}</h6>
+                      <p>
+                        {item.titledes}
+                      </p><br />
+                    </li>
+                  ))}
+                </ul>
               </div>
-          </div>
-          <div className="about-content">
-            <div className="mb-4">
-              <h2>{props.name}</h2>
-              <div className="">
-              <div class="about-content-inner" dangerouslySetInnerHTML={{__html: convertToRtf(props.description)}}/>
+              <div className="is-layout-flow wp-block-column" >
               </div>
-              {props.c_viewMore.link&&props.c_viewMore.label?
-              <div className="content-center w-full ">
-                <Link href={props.c_viewMore.link} className="button-red"
-                 data-ya-track={`about-button`}
-                 eventName={`about-button`}
-                 rel="noopener noreferrer"
-                >{props.c_viewMore.label}</Link>
-              </div>
-              :''}
             </div>
+          
+            <a className="btn style-white int" href="https://www.whitbread.co.uk/sustainability/" target="_self">{c_about.cta1.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+            </a><br />
+            
+            <a className="btn style-white int" href="https://cdn.whitbread.co.uk/media/2022/05/Whitbread-ESG-Report-2021_22.pdf" target="_blank">{c_about.cta2.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+            </a>
           </div>
         </div>
-        </div>
+
       </div>
     </>
   )

@@ -18,9 +18,8 @@
     },
     {
       "name": "locator",
-      "streamId": "Locator",
       "templateType": "JS",
-      "entityPageSet": {
+      "staticPage": {
         "plugin": {}
       }
     },
@@ -73,24 +72,7 @@
       },
       "localization": {
         "locales": [
-          "en_GB"
-        ],
-        "primary": false
-      }
-    },
-    {
-      "$id": "Locator",
-      "fields": [
-        "name"
-      ],
-      "filter": {
-        "entityIds": [
-          "gd-1"
-        ]
-      },
-      "localization": {
-        "locales": [
-          "en_GB"
+          "en"
         ],
         "primary": false
       }

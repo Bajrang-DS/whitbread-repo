@@ -1,138 +1,104 @@
 import * as React from "react";
 
 const Footer = (props: any) => {
-  console.log(props)
-  React.useEffect(() => {
-    document.body.setAttribute("id", "body");
-  })
-  const toggle = () => {
-    (document.getElementById("body") as HTMLInputElement).classList.toggle('');
-  };
-  const Services = props?._site?.c_customerServices?.links?.map((link: any) => (
-    <a style={{ font: "caption", color: "black" }} className="navbar-item" href="#" >
-      <span>{link.label}</span><br />
-    </a>
-  ));
+  const { c_footerlink1, c_footerlink2, c_footerlink3, c_footerlogo, c_socialitems, description } = props;
 
-  const Aboutm = props?._site?.c_aboutMatalan?.links?.map((link: any) => (
-    <a style={{ font: "caption", color: "black" }} className="navbar-item" href="#" >
-      <span>{link.label}</span><br />
-    </a>
-  ));
-  const Websites = props?._site?.c_aboutMatalan?.links?.map((link: any) => (
-    <a style={{ font: "caption", color: "black" }} className="navbar-item" href="#" >
-      <span>{link.label}</span><br />
-    </a>
-  ));
+
   return (
-    <  footer className="site-footer">
-     
+    <>
 
-        <div className="container">
-        < section className="footer-panel ">
-          
-            <div  className="grid grid-cols-5 gap-x-10 gap-y-10 pt-4">
-              <div className="u-mar-t-medium col-12@lg col-6@xs">
-              {props._site.c_faqs.map((res: any) => {
-                        return (
-                          <>
-                           
-                              <img  style={ {alignItems:"center", height:"20px",width:"20px"}} src={res.icon.url} />
-                             
-                              <a className="pt-4" href="#" > {res.cta.label} </a><br /><br />
-                          </>
-                        )
-                      })}
+      <footer className="colophon">
+        <div className="wrap">
+          <div className="columns">
+            <div className="col col-1">
+              <div className="wb-1">
 
+                <div id="media_image-2" className="site-widget widget_media_image">
+
+                  <img style={{marginTop:"-20px"}} src={props._site.c_footerlogo.url} alt="logo" />
+                </div>
+
+                <div id="nav_menu-4" className="site-widget widget_nav_menu">
+                  <div className="menu-about-submenu-container">
+                    <ul id="menu-about-submenu" className="menu">
+                      {props._site?.c_footerlink1?.map((item: any, index: number) => (
+
+                        <li key={index} id="menu-item-1597" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597">
+                          <a href="#">{item.label}</a>
+
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <p>{props._site.description}</p>
               </div>
 
-              <div className="col-xs-12 col-sm-2 col-lg-2 col-md-2">
+              <div className="wb-2">
+                <img src={props._site.c_careers.photo.url} width="500" height="229" alt="" />
 
-                <h2 style={{ color: "#f5821f" }} className="title-widget">{props._site.c_customerServices.headingName}</h2>
-                <ul style={{ color: "black" }} className="menu_footer">
-                  <li><a >{Services}</a><br /></li>
-                </ul>
-
+                <a className="btn style-white" href="#" target="_blank">
+                  {props._site.c_careers.cta.label}
+                  <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                </a>
               </div>
-              <div className="col-xs-12 col-sm-2 col-lg-2 col-md-2">
 
 
-                <h2 style={{ color: "#f5821f" }} className="title-widget">{props._site.c_aboutMatalan.headingName}</h2>
-                <ul style={{ color: "black" }} className="menu_footer">
-                  <li><a href="#">{Aboutm}</a></li>
+            </div>
 
-
-                </ul>
-
-              </div>
-              <div>
-                <h2 style={{ color: "#f5821f" }} className="title-widget">{props._site.c_ourWebsites.headingName}</h2>
-                <ul style={{ color: "black" }} className="menu_footer">
-
-                  <li><a href="#">{Websites}</a></li>
-
-
-                </ul>
-
-              </div>
-              <div>
-                <div className="col-12@xs col-3@lg u-mar-t-large o-footer__menu--social pr-4">
-                  
-                    <div className="col-12@xs o-footer__app-store-container__header-wrap u-mar-b-small">
-                      <h3 className="u-font-wb u-font-ta-c@md-down pb-4"><b>{props._site.c_appSectionText}</b></h3>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-x-5 gap-y-5">
-                      {props._site.c_appIcons.map((res: any) => {
-                        return (
-                          <>
-                            <a href="#" >
-                              <img src={res.icon.url} />
-                            </a>
-                          </>
-                        )
-                      })}
-
-                    </div>
-                    <br />
-
-                    <div className="row u-mar-b-large@lg-up u-mar-t-medium">
-                      <div className="grid grid-cols-5 gap-x-5 gap-y-5">
-                        {props._site.c_socials.map((res: any) => {
-                          return (
-                            <>
-                              <a href="#" >
-                                <img src={res.icon.url} />
-                              </a>
-                            </>
-                          )
-                        })}
-                      </div>
-                    </div><br />
-                    <div className="row">
-                      <div className="col-12@xs u-mar-v-medium@md-down">
-                        <span ><p style={{ font: "small-caption" }} className="u-font--smaller u-font-ta-c@md-down" data-copyright="">
-                          {props._site.c_description}
-
-                        </p></span>
-                      </div>
-                    </div><br />
-
-                    <div className="col-12@xs u-font-lh-0 u-font-ta-c@md-down">
-                     <a href="#"><img style={{ }} src={props._site.c_footerLogo.url} alt="footer logo" /></a> 
-                    </div>
-
-                 
+            <div className="col col-2">
+              <div id="nav_menu-2" className="site-widget widget_nav_menu">
+                <div className="menu-policies-container">
+                  <ul id="menu-policies" className="menu">
+                    {props._site?.c_footerlink2?.map((item: any, index: number) => (
+                      <li id="menu-item-42" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+                        <a href="#">{item.label}</a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-          
+
             </div>
-            </section>
+            <div className="col col-3">
+              <div id="nav_menu-3" className="site-widget widget_nav_menu">
+                <div className="menu-footer-menu-container">
+                  <ul id="menu-footer-menu" className="menu">
+                    {props._site?.c_footerlink3?.map((item: any, index: number) => (
+                      <li id="menu-item-43" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
+                        <a href="#">
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col col-soc">
+              <ul className="soc">
+                {props._site?.c_socialitems?.image.map((item: any, index: number) => (
+                  <li>
+                    <a href="#" target="_blank">
+
+                      <img style={{ height: "30px", width: "30px" }} src={item.url} alt="icons" />
+
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="credit">
+                {props._site.c_socialitems.heading}
+                <a className="bir" href="#" target="_blank" rel="noopener"><br />
+                  {props._site.c_socialitems?.cTA?.label}
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-        
-     
-    </footer >
+      </footer>
+    </>
   );
 };
-
 export default Footer;

@@ -1,28 +1,24 @@
 {
   "$id": "site-entity",
   "filter": {
-    "entityIds": ["gd-1"] 
+    "entityIds": ["globaldata"] 
   },
   "source": "knowledgeGraph",
   "fields": [
-    "id",
-    "uid",
-    "meta",
     "name",
-    "c_matalanLogo",
-    "c_headerLink",
-    "c_description",
-    "c_socials",
-    "c_footerLogo",
-    "c_customerServices",
-    "c_aboutMatalan",
-    "c_ourWebsites",
-    "c_appSectionText",
-    "c_appIcons",
-    "c_faqs"
+    "c_logo",
+    "c_headerlink",
+    "c_uppersection",
+    "c_footerlogo",
+    "c_footerlink1",
+    "c_footerlink2",
+    "c_footerlink3",
+    "c_careers",
+    "description",
+    "c_socialitems"
   ],
   "localization": {
-    "locales": ["en_GB"],
+    "locales": ["en"],
     "primary": false
   }
 }

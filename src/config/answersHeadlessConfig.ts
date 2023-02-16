@@ -1,10 +1,10 @@
 
 export const AnswerExperienceConfig = {
   limit:6,
-  locale: "en_GB",
-  apiKey : "a047eef1e2852d278bbac99473b39cce",
+  locale: "en",
+  apiKey : "8126755ba82f01a75e8d4db9e2310d47",
   verticalKey : "locations",
-  experienceKey : "matalan-store",
+  experienceKey : "whitbread",
   experienceVersion: "STAGING",
   locationRadius: 804672,
   sessionTrackingEnabled: true,

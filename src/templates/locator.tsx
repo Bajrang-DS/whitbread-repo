@@ -25,27 +25,28 @@ import {
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
 import Header from "../components/layouts/header";
 import Footer from "../components/layouts/footer";
+import Banner from "../components/locationDetail/banner";
 
-export const config: TemplateConfig = {
-  stream: {
-    $id: "Locator",
-    // Specifies the exact data that each generated document will contain. This data is passed in
-    // directly as props to the default exported function.
-    fields: [
-      "name",
+// export const config: TemplateConfig = {
+//   stream: {
+//     $id: "Locator",
+//     // Specifies the exact data that each generated document will contain. This data is passed in
+//     // directly as props to the default exported function.
+//     fields: [
+//       "name",
      
-    ],
-    // Defines the scope of entities that qualify for this stream.
-    filter: {
-      entityIds: ["gd-1"]
-    },
-    // The entity language profiles that documents will be generated for.
-    localization: {
-      locales: ["en_GB"],
-      primary: false,
-    },
-  },
-};
+//     ],
+//     // Defines the scope of entities that qualify for this stream.
+//     filter: {
+//       entityIds: ["gd-1"]
+//     },
+//     // The entity language profiles that documents will be generated for.
+//     localization: {
+//       locales: ["en_GB"],
+//       primary: false,
+//     },
+//   },
+// };
 
 export const getPath: GetPath<TemplateProps> = () => {
   return `/index.html`;
@@ -199,7 +200,8 @@ const Locator: Template<TemplateRenderProps>= ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           
-        {/* <Header _site={_site}/> */}
+        <Header _site={_site}/>
+        <Banner/>
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}
@@ -213,7 +215,7 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
-        {/* <Footer _site={_site} /> */}
+        <Footer _site={_site} />
        
      
       </AnalyticsScopeProvider>

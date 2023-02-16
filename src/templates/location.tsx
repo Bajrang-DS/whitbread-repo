@@ -69,7 +69,11 @@ export const config: TemplateConfig = {
       "timezone",
       "yextDisplayCoordinate",
       "displayCoordinate",
-      "cityCoordinate"
+      "cityCoordinate",
+      "photoGallery",
+      "c_servicesitems",
+      "c_about",
+      "c_aboutdatas",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -78,7 +82,7 @@ export const config: TemplateConfig = {
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en_GB"],
+      locales: ["en"],
       primary: false,
     },
   },
@@ -264,6 +268,8 @@ const Location: Template<ExternalApiRenderData> = ({
     slug,
     hours,
     mainPhone,
+    c_about,
+    c_aboutdatas,
     photoGallery,
     c_banner_image,
     c_canonical,
@@ -441,11 +447,15 @@ const Location: Template<ExternalApiRenderData> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <PageLayout _site={_site}>
+            
 
+          <PhotoSlider photoGallery={photoGallery}/>
 
+           
+          
             <div className="container">
               <div className='banner-text banner-dark-bg justify-center text-center'>
-                <h1 className=""> {name}</h1>
+                <h1  className=""> {name}</h1>
                 <div className="openClosestatus detail-page closeing-div">
                   <OpenClose timezone={timezone} hours={hours} />
                 </div>
@@ -465,7 +475,7 @@ const Location: Template<ExternalApiRenderData> = ({
                   </div>
               }
             </div>
-
+            <About  c_about={c_about} c_aboutdatas={c_aboutdatas} ></About>
             <div className="nearby-sec">
               <div className="container">
                 <div className="sec-title"><h2 className="">{StaticData.NearStoretext}</h2></div>
@@ -477,7 +487,7 @@ const Location: Template<ExternalApiRenderData> = ({
               </div>
 
             </div>
-
+           
           </PageLayout>
         </AnalyticsScopeProvider>
       </AnalyticsProvider>

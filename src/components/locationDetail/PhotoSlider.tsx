@@ -3,18 +3,23 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 const PhotoSlider = (props: any) => {
-  const { photoGallery, height, width } = props;  
-  const photos = photoGallery.map((element:any) => (   
-
+  const { photoGallery} = props;  
+  const photos = photoGallery && photoGallery?.map((element:any) => (     
+   
 	<SplideSlide>
-    <img height={height} width={width} src={element.url} />
+    <div className="slider">
+    <img  src={element.image.url}  alt="photoGallery"/>
+    </div>
 	</SplideSlide>    
   ));
+  
   return (
     <>
+     
 	  <Splide aria-label="Photo Slider">
           {photos}
       </Splide>
+  
     </>
   );
 };
