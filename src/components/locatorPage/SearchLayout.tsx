@@ -283,11 +283,11 @@ const SearchLayout = (props: any): JSX.Element => {
                   fieldApiName: "address.city",
 
                 },
-                // {
-                //   entityType: "location",
-                //   fieldApiName: "address.region",
+                {
+                  entityType: "location",
+                  fieldApiName: "address.region",
 
-                // },
+                }
                 // {
                 //   entityType: "location",
                 //   fieldApiName: "address.countryCode",

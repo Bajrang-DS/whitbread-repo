@@ -596,7 +596,6 @@ function UnwrappedGoogleMaps({
 
     google.maps.event.addListener(infoWindow.current, 'domready', (e: any) => {
       const someButton = document.getElementById("direct");
-
       someButton?.addEventListener("click", direction);
      
     

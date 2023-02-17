@@ -573,7 +573,7 @@ table.day-hrs td{ @apply   text-right  }
 table.day-hrs tr:last-child td{  @apply border-b-0}
 table.day-hrs .dayName{ @apply text-lg md:text-lg capitalize pl-0 py-0 text-left}
 table.day-hrs .currentDay .dayName{  @apply relative  py-1}
-table.day-hrs .currentDay{  @apply font-bold}
+table.day-hrs .currentDay{  @apply font-bold text-black bg-hover-btn}
 
 /* table.day-hrs .currentDay .dayName .checked{  @apply absolute top-1/2 -mt-2 left-0 bg-red rounded-sm w-4 h-4 z-0}
 table.day-hrs .currentDay .dayName .checked:after{  @apply content-[''] border-b-2 border-l-2 border-white transform -rotate-45 z-0 w-2.5 h-1.5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -mt-1} */
@@ -1616,3 +1616,122 @@ p.meta a {
   margin-top: 10%;
 }
 
+/* for search */
+
+/* @media (min-width: 1024px)
+{.sitenav > .menu > li:hover > .sub-menu, .sitenav > .menu > li:active > .sub-menu, .sitenav > .menu > li:focus > .sub-menu {
+    margin-top: 0;
+    height: auto;
+    visibility: visible;
+    z-index: 99999;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+}
+@media (min-width: 1024px)
+{.sitenav > ul > li > .sub-menu {
+    display: block !important;
+    padding: 50px 0 25px 0;
+    background: #fff;
+    border-top: 1px solid #d0d0d1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    height: 0;
+    visibility: hidden;
+    z-index: -1;
+}}
+@media (min-width: 1024px)
+{.sitenav > ul > li > .sub-menu > ul {
+ 
+ 
+    flex-wrap: wrap;
+}}
+@media (min-width: 1024px)
+{.sitenav #sp-search li {
+
+    display: flex;
+ 
+    flex-wrap: wrap;
+    width: 100%;
+}}
+@media (min-width: 1024px)
+{.sitenav > ul > li > .sub-menu li {
+    margin: 0;
+    opacity: .5;
+}}
+@media (min-width: 1024px)
+{.sitenav #sp-search li h5 {
+    width: 25%;
+    margin: 1px 0 0 0;
+}}
+@media (min-width: 1024px)
+{.sitenav #sp-search li h5 {
+    width: 25%;
+    margin: 1px 0 0 0;
+}}
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text {
+  border: 0;
+ 
+  clip-path: inset(50%);
+
+  margin: -1px;
+
+  padding: 0;
+
+  word-wrap: normal!important;
+}
+@media (min-width: 1024px)
+{.sitenav #sp-search li form input[type="search"] {
+    width: calc(80% - 94px);
+    margin-right: 20%;
+    padding-top: 10px;
+    border-bottom: 1px solid #d0d0d1;
+    border-radius: 0;
+}}
+
+@media (min-width: 1024px)
+{.sitenav #sp-search li form input {
+    float: left;
+    height: 39px;
+    font-family: "Metropolis-Regular", sans-serif;
+    font-size: 1.8rem;
+    color: #646566;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}}
+@media (min-width: 1024px)
+{.sitenav #sp-search li form input[type="submit"] {
+    width: 94px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: left;
+    text-transform: uppercase;
+    color: #72246c;
+    padding-left: 22px;
+    border: 2px solid #72246c;
+    background: transparent url(../assets/images/arrow-go.svg) 58px center no-repeat;
+    cursor: pointer;
+}}
+
+@media (min-width: 1024px)
+{.sitenav #sp-search li form input {
+    float: left;
+    height: 39px;
+
+    -webkit-appearance: none;
+}} */

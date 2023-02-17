@@ -59,8 +59,8 @@ function opentime(e: any) {
           <div className="lp-param-results lp-subparam-hours">
             <div className="location-name-miles icon-row">
               <div className="icon text-black relative"> <img className=" " src={redmapimage} width="20" height="20"
-                alt={''} /><span  className="map-count">M</span></div>
-              <h2 ><Link style={{color:"red"}} className="inline-block notHighlight"
+                alt={''} /><span  className="map-count">W</span></div>
+              <h2 ><Link style={{color:"#002d72"}} className="inline-block notHighlight"
                data-ya-track={`viewDetail -${result.rawData.name}`}
                eventName={`viewDetail -${result.rawData.name}`}
                rel="noopener noreferrer"
@@ -109,7 +109,7 @@ function opentime(e: any) {
             </div>
          
              <div className="button-bx">
-              <Link style={{background:"green"}}  type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
+              <Link style={{background:"#002d72"}}  type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
               data-ya-track={`viewStore -${result.rawData.name}`}
               eventName={`viewStore -${result.rawData.name}`}
               rel="noopener noreferrer"

@@ -8,7 +8,7 @@ export const StaticData = {
     Brandname:"Whitbread Stores",
     miles:"miles",
     tempClosed:"Temporarily Closed",
-    StoreDetailbtn:"View Store Detail",
+    StoreDetailbtn:"Store Detail",
     Storehighlight:"Store Highlights",
     Days:"Days",
     Hours:"Hours",
