@@ -69,7 +69,12 @@
         "c_about",
         "c_aboutdatas",
         "c_servicesimage",
-        "c_brands"
+        "c_brands",
+        "c_newsheading",
+        "c_brandfirst",
+        "c_brandsecond",
+        "c_brandthird",
+        "c_bannerlink"
       ],
       "filter": {
         "entityTypes": [

@@ -58,8 +58,8 @@ const Contact = (props: any) => {
           ""
         )}
 
-        <ul className="">
-          <li className="button-bx direction-button">
+        <ul  className="">
+          <li  className="button-bx direction-button">
             <GetDirection
               buttonText={c_getDirectionsCTAText?c_getDirectionsCTAText:StaticData.getDirection}
               address={address}

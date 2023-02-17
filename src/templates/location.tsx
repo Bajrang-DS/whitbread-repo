@@ -50,6 +50,7 @@ import MgmTimber from "../components/locationDetail/MgmTimber";
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
 import MoreAbout from "../components/locationDetail/MoreAbout";
 import Brands from "../components/locationDetail/Brands";
+import NewsSection from "../components/locationDetail/NewsSection";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -78,6 +79,11 @@ export const config: TemplateConfig = {
       "c_aboutdatas",
       "c_servicesimage",
       "c_brands",
+      "c_newsheading",
+      "c_brandfirst",
+      "c_brandsecond",
+      "c_brandthird",
+      "c_bannerlink",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -287,6 +293,11 @@ const Location: Template<ExternalApiRenderData> = ({
     c_servicesitems,
     c_servicesimage,
     c_brands,
+    c_newsheading,
+    c_brandfirst,
+    c_brandsecond,
+    c_brandthird,
+    c_bannerlink,
   } = document;
 
   let templateData = { document: document, __meta: __meta };
@@ -456,13 +467,13 @@ const Location: Template<ExternalApiRenderData> = ({
           <PageLayout _site={_site}>
             
 
-          <PhotoSlider photoGallery={photoGallery}/>
+          <PhotoSlider photoGallery={photoGallery} c_bannerlink={c_bannerlink}/>
 
            
           
             <div className="container">
               <div className='banner-text banner-dark-bg justify-center text-center'>
-                <h1  className=""> {name}</h1>
+                <h1 style={{color:"#002d72"}} className=""> {name}</h1>
                 <div className="openClosestatus detail-page closeing-div">
                   <OpenClose timezone={timezone} hours={hours} />
                 </div>
@@ -484,9 +495,10 @@ const Location: Template<ExternalApiRenderData> = ({
             </div>
             <MoreAbout c_servicesitems={c_servicesitems} c_servicesimage={c_servicesimage}/>
             <About  c_about={c_about} c_aboutdatas={c_aboutdatas} ></About>
+            <NewsSection c_newsheading={c_newsheading} c_brandfirst={c_brandfirst} c_brandsecond={c_brandsecond} c_brandthird={c_brandthird}/>
             <div className="nearby-sec">
               <div className="container">
-                <div className="sec-title"><h2 className="">{StaticData.NearStoretext}</h2></div>
+                <div className="sec-title"><h2 style={{color:"#002d72"}} className="">{StaticData.NearStoretext}</h2></div>
                 <div className="nearby-sec-inner">
                   {yextDisplayCoordinate || cityCoordinate || displayCoordinate ?
                     <Nearby externalApiData={externalApiData} />

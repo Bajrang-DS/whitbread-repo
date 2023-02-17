@@ -26,13 +26,14 @@ import Opening from "../commons/openClose";
 import GetDirection from "../commons/GetDirection";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import Address from "../commons/Address";
-import Phonesvg from "../../images/phone.svg";
+import Phones from "../../images/phone.svg";
 import { ResultsCount } from "@yext/search-ui-react";
 import OpenClose from "../commons/openClose";
 import $ from "jquery";
 import { Directionsvg, View_Store } from "../../../sites-global/global";
 import { StaticData } from "../../../sites-global/staticData";
 import useFetchResults from "../../hooks/useFetchResults";
+import { Link } from "@yext/pages/components";
 /**
  * CSS class interface for the {@link GoogleMaps} component
  *
@@ -523,7 +524,7 @@ function UnwrappedGoogleMaps({
           </div>
           {result.rawData.mainPhone?   //open for phone
     <div className="icon-row">
-      <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
+      <div className="icon"> <img className=" " src={Phones} width="20" height="20" alt="" />
       </div>
       <div className="content-col">
         <h6>Telephone</h6>
@@ -566,103 +567,43 @@ function UnwrappedGoogleMaps({
           )}
         </div>
         <div  className="button-bx !ml-4 !mb-0">
-          <a style={{background:"green"}} type="button" href={`/${result.rawData.id}`} className="btn">
+          <Link style={{background:"green"}} type="button" href={`/${result.rawData.id}`} className="btn">
             {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
             {StaticData.StoreDetailbtn}
-          </a>
-          {result.rawData.displayCoordinate ? (
-            <a 
-              data-listener="false"
-              data-latitude={result.rawData.displayCoordinate.latitude}
-              data-longitude={result.rawData.displayCoordinate.longitude}
-              className="cursor-pointer  getdirection btn"
-              rel="noopener noreferrer"
-              data-city={result.rawData.address.city}
-              data-country={result.rawData.address.countryCode}
-              data-region={result.rawData.address.region}
-            >
-              {/* <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
-              {StaticData.getDirection}
-            </a>
-          ) : (
-            <a 
-              data-listener="false"
-              data-latitude={result.rawData.yextDisplayCoordinate.latitude}
-              data-longitude={result.rawData.yextDisplayCoordinate.longitude}
-              data-city={result.rawData.address.city}
-              data-country={result.rawData.address.countryCode}
-              data-region={result.rawData.address.region}
-              className="cursor-pointer getdirection1 btn"
-              rel="noopener noreferrer"
-            >
-              {/* <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
-             <span style={{color:"blue"}}> {StaticData.getDirection}</span>
-            </a>
-          )}
+          </Link>
+          <Link
+            data-ya-track="getdirections"
+            eventName={`getdirections`}
+            className="btn"
+            onClick={() => GetDirection(result.rawData)}
+            href="javascript:void(0);"
+            id="direct"
+            rel="noopener noreferrer"
+            //conversionDetails={conversionDetails_direction}
+          >
+            <> Direction </>
+          </Link>
 
-          {/* <GetDirection buttonText="Direction" latitude={result.rawData.displayCoordinate?.latitude} longitude={result.rawData.displayCoordinate?.longitude}/> */}
+        
         </div>
       </>
     );
+    function direction(){
+     
+      GetDirection(result.rawData)
+      
+     }
 
-    const string = renderToString(MarkerContent);
-    infoWindow.current.setContent(string);
-  }
+    google.maps.event.addListener(infoWindow.current, 'domready', (e: any) => {
+      const someButton = document.getElementById("direct");
 
-  google.maps.event.addListener(infoWindow.current, "domready", () => {
-    let inputs;
-    inputs = document.getElementsByClassName("getdirection");
-    if (inputs.length == 0) {
-      inputs = document.getElementsByClassName("getdirection1");
-    }
-    for (let i = 0; i < inputs.length; i++) {
-      inputs[i].addEventListener("click", GetDirection);
-    }
-  });
-
-  function GetDirection(e: any) {
-    let origin: any = null;
-
-    if (e.target.dataset.city) {
-      origin = e.target.dataset.city;
-    } else if (e.target.dataset.region) {
-      origin = e.target.dataset.region;
-    } else {
-      origin = e.target.dataset.country;
-    }
-    if (navigator.geolocation) {
-      const error = (error: any) => {
-        const getDirectionUrl =
-          "https://www.google.com/maps/dir/?api=1&destination=" +
-          e.target.dataset.latitude +
-          "," +
-          e.target.dataset.longitude +
-          "&origin=" +
-          origin +
-          ",UK";
-        window.open(getDirectionUrl, "_blank");
-      };
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          const currentLatitude = position.coords.latitude;
-          const currentLongitude = position.coords.longitude;
-          const getDirectionUrl =
-            "https://www.google.com/maps/dir/?api=1&destination=" +
-            e.target.dataset.latitude +
-            "," +
-            e.target.dataset.longitude +
-            "&origin=" +
-            currentLatitude +
-            "," +
-            currentLongitude;
-          window.open(getDirectionUrl, "_blank");
-        },
-        error,
-        {
-          timeout: 10000,
-        }
-      );
-    }
+      someButton?.addEventListener("click", direction);
+     
+    
+      });
+     
+     let string = renderToString(MarkerContent);
+     infoWindow.current.setContent(string);
   }
 
   function deleteMarkers(): void {
