@@ -1,8 +1,8 @@
 {
   "bundlePaths": {
     "404": "assets/server/404.52b3db9d.js",
-    "location": "assets/server/location.6cd54719.js",
-    "locator": "assets/server/locator.51122051.js",
+    "location": "assets/server/location.bd76b265.js",
+    "locator": "assets/server/locator.32fd0ae2.js",
     "robots": "assets/server/robots.a2ec608d.js"
   },
   "projectFilepaths": {
@@ -22,10 +22,6 @@
         "_server.browser-9d07d5d1.js"
       ]
     },
-    "src/images/whitbread-locator.jpg": {
-      "file": "assets/static/whitbread-locator-02307953.jpg",
-      "src": "src/images/whitbread-locator.jpg"
-    },
     "src/images/phone.svg": {
       "file": "assets/static/phone-057118a0.svg",
       "src": "src/images/phone.svg"
@@ -33,6 +29,10 @@
     "src/images/map.svg": {
       "file": "assets/static/map-05379a2e.svg",
       "src": "src/images/map.svg"
+    },
+    "src/images/whitbread-locator.jpg": {
+      "file": "assets/static/whitbread-locator-02307953.jpg",
+      "src": "src/images/whitbread-locator.jpg"
     },
     "src/images/MGMpin.svg": {
       "file": "assets/static/MGMpin-4be339ed.svg",
@@ -42,10 +42,6 @@
       "file": "assets/static/red-map-5e24b2b8.svg",
       "src": "src/images/red-map.svg"
     },
-    "src/images/watch-icn.svg": {
-      "file": "assets/static/watch-icn-12e4a5d9.svg",
-      "src": "src/images/watch-icn.svg"
-    },
     "src/images/MGMhover1.svg": {
       "file": "assets/static/MGMhover1-bbbef0ea.svg",
       "src": "src/images/MGMhover1.svg"
@@ -54,25 +50,25 @@
       "file": "assets/static/map-center-990b96bc.svg",
       "src": "src/images/map-center.svg"
     },
-    "src/images/plus-sym.svg": {
-      "file": "assets/static/plus-sym-e2bf518e.svg",
-      "src": "src/images/plus-sym.svg"
-    },
-    "src/images/shape-t.svg": {
-      "file": "assets/static/shape-t-4e865b2a.svg",
-      "src": "src/images/shape-t.svg"
+    "src/images/minus-sym.svg": {
+      "file": "assets/static/minus-sym-f0f517fd.svg",
+      "src": "src/images/minus-sym.svg"
     },
     "src/images/dots.svg": {
       "file": "assets/static/dots-c532748f.svg",
       "src": "src/images/dots.svg"
     },
-    "src/images/minus-sym.svg": {
-      "file": "assets/static/minus-sym-f0f517fd.svg",
-      "src": "src/images/minus-sym.svg"
+    "src/images/plus-sym.svg": {
+      "file": "assets/static/plus-sym-e2bf518e.svg",
+      "src": "src/images/plus-sym.svg"
     },
     "src/images/shape-b.svg": {
       "file": "assets/static/shape-b-bdecdd2a.svg",
       "src": "src/images/shape-b.svg"
+    },
+    "src/images/shape-t.svg": {
+      "file": "assets/static/shape-t-4e865b2a.svg",
+      "src": "src/images/shape-t.svg"
     },
     "src/images/newsletter-bg.png": {
       "file": "assets/static/newsletter-bg-6b390772.png",
@@ -103,7 +99,7 @@
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.32598e9b.js",
+      "file": "assets/hydrate/location.7ab71157.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -111,27 +107,27 @@
         "src/templates/location.tsx",
         "_header-302b4dd2.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-95e3adff.js",
+        "_answersHeadlessConfig-cc85fb05.js",
         "_global-76417404.js",
         "_PageLayout-f54568eb.js",
         "_preload-helper-094304c8.js"
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.6cd54719.js",
+      "file": "assets/server/location.bd76b265.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
-        "_index-12b03496.js",
+        "_answersHeadlessConfig-cc85fb05.js",
         "_header-302b4dd2.js",
-        "_answersHeadlessConfig-95e3adff.js",
+        "_index-12b03496.js",
         "_index-bdcd3d25.js",
         "_global-76417404.js",
         "_PageLayout-f54568eb.js",
         "_preload-helper-094304c8.js"
       ],
       "dynamicImports": [
-        "_answersHeadlessConfig-95e3adff.js"
+        "_answersHeadlessConfig-cc85fb05.js"
       ],
       "css": [
         "assets/static/location-55d13414.css"
@@ -141,7 +137,7 @@
       ]
     },
     "dist/hydration_templates/locator.tsx": {
-      "file": "assets/hydrate/locator.9aa2b770.js",
+      "file": "assets/hydrate/locator.0e3f8022.js",
       "src": "dist/hydration_templates/locator.tsx",
       "isEntry": true,
       "imports": [
@@ -149,19 +145,19 @@
         "src/templates/locator.tsx",
         "_header-302b4dd2.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-95e3adff.js",
+        "_answersHeadlessConfig-cc85fb05.js",
         "_global-76417404.js",
         "_server.browser-9d07d5d1.js"
       ]
     },
     "src/templates/locator.tsx": {
-      "file": "assets/server/locator.51122051.js",
+      "file": "assets/server/locator.32fd0ae2.js",
       "src": "src/templates/locator.tsx",
       "isEntry": true,
       "imports": [
         "_header-302b4dd2.js",
         "_index-12b03496.js",
-        "_answersHeadlessConfig-95e3adff.js",
+        "_answersHeadlessConfig-cc85fb05.js",
         "_server.browser-9d07d5d1.js",
         "_global-76417404.js"
       ],
@@ -170,7 +166,6 @@
       ],
       "assets": [
         "assets/static/red-map-5e24b2b8.svg",
-        "assets/static/watch-icn-12e4a5d9.svg",
         "assets/static/MGMhover1-bbbef0ea.svg",
         "assets/static/map-center-990b96bc.svg",
         "assets/static/whitbread-locator-02307953.jpg"
@@ -208,7 +203,7 @@
         "_index-12b03496.js"
       ],
       "css": [
-        "assets/static/header-202d2d62.css"
+        "assets/static/header-f9246166.css"
       ],
       "assets": [
         "assets/static/dots-c532748f.svg",
@@ -228,12 +223,12 @@
         "_header-302b4dd2.js"
       ]
     },
-    "_answersHeadlessConfig-95e3adff.js": {
-      "file": "assets/static/answersHeadlessConfig-95e3adff.js",
+    "_answersHeadlessConfig-cc85fb05.js": {
+      "file": "assets/static/answersHeadlessConfig-cc85fb05.js",
       "isDynamicEntry": true,
       "imports": [
-        "_header-302b4dd2.js",
         "_index-12b03496.js",
+        "_header-302b4dd2.js",
         "_global-76417404.js"
       ],
       "assets": [
@@ -241,16 +236,16 @@
         "assets/static/MGMpin-4be339ed.svg"
       ]
     },
-    "src/templates/locator.css": {
-      "file": "assets/static/locator-7e1d7cb8.css",
-      "src": "src/templates/locator.css"
-    },
     "src/templates/location.css": {
       "file": "assets/static/location-55d13414.css",
       "src": "src/templates/location.css"
     },
+    "src/templates/locator.css": {
+      "file": "assets/static/locator-7e1d7cb8.css",
+      "src": "src/templates/locator.css"
+    },
     "header.css": {
-      "file": "assets/static/header-202d2d62.css",
+      "file": "assets/static/header-f9246166.css",
       "src": "header.css"
     }
   }

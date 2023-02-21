@@ -15,7 +15,9 @@
     "c_footerlink3",
     "c_careers",
     "description",
-    "c_socialitems"
+    "c_socialitems",
+    "photoGallery",
+    "c_bannerlink"
   ],
   "localization": {
     "locales": ["en"],

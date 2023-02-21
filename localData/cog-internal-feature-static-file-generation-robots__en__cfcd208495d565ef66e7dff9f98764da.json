@@ -7,6 +7,10 @@
 		"templateType": "JS"
 	},
 	"_site": {
+		"c_bannerlink": {
+			"label": "READ MORE",
+			"linkType": "URL"
+		},
 		"c_careers": {
 			"cta": {
 				"label": "VISIT CAREERS SITE",
@@ -147,6 +151,58 @@
 			"locale": "en"
 		},
 		"name": "GlobalData",
+		"photoGallery": [
+			{
+				"description": "Dominic Paul joins Whitbread as Chief Executive",
+				"image": {
+					"height": 886,
+					"url": "https://a.mktgcdn.com/p-sandbox/I8plBVeVFKjFbyVaA4f4RnJNPgXSZnIubTVICFwo3TQ/1650x886.jpg",
+					"width": 1650
+				}
+			},
+			{
+				"description": "Whitbread named \"Top Employer\" for 13th consecutive year",
+				"image": {
+					"height": 1100,
+					"url": "https://a.mktgcdn.com/p-sandbox/Vf3wX1bxQgz-IOPPMNHkPcJHPkoUAO-2uaq8K6aEgw8/1650x1100.jpg",
+					"width": 1650
+				}
+			},
+			{
+				"description": "Q3 FY23 Trading Update",
+				"details": "We released our Q3 FY23 trading update on 12th January 2023",
+				"image": {
+					"height": 1080,
+					"url": "https://a.mktgcdn.com/p-sandbox/hvNcdjJNF0OP6ujVMsEBDY8Nk7XEbfwqDPWWHPSEmqk/1920x1080.png",
+					"width": 1920
+				}
+			},
+			{
+				"description": "We have been awarded a Gold Award on Stonewall’s Global Workplace Equality Index of Top Global Employers",
+				"image": {
+					"height": 1267,
+					"url": "https://a.mktgcdn.com/p-sandbox/XpbBXiC_030x_k-IBEQfREaLVXwh9VQ8UlPK5jXkZjA/1900x1267.jpg",
+					"width": 1900
+				}
+			},
+			{
+				"description": "Whitbread marks Purple Tuesday by signing up to Hidden Disabilities Sunflower",
+				"image": {
+					"height": 1100,
+					"url": "https://a.mktgcdn.com/p-sandbox/a8HTvobOtxmHAI6B9QZxqwL70Txb-p3I3P_V6ROP1BM/1650x1100.jpg",
+					"width": 1650
+				}
+			},
+			{
+				"description": "We’re committed to being a Force for Good",
+				"details": "Our sustainability programme underpins everything we do at Whitbread, reducing our environmental impact and enabling people to live and work well",
+				"image": {
+					"height": 1100,
+					"url": "https://a.mktgcdn.com/p-sandbox/AjB5U6ojv5dmomWMkvNX3CqTQDQ4xrhHK3-2R--a-OY/1650x1100.jpg",
+					"width": 1650
+				}
+			}
+		],
 		"uid": 32501242
 	},
 	"businessId": 3196049,

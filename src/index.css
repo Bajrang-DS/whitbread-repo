@@ -635,6 +635,9 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
 .icon-row{
   @apply pl-7 relative mb-3 flex flex-col
 }
+.hours-labels.icon-row {
+  @apply pl-0
+}
 .icon-row.location-name-miles{
   @apply mb-2
 }
@@ -1031,6 +1034,10 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
   .storelocation-openCloseTime .day-hrs td.dayName{@apply pl-6}
   .storelocation-openCloseTime table.day-hrs .currentDay .dayName .checked{@apply left-1}
 }
+.active.daylist{ @apply  !block pl-[50px]}
+.OpenCloseStatus .daylist{@apply hidden}
+
+
  /* about */
 
   .full-width #content > .blue-cta-box {

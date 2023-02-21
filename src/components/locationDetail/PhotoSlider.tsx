@@ -12,7 +12,7 @@ const options = {
 
 
   const { photoGallery, c_bannerlink } = props;
-  const photos = photoGallery && photoGallery?.map((element: any) => (
+  const photos =props._site?.photoGallery?.map((element: any) => (
 
     <SplideSlide>
       <div className="slider" id="banner">
@@ -23,7 +23,7 @@ const options = {
           <h2>{element.description}</h2>
           <p>{element.details}</p>
      
-            <a className="btn style-outline-white" href="#">{c_bannerlink.label}</a>
+            <a className="btn style-outline-white" href="#">{props._site.c_bannerlink.label}</a>
      
         </div>
       </div>

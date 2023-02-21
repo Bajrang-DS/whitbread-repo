@@ -467,7 +467,7 @@ const Location: Template<ExternalApiRenderData> = ({
           <PageLayout _site={_site}>
             
 
-          <PhotoSlider photoGallery={photoGallery} c_bannerlink={c_bannerlink}/>
+          <PhotoSlider _site={_site} />
 
            
           
