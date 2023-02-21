@@ -76,14 +76,15 @@ const GetDirection = (props: GetDirection) => {
                       rel="noopener noreferrer"
                       conversionDetails={conversionDetails_direction}
                     >
+                      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> 
                         {buttonText}
                     </Link>
     {/* <a
      onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >
-      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
+      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> 
     
     
-    {/* </a> */}
+     </a> */}
     </>
 
   );

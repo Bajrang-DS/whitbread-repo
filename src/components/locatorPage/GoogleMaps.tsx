@@ -571,7 +571,38 @@ function UnwrappedGoogleMaps({
             {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
             {StaticData.StoreDetailbtn}
           </Link>
-          <Link
+          {result.rawData.displayCoordinate ? (
+              <a
+              style={{color:"blue !important"}}
+                data-listener="false"
+                data-latitude={result.rawData.displayCoordinate.latitude}
+                data-longitude={result.rawData.displayCoordinate.longitude}
+                className="cursor-pointer  getdirection btn"
+                rel="noopener noreferrer"
+                data-city={result.rawData.address.city}
+                data-country={result.rawData.address.countryCode}
+                data-region={result.rawData.address.region}
+              >
+                <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
+                {StaticData.getDirection}
+              </a>
+            ) : (
+              <a
+              style={{color:"blue !important"}}
+                data-listener="false"
+                data-latitude={result.rawData.yextDisplayCoordinate.latitude}
+                data-longitude={result.rawData.yextDisplayCoordinate.longitude}
+                data-city={result.rawData.address.city}
+                data-country={result.rawData.address.countryCode}
+                data-region={result.rawData.address.region}
+                className="cursor-pointer getdirection1 btn"
+                rel="noopener noreferrer"
+              >
+                <div dangerouslySetInnerHTML={{ __html: Directionsvg }}/>
+                {StaticData.getDirection}
+              </a>
+            )}
+          {/* <Link
             data-ya-track="getdirections"
             eventName={`getdirections`}
             className="btn"
@@ -582,27 +613,82 @@ function UnwrappedGoogleMaps({
             //conversionDetails={conversionDetails_direction}
           >
             <> Direction </>
-          </Link>
+          </Link> */}
 
         
         </div>
       </>
     );
-    function direction(){
+    // function direction(){
      
-      GetDirection(result.rawData)
+    //   GetDirection(result.rawData)
       
-     }
+    //  }
 
-    google.maps.event.addListener(infoWindow.current, 'domready', (e: any) => {
-      const someButton = document.getElementById("direct");
-      someButton?.addEventListener("click", direction);
+    // google.maps.event.addListener(infoWindow.current, 'domready', (e: any) => {
+    //   const someButton = document.getElementById("direct");
+    //   someButton?.addEventListener("click", direction);
      
     
-      });
+    //   });
      
-     let string = renderToString(MarkerContent);
-     infoWindow.current.setContent(string);
+      const string = renderToString(MarkerContent);
+      infoWindow.current.setContent(string);
+  }
+  google.maps.event.addListener(infoWindow.current, "domready", () => {
+    let inputs;
+    inputs = document.getElementsByClassName("getdirection");
+    if (inputs.length == 0) {
+      inputs = document.getElementsByClassName("getdirection1");
+    }
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("click", GetDirection);
+    }
+  }); 
+
+  function GetDirection(e: any) {
+    let origin: any = null;
+
+    if (e.target.dataset.city) {
+      origin = e.target.dataset.city;
+    } else if (e.target.dataset.region) {
+      origin = e.target.dataset.region;
+    } else {
+      origin = e.target.dataset.country;
+    }
+    if (navigator.geolocation) {
+      const error = (error: any) => {
+        const getDirectionUrl =
+          "https://www.google.com/maps/dir/?api=1&destination=" +
+          e.target.dataset.latitude +
+          "," +
+          e.target.dataset.longitude +
+          "&origin=" +
+          origin +
+          ",UK";
+        window.open(getDirectionUrl, "_blank");
+      };
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          const currentLatitude = position.coords.latitude;
+          const currentLongitude = position.coords.longitude;
+          const getDirectionUrl =
+            "https://www.google.com/maps/dir/?api=1&destination=" +
+            e.target.dataset.latitude +
+            "," +
+            e.target.dataset.longitude +
+            "&origin=" +
+            currentLatitude +
+            "," +
+            currentLongitude;
+          window.open(getDirectionUrl, "_blank");
+        },
+        error,
+        {
+          timeout: 10000,
+        }
+      );
+    }
   }
 
   function deleteMarkers(): void {

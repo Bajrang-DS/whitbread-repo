@@ -26,23 +26,46 @@ import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
 import Header from "../components/layouts/header";
 import Footer from "../components/layouts/footer";
 import Banner from "../components/locationDetail/banner";
+import PhotoSlider from "../components/locationDetail/PhotoSlider";
 
 // export const config: TemplateConfig = {
 //   stream: {
-//     $id: "Locator",
+//     $id: "locator",
 //     // Specifies the exact data that each generated document will contain. This data is passed in
 //     // directly as props to the default exported function.
 //     fields: [
+//       "id",
+//       "uid",
+//       "meta",
 //       "name",
-     
+//       "address",
+//       "mainPhone",
+//       "hours",
+//       "slug",
+//       "timezone",
+//       "yextDisplayCoordinate",
+//       "displayCoordinate",
+//       "cityCoordinate",
+//       "photoGallery",
+//       "c_servicesitems",
+//       "c_about",
+//       "c_aboutdatas",
+//       "c_servicesimage",
+//       "c_brands",
+//       "c_newsheading",
+//       "c_brandfirst",
+//       "c_brandsecond",
+//       "c_brandthird",
+//       "c_bannerlink",
 //     ],
 //     // Defines the scope of entities that qualify for this stream.
 //     filter: {
-//       entityIds: ["gd-1"]
+//       entityTypes: ['location']
+
 //     },
 //     // The entity language profiles that documents will be generated for.
 //     localization: {
-//       locales: ["en_GB"],
+//       locales: ["en"],
 //       primary: false,
 //     },
 //   },
@@ -159,11 +182,15 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Locator: Template<TemplateRenderProps>= ({
-   document,
-   __meta,
+  path,
+  document,
+  __meta,
+
  }) => {
    const {    
-   _site
+   _site,
+   photoGallery,
+   c_bannerlink,
    } = document;
  
 
@@ -178,7 +205,9 @@ const Locator: Template<TemplateRenderProps>= ({
    
   }
   var Api="a047eef1e2852d278bbac99473b39cce";  
+  
   return (
+
     <>
     
     <JsonLd<locator>
@@ -201,7 +230,10 @@ const Locator: Template<TemplateRenderProps>= ({
         <AnalyticsScopeProvider name={""}>
           
         <Header _site={_site}/>
+        {/* <PageLayout _site={_site}> */}
+       {/* <PhotoSlider photoGallery={photoGallery} c_bannerlink={c_bannerlink}/> */} 
         <Banner/>
+   
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}
@@ -215,8 +247,10 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
+
+        {/* <PhotoSlider photoGallery={photoGallery} c_bannerlink={c_bannerlink}/> */}
         <Footer _site={_site} />
-       
+        {/* </PageLayout> */}
      
       </AnalyticsScopeProvider>
     
