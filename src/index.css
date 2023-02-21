@@ -173,16 +173,18 @@ address, article, aside, details, figcaption, figure, footer, header, hgroup, me
 }}
 
 header #branding {
-    width: 196px;
+    width: 220px;
    
 }
 @media (min-width: 1024px)
 {header #branding a {
-    padding: 39px 0;
+  margin: 0px 0;
 }}
 
 header #branding a {
-    display: block;
+  display: block;
+  height: 100%;
+  width: 110%;
 }
 a:not(.btn) {
     text-decoration: none;
@@ -215,22 +217,23 @@ ul, ol {
 {.sitenav > .menu > li {
     float: left;
     height: 45px;
+    margin: 0px 14px;
 }}
-@media (min-width: 1150px)
-{.sitenav > .menu > li > a {
+/* @media (min-width: 1150px) */
+/* {.sitenav > .menu > li > a {
     padding: 5px 20px;
-}}
+}} */
 
  @media (min-width: 1024px)
 {.sitenav > .menu > li > a {
-    padding: 5px 20px;
-    color: #002d72;
+  margin: 0;
+    color: #05029f;
     -webkit-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
 }}
 @media (min-width: 1024px)
 {.sitenav > .menu a {
-    color: #002d72;
+    color: #05029f;
 }}
 body {
   font-family: "Metropolis-Regular", sans-serif;
