@@ -493,9 +493,9 @@ function UnwrappedGoogleMaps({
     const string1: any = name.toString();
     const result1: any = string1.replaceAll(" ", "-");
     if (!result.rawData.slug) {
-      url = `${result.rawData.id}-${result1}.html`;
+      url = `${result.rawData.id}-${result1}`;
     } else {
-      url = `${result.rawData.slug.toString()}.html`;
+      url = `${result.rawData.slug.toString()}`;
     }
 
     const MarkerContent = (
@@ -506,7 +506,7 @@ function UnwrappedGoogleMaps({
             {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
         alt="" /></div> */}
             <h2>
-              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${result.rawData.id}`}>
+              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${url}`}>
                 {result.rawData.name}
               </a>
             </h2>
@@ -567,7 +567,7 @@ function UnwrappedGoogleMaps({
           )}
         </div>
         <div  className="button-bx !ml-4 !mb-0">
-          <Link style={{background:"green"}} type="button" href={`/${result.rawData.id}`} className="btn">
+          <Link style={{background:"green"}} type="button" href={`/${url}`} className="btn">
             {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
             {StaticData.StoreDetailbtn}
           </Link>

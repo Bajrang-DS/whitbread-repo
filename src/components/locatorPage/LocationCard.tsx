@@ -44,9 +44,9 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
     var string: any = name.toString();
     let result1: any = string.replaceAll(" ", "-");
    if (!result.rawData.slug) {
-     url= `${result.rawData.id}-${result1}.html`;
+     url= `${result.rawData.id}-${result1}`;
    } else {
-     url= `${result.rawData.slug.toString()}.html`;
+     url= `${result.rawData.slug.toString()}`;
    }
 
   return (
@@ -61,7 +61,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                 data-ya-track={`viewDetail -${result.rawData.name}`}
                 eventName={`viewDetail -${result.rawData.name}`}
                 rel="noopener noreferrer"
-                href={`/${result.rawData.id}`}>{result.rawData.name}
+                href={`/${url}`}>{result.rawData.name}
               </Link></h2>
               {typeof result.distance != "undefined" ?
                 <div style={{ color: "green" }} className="distance">
@@ -104,7 +104,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
 
             <div className="button-bx">
-              <Link style={{ background: "#002d72" }} type="button" href={`/${result.rawData.id}`+".html"} className=" btn notHighlight "
+              <Link style={{ background: "#002d72" }} type="button" href={`/${url}`} className=" btn notHighlight "
                 data-ya-track={`viewStore -${result.rawData.name}`}
                 eventName={`viewStore -${result.rawData.name}`}
                 rel="noopener noreferrer"
