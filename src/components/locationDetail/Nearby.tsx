@@ -57,9 +57,9 @@ export default function Nearby(props: any) {
           var string: any = name.toString();
           let result1: any = string.replaceAll(" ", "-");
           if (!location.data.slug) {
-            url = `/${location.data.id}-${result1}`;
+            url = `${location.data.id}-${result1}`;
           } else {
-            url = `/${location.data.slug.toString()}`;
+            url = `${location.data.slug.toString()}`;
           }
       
           if (index > 0) {

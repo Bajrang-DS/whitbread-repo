@@ -31,8 +31,9 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
       setTimeStatus("");
     }
   }
-  let url = "";
+ 
   const { address, hours, additionalHoursText, mainPhone, timezone } = result.rawData;
+  // let url = "";
   //     var name: any = result.rawData.name?.toLowerCase();
   //   var region: any = result.rawData.address.region?.toLowerCase();
   //   var initialregion: any = region.toString();
@@ -43,10 +44,23 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
   //   var string: any = name.toString();
   //   let result1: any = string.replaceAll(" ", "-");
   //  if (!result.rawData.slug) {
-  //    url= `/${result.rawData.id}-${result1}.html`;
+  //    url= `/${result.id}-${result1}`;
   //  } else {
-  //    url= `/${result.rawData.slug.toString()}.html`;
+  //    url= `/${result.rawData.slug.toString()}`;
   //  }
+  var url = "";
+  var name: any = result?.rawData?.name?.toLowerCase();
+  var string: any = name?.toString();
+  let removeSpecialCharacters = string.replace(
+    /[&\/\\#^+()$~%.'":*?<>{}!@]/g,
+    "");
+  let results: any = removeSpecialCharacters.replaceAll(" ", "-");
+  if (!result.rawData.slug) {
+    url = `${result.id}-${results}`;
+  } else {
+    url = `${result.rawData.slug?.toString()}`;
+  }
+
 
   return (
     <div className={`location result-list-inner-${result.id} result`} id={`result-${result.id}`} key={`result-${result.rawData.id}`}>
@@ -103,7 +117,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
 
             <div className="button-bx">
-              <Link style={{ background: "#002d72" }} type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
+              <Link style={{ background: "#002d72" }} type="button" href={`/${url}`} className=" btn notHighlight "
                 data-ya-track={`viewStore -${result.rawData.name}`}
                 eventName={`viewStore -${result.rawData.name}`}
                 rel="noopener noreferrer"
