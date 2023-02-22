@@ -9,6 +9,22 @@
       }
     },
     {
+      "name": "city",
+      "streamId": "city",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "country",
+      "streamId": "country",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
       "name": "location",
       "streamId": "locations",
       "templateType": "JS",
@@ -29,6 +45,22 @@
       "staticPage": {
         "plugin": {}
       }
+    },
+    {
+      "name": "root",
+      "streamId": "root",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "state",
+      "streamId": "states",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
     }
   ],
   "streams": [
@@ -42,6 +74,67 @@
           "global-data"
         ]
       },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "city",
+      "filter": {
+        "entityTypes": [
+          "ce_city"
+        ]
+      },
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "slug",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.meta.entityType",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildren.id",
+        "dm_directoryParents.dm_directoryChildrenCount",
+        "dm_directoryChildren.dm_directoryChildrenCount",
+        "dm_directoryChildren.address",
+        "dm_directoryChildren.hours",
+        "dm_directoryChildren.mainPhone",
+        "dm_directoryChildren.yextDisplayCoordinate"
+      ],
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "country",
+      "filter": {
+        "entityTypes": [
+          "ce_country"
+        ]
+      },
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "description",
+        "slug",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_directoryChildrenCount",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.meta.entityType"
+      ],
       "localization": {
         "locales": [
           "en"
@@ -74,13 +167,78 @@
         "c_brandfirst",
         "c_brandsecond",
         "c_brandthird",
-        "c_bannerlink"
+        "c_bannerlink",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.dm_directoryChildrenCount",
+        "dm_directoryParents.meta.entityType"
       ],
       "filter": {
         "entityTypes": [
           "location"
         ]
       },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "root",
+      "filter": {
+        "entityTypes": [
+          "ce_root"
+        ]
+      },
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "slug",
+        "description",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.meta.entityType",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildrenCount"
+      ],
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "states",
+      "filter": {
+        "entityTypes": [
+          "ce_region"
+        ]
+      },
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "description",
+        "slug",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.meta.entityType",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildren.id",
+        "dm_directoryParents.dm_directoryChildrenCount",
+        "dm_directoryChildren.dm_directoryChildrenCount",
+        "dm_directoryChildren.dm_directoryChildren.name",
+        "dm_directoryChildren.dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_directoryChildren.id"
+      ],
       "localization": {
         "locales": [
           "en"

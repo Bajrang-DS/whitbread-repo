@@ -1,4 +1,13 @@
 {
+	"city": [
+		"city__en__1592f05b9e486fda3026243faf7ec6bb.json",
+		"city__en__131cd016fd00243fd3ceded6feb68a27.json",
+		"city__en__3d616a9a98d33eac586ef181fbeaea65.json",
+		"city__en__3fe804d3dea1a6f8f6ebe729c7fec5eb.json"
+	],
+	"country": [
+		"country__en__cac60b2c37106b020e8d10a9b4d9725b.json"
+	],
 	"location": [
 		"locations__en__a98b434731722bd106372ed181366b94.json",
 		"locations__en__c7aacf489199bad5d55a78ae276c088f.json",
@@ -11,5 +20,14 @@
 	],
 	"robots": [
 		"cog-internal-feature-static-file-generation-robots__en__cfcd208495d565ef66e7dff9f98764da.json"
+	],
+	"root": [
+		"root__en__6d8c3021b35f04be7f652d0c055a978a.json"
+	],
+	"state": [
+		"states__en__64803c64280877ea47d8b42f61619f64.json",
+		"states__en__9ec2e64b55235aaf0b118710f84c7bd9.json",
+		"states__en__17e5c001609b8a4bbb43b00afe690a5c.json",
+		"states__en__4e4a830b653d32a2a507557af3b30b3b.json"
 	]
 }

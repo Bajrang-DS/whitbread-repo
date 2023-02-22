@@ -72,7 +72,7 @@ import PhotoSlider from "../components/locationDetail/PhotoSlider";
 // };
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return `/index.html`;
+  return `/locator.html`;
 };
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   relativePrefixToRoot,

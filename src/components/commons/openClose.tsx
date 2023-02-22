@@ -202,7 +202,7 @@ export const OpenStausFunctions = {
            
             <div className="hours-info ">
               {" "}
-              <span className="font-second-main-font "> Open now - </span>
+              <span className="font-second-main-font text-[#337aff] "> Open now - </span>
               <span className="lowercase">
                 {OpenStausFunctions.formatTime(currentInterval.start).replace(
                   ":00",
@@ -229,7 +229,7 @@ export const OpenStausFunctions = {
             <div className="red-dot">
             
               <div className="hours-info ">
-                <span className="font-second-main-font "> Closed - </span>
+                <span className="font-second-main-font text-[#FF3342] "> Closed - </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -248,7 +248,7 @@ export const OpenStausFunctions = {
             <div className="red-dot">
              
               <div className="hours-info ">
-                <span className="font-second-main-font">Closed - </span>
+                <span className="font-second-main-font text-[#FF3342]">Closed - </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -266,7 +266,7 @@ export const OpenStausFunctions = {
         <div className="closeddot 2">
           <div className="red-dot">
            
-            <div className="hours-info ">Closed</div>{" "}
+            <div className="hours-info text-[#FF3342] ">Closed</div>{" "}
           </div>
         </div>
       );
@@ -435,7 +435,7 @@ export default function OpenClose(props: any) {
                 fill="#ad1e1f"
               />
             </svg>
-            <div className="hours-info font-second-main-font ">Closed</div>{" "}
+            <div className="hours-info font-second-main-font text-[#FF3342] ">Closed</div>{" "}
           </div>
         </div>
       )}
