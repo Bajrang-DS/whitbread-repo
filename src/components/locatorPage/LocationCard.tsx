@@ -44,9 +44,9 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
     var string: any = name.toString();
     let result1: any = string.replaceAll(" ", "-");
    if (!result.rawData.slug) {
-     url= `${result.rawData.id}-${result1}`;
+     url= `${result.rawData.id}-${result1}.html`;
    } else {
-     url= `${result.rawData.slug.toString()}`;
+     url= `${result.rawData.slug.toString()}.html`;
    }
 
   return (
@@ -104,7 +104,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
 
             <div className="button-bx">
-              <Link style={{ background: "#002d72" }} type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
+              <Link style={{ background: "#002d72" }} type="button" href={`/${result.rawData.id}`+".html"} className=" btn notHighlight "
                 data-ya-track={`viewStore -${result.rawData.name}`}
                 eventName={`viewStore -${result.rawData.name}`}
                 rel="noopener noreferrer"
