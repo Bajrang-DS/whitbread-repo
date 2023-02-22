@@ -2,7 +2,7 @@ import * as React from "react";
 import Header from "../../src/components/layouts/header";
 import Footer from "../components/layouts/footer";
 // import Banner from "../components/banner";
-import BreadCrumbs from "../components/layouts/BreadCrumb";
+import BreadCrumbs from "../components/layouts/Breadcrumb";
 import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
 
 import "../index.css";

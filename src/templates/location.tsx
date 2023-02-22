@@ -8,8 +8,8 @@ import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
 import { JsonLd } from "react-schemaorg";
 import Opening from "../components/commons/openClose";
 import { nearByLocation } from "../types/nearByLocation";
-import Logo from "../images/logo-header.svg"
-import offerBanner from "../images/offer-banner.jpg"
+// import Logo from "../images/logo-header.svg"
+// import offerBanner from "../images/offer-banner.jpg"
 import IframeMap from "../components/locationDetail/IframeMap";
 import "../index.css";
 import {
@@ -451,7 +451,7 @@ const Location: Template<ExternalApiRenderData> = ({
           url: `${c_canonical ? c_canonical : stagingBaseurl}${slug ? slug : `${name}`}.html`
         }}
       />
-      <JsonLd<BreadcrumbList>
+      {/* <JsonLd<BreadcrumbList>
         item={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -459,7 +459,7 @@ const Location: Template<ExternalApiRenderData> = ({
           itemListElement: breadcrumbScheme,
         }}
       />
-      
+       */}
 
 
       <AnalyticsProvider

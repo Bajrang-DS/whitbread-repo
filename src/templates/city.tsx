@@ -3,7 +3,7 @@ import Footer from "../components/layouts/footer";
 import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
 import getDirectionUrl from "../components/commons/GetDirection";
 import Header from "../../src/components/layouts/header";
-import BreadCrumbs from "../components/layouts/BreadCrumb";
+import BreadCrumbs from "../components/layouts/Breadcrumb";
 // import { AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie } from "../types/constants";
 import {
   AnalyticsProvider,
@@ -110,8 +110,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   __meta,
 }): HeadConfig => {
 
-  let metaDescription =  "Find your nearest Vodafone store and which services are available." + document.name;
-  let metaTitle = `Vodafone Store in ${document.name} | Find a Local Store`;
+  let metaDescription =  "Find your nearest Whitbread store and which services are available." + document.name;
+  let metaTitle = `Whitbread Store in ${document.name} | Find a Local Store`;
   let canonicalURL = document._site  ? document._site + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"  : stagingBaseurl + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"
   let ogmetaImage = document._site.url ? document._site.url : "https://cdn.vodafone.co.uk/en/assets/images/large/IMG_10480.jpg"
 
@@ -147,7 +147,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: " Vodafone",
+          content: " Whitbread",
         },
       },
       
@@ -225,7 +225,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:image",
-          content: `https://www.vodafone.co.uk/cs/groups/configfiles/documents/document/favicon.ico`
+          content: `https://companieslogo.com/img/orig/WTB.L-13ed7054.png?t=1652332938`
         },
       },
       {
@@ -557,12 +557,12 @@ const City: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Vodafone UK",
-          "url": "https://www.vodafone.co.uk/",
+          "name": "Whitbread UK",
+          "url": "https://www.whitbread.co.uk/",
           "logo": favicon,
           "sameAs": [
-            "https://www.twitter.com/VodafoneUK",
-            "https://www.facebook.com/vodafoneUK"
+            "https://www.twitter.com/WhitbreadUK",
+            "https://www.facebook.com/WhitbreadUK"
           ],
         }}
       />

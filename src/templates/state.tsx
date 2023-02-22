@@ -4,8 +4,9 @@ import Footer from "../components/layouts/footer";
 // import Banner from "../components/banner";
 // import Header from "../../src/components/layouts/footer";
 // import Footer from "../../src/components/layouts/header";
-// import favicon from "../images/vodafone-favicon.ico";
-import BreadCrumbs from "../components/layouts/BreadCrumb";
+// import favicon from "../images/Whitbread-favicon.ico";
+
+import BreadCrumbs from "../components/layouts/Breadcrumb";
 import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
 
 // import { AnalyticsEnableTrackingCookie,  AnalyticsEnableDebugging} from "../types/constants";
@@ -18,7 +19,7 @@ import {
 import "../index.css";
 // import "../main.css";
 //import favicon from "../images/favicon-live.png";
-// import favicon from "../images/vodafone-favIcon.ico";
+// import favicon from "../images/Whitbread-favIcon.ico";
 
 import {
   Template,
@@ -102,11 +103,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
 
-  let metaDescription ="Find your nearest Vodafone store and which services are available." + document.name;
-  let metaTitle = `Vodafone Store in ${document.name} | Find a Local Store`;
+  let metaDescription ="Find your nearest Whitbread store and which services are available." + document.name;
+  let metaTitle = `Whitbread Store in ${document.name} | Find a Local Store`;
   let canonicalURL = document._site ? document._site + document.dm_directoryParents[1].name.toLowerCase() +"/"+  document.slug + ".html"
   : stagingBaseurl +  document.slug + ".html"
-  let ogmetaImage = document._site.url ? document._site.url : "https://cdn.vodafone.co.uk/en/assets/images/large/IMG_10480.jpg"
+  let ogmetaImage = document._site.url ? document._site.url : "https://cdn.Whitbread.co.uk/en/assets/images/large/IMG_10480.jpg"
 
   return {
     title: metaTitle,
@@ -140,7 +141,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: " Vodafone",
+          content: " Whitbread",
         },
       },
       
@@ -219,7 +220,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:image",
-          content: `https://www.vodafone.co.uk/cs/groups/configfiles/documents/document/favicon.ico`
+          content: `https://companieslogo.com/img/orig/WTB.L-13ed7054.png?t=1652332938`
         },
       },
       {
@@ -358,12 +359,12 @@ const State: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Vodafone UK",
-          "url": "https://www.vodafone.co.uk/",
+          "name": "Whitbread UK",
+          "url": "https://www.Whitbread.co.uk/",
           "logo": favicon,
           "sameAs": [
-            "https://www.twitter.com/VodafoneUK",
-            "https://www.facebook.com/vodafoneUK"
+            "https://www.twitter.com/WhitbreadUK",
+            "https://www.facebook.com/WhitbreadUK"
           ],
         }}
       />
@@ -416,8 +417,8 @@ const State: Template<TemplateRenderProps> = ({
       </div>
       <Footer _site={_site}/>
      {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}
-     helpSupport={_site.c_helpSupport} helpSupportcta={_site.c_helpSupportcta} vodafoneUK={_site.c_vodafoneUK} vodafoneUKCta={_site.c_vodafoneUKCta} c_cPIChanges={_site.c_cPIChanges}
-     c_cPIChangesDescription1={_site.c_cPIChangesDescription1} vodafoneDetails={_site.c_vodafoneDetails}
+     helpSupport={_site.c_helpSupport} helpSupportcta={_site.c_helpSupportcta} WhitbreadUK={_site.c_WhitbreadUK} WhitbreadUKCta={_site.c_WhitbreadUKCta} c_cPIChanges={_site.c_cPIChanges}
+     c_cPIChangesDescription1={_site.c_cPIChangesDescription1} WhitbreadDetails={_site.c_WhitbreadDetails}
      ></Footer> */}
      </AnalyticsScopeProvider>
       </AnalyticsProvider>
