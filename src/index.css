@@ -1036,7 +1036,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 }
 .active.daylist{ @apply  !block pl-[50px]}
 .OpenCloseStatus .daylist{@apply hidden}
-
+.location .location-info .open-close .OpenCloseStatus{@apply pr-5 pl-0   w-[300px]   relative   xl:pr-4 2xl:pr-5 border-none text-sm xl:text-xs 2xl:text-sm } 
 
  /* about */
 

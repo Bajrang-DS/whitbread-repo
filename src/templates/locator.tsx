@@ -231,8 +231,8 @@ const Locator: Template<TemplateRenderProps>= ({
           
         <Header _site={_site}/>
         {/* <PageLayout _site={_site}> */}
-       {/* <PhotoSlider photoGallery={photoGallery} c_bannerlink={c_bannerlink}/> */} 
-        <Banner/>
+        <PhotoSlider _site={_site} />
+        {/* <Banner/> */}
    
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}

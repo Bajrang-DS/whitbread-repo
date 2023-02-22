@@ -73,16 +73,20 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             <div className="icon-row content-col address-with-availablity notHighlight">
               <Address address={address} />
               <div className="open-close ">
+
                 <div className="hours-sec onhighLight">
+
                   <div className="OpenCloseStatus ">
+
                     <div className="hours-labels icon-row">
-                      <div className="flex" onClick={onOpenHide}>
+
+                      <div className="flex" >
                         <OpenClose
                           timezone={timezone}
                           hours={hours}
                           deliveryHours={hours}
                         ></OpenClose>
-                        <button><svg className="mt-2" xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 9.585 4.793">
+                        <button onClick={onOpenHide}><svg className="mt-2 ml-4" xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 9.585 4.793">
                           <path id="hrd-drop" d="M9,13.5l4.793,4.793L18.585,13.5Z" transform="translate(-9 -13.5)" fill="#00363f"></path>
                         </svg></button>
                       </div>
