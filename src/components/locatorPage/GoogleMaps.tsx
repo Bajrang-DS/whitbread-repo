@@ -506,7 +506,7 @@ function UnwrappedGoogleMaps({
             {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
         alt="" /></div> */}
             <h2>
-              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${url}`}>
+              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${result.rawData.slug}`}>
                 {result.rawData.name}
               </a>
             </h2>
