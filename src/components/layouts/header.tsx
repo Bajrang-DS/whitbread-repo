@@ -30,6 +30,10 @@ const Header = (HeaderItem: any) => {
 
               </li>
             ))}
+            <li  id="menu-item-55"
+                className="menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+              <a href="/locator.html">Find Store</a>
+            </li>
           </ul>
 
         </div>
