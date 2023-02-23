@@ -26,10 +26,6 @@
         "_server.browser-43c2596a.js"
       ]
     },
-    "src/images/MGMpin.svg": {
-      "file": "assets/static/MGMpin-a97be63c.svg",
-      "src": "src/images/MGMpin.svg"
-    },
     "src/images/map.svg": {
       "file": "assets/static/map-05379a2e.svg",
       "src": "src/images/map.svg"
@@ -37,6 +33,10 @@
     "src/images/phone.svg": {
       "file": "assets/static/phone-057118a0.svg",
       "src": "src/images/phone.svg"
+    },
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-a97be63c.svg",
+      "src": "src/images/MGMpin.svg"
     },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-5e24b2b8.svg",
@@ -62,13 +62,13 @@
       "file": "assets/static/plus-sym-e2bf518e.svg",
       "src": "src/images/plus-sym.svg"
     },
-    "src/images/shape-b.svg": {
-      "file": "assets/static/shape-b-bdecdd2a.svg",
-      "src": "src/images/shape-b.svg"
-    },
     "src/images/shape-t.svg": {
       "file": "assets/static/shape-t-4e865b2a.svg",
       "src": "src/images/shape-t.svg"
+    },
+    "src/images/shape-b.svg": {
+      "file": "assets/static/shape-b-bdecdd2a.svg",
+      "src": "src/images/shape-b.svg"
     },
     "src/images/newsletter-bg.png": {
       "file": "assets/static/newsletter-bg-6b390772.png",
@@ -390,13 +390,13 @@
         "assets/static/MGMpin-a97be63c.svg"
       ]
     },
-    "PhotoSlider.css": {
-      "file": "assets/static/PhotoSlider-55d13414.css",
-      "src": "PhotoSlider.css"
-    },
     "src/templates/locator.css": {
       "file": "assets/static/locator-7e1d7cb8.css",
       "src": "src/templates/locator.css"
+    },
+    "PhotoSlider.css": {
+      "file": "assets/static/PhotoSlider-55d13414.css",
+      "src": "PhotoSlider.css"
     },
     "header.css": {
       "file": "assets/static/header-867bd5c1.css",
