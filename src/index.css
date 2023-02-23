@@ -538,6 +538,10 @@ body.mapView .mobile-btns .btn.mapBtn{  @apply text-Dark-red border-t-0 border-l
 .location.fixed-hover .result-inner .svg-map-icn svg{@apply fill-red }
 .result-inner:hover {
   background-color: bisque;
+  border:ridge;
+}
+.result-inner{
+  border:double;
 }
    
 .location .button-bx{  @apply max-w-lg justify-start xl:mx-auto pl-2 flex-row lg:pl-7}
@@ -1045,6 +1049,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 }
 .active.daylist{ @apply  !block pl-[50px]}
 .OpenCloseStatus .daylist{@apply hidden}
+.location .location-info .open-close{ @apply flex items-start   flex-row justify-between pl-0  sm:pl-0 md:pl-0 xl:pl-0 2xl:pl-0  leading-7}
 .location .location-info .open-close .OpenCloseStatus{@apply pr-5 pl-0   w-[300px]   relative   xl:pr-4 2xl:pr-5 border-none text-sm xl:text-xs 2xl:text-sm } 
 
  /* about */

@@ -9,15 +9,28 @@ import Phonesvg from "../../images/phone.svg"
 import { Addresssvg, mobilesvg, View_Store } from "../../../sites-global/global";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Link } from "@yext/pages/components";
+import { StaticData } from "../../../sites-global/staticData";
 
+
+type props = {
+  prop: any;
+  parents: any;
+  baseUrl: any;
+  coords: any;
+  slug: any;
+  c_heading: any;
+  services:any;
+
+};
+const metersToMiles = (meters: number) => {
+
+  const miles = meters * 0.000621371;
+  return miles.toFixed(2);
+}
 export default function Nearby(props: any) {
-  
-  const [neabyData, setnearbyData] = React.useState(props.externalApiData.response.results);
-  const metersToMiles = (meters: number) => {
 
-    const miles = meters * 0.000621371;
-    return miles.toFixed(2);
-  }
+  const [neabyData, setnearbyData] = React.useState(props?.externalApiData?.response?.results);
+ 
 
   return (
 
@@ -44,7 +57,7 @@ export default function Nearby(props: any) {
           },
         }}
       >
-        {neabyData.map((location: any, index: Number) => {
+        {neabyData?.map((location: any, index: Number) => {
 
           let url = "";
           var name: any = location.data.name?.toLowerCase();
@@ -63,9 +76,9 @@ export default function Nearby(props: any) {
             let countrycode = `${location.data?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
             let statecode = `${location.data?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
             let citycode = `${location.data?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
-             url = `${countrycode+"/"+statecode+"/"+citycode+"/"+location.data.slug?.toString()}`;
+            url = `${countrycode + "/" + statecode + "/" + citycode + "/" + location.data.slug?.toString()}`;
           }
-      
+
           if (index > 0) {
             return (
               <>
@@ -76,35 +89,39 @@ export default function Nearby(props: any) {
                         data-ya-track={`${location.data.name}`}
                         eventName={`${location.data.name}`}
                         rel="noopener noreferrer">{location.data.name}</Link></h2>
-
+                      {typeof location.distance != "undefined" ?
+                        <div style={{ color: "green" }} className="distance">
+                          {metersToMiles(location.distance)} <span>{StaticData.miles}</span>
+                        </div>
+                        : ''}
                     </div>
                     <div className="icon-row content-col">
                       <Address address={location.data.address} />
                     </div>
                     <div className="icon-row closeing-div">
-                    {location.data.hours?
-                    <div className="flex open-now-string items-center " data-id={`main-shop-${location.data.id}`} >
-                      <OpenClose timezone={location.data.timezone} hours={location.data.hours} deliveryHours={location.data.hours}></OpenClose>
-                    </div>:
-                    <div className="closeddot notHighlight red-dot">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-           <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" fill="#ad1e1f"/>
-         </svg>
-                   <div className="hours-info text-lg font-second-main-font closeddot"> 
-                   Closed
-                   </div>
-                   </div>
-                    }
-                    </div> 
+                      {location.data.hours ?
+                        <div className="flex open-now-string items-center " data-id={`main-shop-${location.data.id}`} >
+                          <OpenClose timezone={location.data.timezone} hours={location.data.hours} deliveryHours={location.data.hours}></OpenClose>
+                        </div> :
+                        <div className="closeddot notHighlight red-dot">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                            <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" fill="#ad1e1f" />
+                          </svg>
+                          <div className="hours-info text-lg font-second-main-font closeddot">
+                            Closed
+                          </div>
+                        </div>
+                      }
+                    </div>
                     <div className="button-bx">
                       <Link className="btn" href={`/${url}`}
-                       data-ya-track={`viewstore-${location.data.name}`}
-                       eventName={`viewstore-${location.data.name}`}
-                       rel="noopener noreferrer">
+                        data-ya-track={`viewstore-${location.data.name}`}
+                        eventName={`viewstore-${location.data.name}`}
+                        rel="noopener noreferrer">
                         {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
                         STORE DETAILS</Link>
-                      <GetDirection buttonText={props.c_getDirectionsCTAText?props.c_getDirectionsCTAText:"Get directions"} address={location.data.address} latitude={location.data.displayCoordinate ? location.data.displayCoordinate.latitude : location.data.yextDisplayCoordinate.latitude} longitude={location.data.displayCoordinate ? location.data.displayCoordinate.longitude : location.data.yextDisplayCoordinate.longitude} />
-                      
+                      <GetDirection buttonText={props.c_getDirectionsCTAText ? props.c_getDirectionsCTAText : "Get directions"} address={location.data.address} latitude={location.data.displayCoordinate ? location.data.displayCoordinate.latitude : location.data.yextDisplayCoordinate.latitude} longitude={location.data.displayCoordinate ? location.data.displayCoordinate.longitude : location.data.yextDisplayCoordinate.longitude} />
+
                     </div>
                   </div>
                 </SplideSlide>

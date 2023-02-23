@@ -23,7 +23,7 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-// import { stagingBaseurl } from "../config/globalConfig";
+
 import { JsonLd } from "react-schemaorg";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
 // import Herobanner from "../components/commons/Herobanner";
