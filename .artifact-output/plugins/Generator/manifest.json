@@ -26,6 +26,10 @@
         "_server.browser-43c2596a.js"
       ]
     },
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-a97be63c.svg",
+      "src": "src/images/MGMpin.svg"
+    },
     "src/images/map.svg": {
       "file": "assets/static/map-05379a2e.svg",
       "src": "src/images/map.svg"
@@ -33,10 +37,6 @@
     "src/images/phone.svg": {
       "file": "assets/static/phone-057118a0.svg",
       "src": "src/images/phone.svg"
-    },
-    "src/images/MGMpin.svg": {
-      "file": "assets/static/MGMpin-a97be63c.svg",
-      "src": "src/images/MGMpin.svg"
     },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-5e24b2b8.svg",
@@ -50,21 +50,21 @@
       "file": "assets/static/map-center-990b96bc.svg",
       "src": "src/images/map-center.svg"
     },
-    "src/images/minus-sym.svg": {
-      "file": "assets/static/minus-sym-f0f517fd.svg",
-      "src": "src/images/minus-sym.svg"
-    },
     "src/images/dots.svg": {
       "file": "assets/static/dots-c532748f.svg",
       "src": "src/images/dots.svg"
     },
-    "src/images/plus-sym.svg": {
-      "file": "assets/static/plus-sym-e2bf518e.svg",
-      "src": "src/images/plus-sym.svg"
-    },
     "src/images/shape-t.svg": {
       "file": "assets/static/shape-t-4e865b2a.svg",
       "src": "src/images/shape-t.svg"
+    },
+    "src/images/minus-sym.svg": {
+      "file": "assets/static/minus-sym-f0f517fd.svg",
+      "src": "src/images/minus-sym.svg"
+    },
+    "src/images/plus-sym.svg": {
+      "file": "assets/static/plus-sym-e2bf518e.svg",
+      "src": "src/images/plus-sym.svg"
     },
     "src/images/shape-b.svg": {
       "file": "assets/static/shape-b-bdecdd2a.svg",
@@ -390,13 +390,13 @@
         "assets/static/MGMpin-a97be63c.svg"
       ]
     },
-    "src/templates/locator.css": {
-      "file": "assets/static/locator-7e1d7cb8.css",
-      "src": "src/templates/locator.css"
-    },
     "PhotoSlider.css": {
       "file": "assets/static/PhotoSlider-55d13414.css",
       "src": "PhotoSlider.css"
+    },
+    "src/templates/locator.css": {
+      "file": "assets/static/locator-7e1d7cb8.css",
+      "src": "src/templates/locator.css"
     },
     "header.css": {
       "file": "assets/static/header-867bd5c1.css",
