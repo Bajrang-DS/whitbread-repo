@@ -113,19 +113,19 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   var name: any = document.name.toLowerCase();
   var string: any = name.toString();;
   let result: any = string.replaceAll(" ", "-");
-  document.dm_directoryParents?.map((result: any, i: Number) => {
+  document.dm_directoryParents?.map((result: any, i: number) => {
     if (i > 0) {
       url += result.slug + "/"
     }
   })
   if (!document.slug) {
-    url += `${result}`;
+    url += `${result.slug}`;
   } else {
     url += `${document.slug.toString()}`;
   }
-return url;
-  // return document.id;
+ return url;
 };
+  // return document.id;
 /**
  * Defines a list of paths which will redirect to the path created by getPath.
  *
@@ -133,9 +133,8 @@ return url;
  * a new deploy.
  */
 export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-  return [`index-old/${document.id}`];
+  return [`index-old/${document.id.toString()}`];
 };
-
 /**
  * This allows the user to define a function which will take in their template
  * data and procude a HeadConfig object. When the site is generated, the HeadConfig

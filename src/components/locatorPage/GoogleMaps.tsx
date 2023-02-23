@@ -495,7 +495,11 @@ function UnwrappedGoogleMaps({
     if (!result.rawData.slug) {
       url = `${result.rawData.id}-${result1}`;
     } else {
-      url = `${result.rawData.slug.toString()}`;
+      // url = `${result.rawData.slug.toString()}`;
+      let countrycode = `${result.rawData?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+      let statecode = `${result.rawData?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+      let citycode = `${result.rawData?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+       url = `${countrycode+"/"+statecode+"/"+citycode+"/"+result.rawData.slug?.toString()}`;
     }
 
     const MarkerContent = (
@@ -506,7 +510,7 @@ function UnwrappedGoogleMaps({
             {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
         alt="" /></div> */}
             <h2>
-              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${result.rawData.slug}`}>
+              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${url}`}>
                 {result.rawData.name}
               </a>
             </h2>

@@ -59,7 +59,11 @@ export default function Nearby(props: any) {
           if (!location.data.slug) {
             url = `${location.data.id}-${result1}`;
           } else {
-            url = `${location.data.slug.toString()}`;
+            // url = `${location.data.slug.toString()}`;
+            let countrycode = `${location.data?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+            let statecode = `${location.data?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+            let citycode = `${location.data?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+             url = `${countrycode+"/"+statecode+"/"+citycode+"/"+location.data.slug?.toString()}`;
           }
       
           if (index > 0) {

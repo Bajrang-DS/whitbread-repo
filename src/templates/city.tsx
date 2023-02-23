@@ -110,9 +110,9 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   __meta,
 }): HeadConfig => {
 
-  let metaDescription =  "Find your nearest Whitbread store and which services are available." + document.name;
+  let metaDescription = "Find your nearest Whitbread store and which services are available." + document.name;
   let metaTitle = `Whitbread Store in ${document.name} | Find a Local Store`;
-  let canonicalURL = document._site  ? document._site + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"  : stagingBaseurl + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"
+  let canonicalURL = document._site ? document._site + document.dm_directoryParents[1].name.toLowerCase() + "/" + document.dm_directoryParents[2].slug + "/" + document.slug + ".html" : stagingBaseurl + document.dm_directoryParents[1].name.toLowerCase() + "/" + document.dm_directoryParents[2].slug + "/" + document.slug + ".html"
   let ogmetaImage = document._site.url ? document._site.url : "https://cdn.vodafone.co.uk/en/assets/images/large/IMG_10480.jpg"
 
   return {
@@ -135,7 +135,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${metaDescription}`,
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -150,7 +150,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: " Whitbread",
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -158,7 +158,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: "noindex, nofollow",
         },
       },
-      
+
       {
         type: "link",
         attributes: {
@@ -167,7 +167,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         },
       },
       ///og tags
-      
+
       {
         type: "meta",
         attributes: {
@@ -175,7 +175,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${canonicalURL}`,
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -197,7 +197,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${ogmetaImage}`
         },
       },
-      
+
       /// twitter tag
 
       {
@@ -276,7 +276,7 @@ const City: Template<TemplateRenderProps> = ({
     slugString += e.slug + "/";
   });
   const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
- 
+
   const childrenDivs = dm_directoryChildren.map((entity: any) => {
     var origin: any = null;
     if (entity.address.city) {
@@ -294,56 +294,61 @@ const City: Template<TemplateRenderProps> = ({
       /[&\/\\#^+()$~%.'":*?<>{}!@]/g,
       "");
     let result: any = removeSpecialCharacters.replaceAll(" ", "-");
-    if(!entity.slug || entity.slug == "undefined"){
+    if (!entity.slug || entity.slug == "undefined") {
       detailPageUrl = `${entity.id}-${result}`
     }
-    else{
-      detailPageUrl = `${entity.slug.toString()}`
+    else {
+      // detailPageUrl = `${entity.slug.toString()}`
+      let countrycode = `${entity?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+      let statecode = `${entity?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+      let citycode = `${entity?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
+       detailPageUrl = `${countrycode+"/"+statecode+"/"+citycode+"/"+entity.slug?.toString()}`;
     }
+  
     return (
       <>
-     
-     
-      <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
-        <div className="near-location">
-          <h4>
-            <Link eventName={"Location detail"} key={entity.slug} href={`/${detailPageUrl}`}>
-            <span style={{color:"OrangeRed"}}>  {entity.name}</span>
-            </Link>
-          </h4>
-          <div className="store-address">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21.23"
-              height="30"
-              viewBox="0 0 21.23 30"
-            >
-              <g transform="translate(0 0)">
-                <path
-                  d="M6.789,23.576c1.079,1.719,2.246,3.8,3.4,5.825.427.747.813.859,1.326-.027,1.113-1.931,2.207-3.931,3.359-5.8,3.5-5.661,9.223-11.181,4.67-18.8C15.5-1.987,4.5-1.265,1.216,5.034c-3.769,7.219,2.117,13.039,5.574,18.542Z"
-                  fill="#d61a0c"
-                  fillRule="evenodd"
-                />
-                <path
-                  d="M10.61,6.247a4.116,4.116,0,1,1-4.116,4.116A4.117,4.117,0,0,1,10.61,6.247Z"
-                  fill="yellow"
-                  fillRule="evenodd"
-                />
-              </g>
-            </svg>
-            <p>
-              {entity.address.line1 ? entity.address.line1 : ""},
-              {entity.address.line2 ? entity.address.line2 : ""}
-              <br /> {entity.address.city ? entity.address.city : ""},{" "}
-              {entity.address.postalCode ? entity.address.postalCode : ""},{" "}
-              <br />
-              {entity.address.countryCode
-                ? regionNames.of(entity.address.countryCode)
-                : ""}{" "}
-              <br />
-            </p>
-          </div>
-          {/* <div className="store-phone w3w">
+
+
+        <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
+          <div className="near-location">
+            <h4>
+              <Link eventName={"Location detail"} key={entity.slug} href={`/${detailPageUrl}`}>
+                <span style={{ color: "OrangeRed" }}>  {entity.name}</span>
+              </Link>
+            </h4>
+            <div className="store-address">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21.23"
+                height="30"
+                viewBox="0 0 21.23 30"
+              >
+                <g transform="translate(0 0)">
+                  <path
+                    d="M6.789,23.576c1.079,1.719,2.246,3.8,3.4,5.825.427.747.813.859,1.326-.027,1.113-1.931,2.207-3.931,3.359-5.8,3.5-5.661,9.223-11.181,4.67-18.8C15.5-1.987,4.5-1.265,1.216,5.034c-3.769,7.219,2.117,13.039,5.574,18.542Z"
+                    fill="#d61a0c"
+                    fillRule="evenodd"
+                  />
+                  <path
+                    d="M10.61,6.247a4.116,4.116,0,1,1-4.116,4.116A4.117,4.117,0,0,1,10.61,6.247Z"
+                    fill="yellow"
+                    fillRule="evenodd"
+                  />
+                </g>
+              </svg>
+              <p>
+                {entity.address.line1 ? entity.address.line1 : ""},
+                {entity.address.line2 ? entity.address.line2 : ""}
+                <br /> {entity.address.city ? entity.address.city : ""},{" "}
+                {entity.address.postalCode ? entity.address.postalCode : ""},{" "}
+                <br />
+                {entity.address.countryCode
+                  ? regionNames.of(entity.address.countryCode)
+                  : ""}{" "}
+                <br />
+              </p>
+            </div>
+            {/* <div className="store-phone w3w">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21.23"
@@ -395,29 +400,29 @@ const City: Template<TemplateRenderProps> = ({
               What3Words
             </a>
           </div> */}
-          {entity.mainPhone &&  <div className="store-phone m-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="23.987"
-              height="23.987"
-              viewBox="0 0 23.987 23.987"
-            >
-              <path
-                d="M19.64,17.328c-.617,1.876-3.036,2.812-4.764,2.656A15.194,15.194,0,0,1,8,17.14,22.652,22.652,0,0,1,.885,8.652C-.22,6.3-.468,3.411,1.176,1.268A2.827,2.827,0,0,1,3.429,0C4.8-.063,4.992.721,5.463,1.943c.351.913.819,1.845,1.08,2.792C7.032,6.5,5.321,6.575,5.105,8.019c-.133.911.969,2.132,1.468,2.781A13.473,13.473,0,0,0,10.051,14c.76.479,1.984,1.341,2.853.865,1.339-.733,1.213-2.991,3.084-2.227a30.12,30.12,0,0,1,2.833,1.463c1.431.769,1.364,1.567.819,3.223h0"
-                transform="translate(4.5) rotate(13)"
-                fill="blue"
-                fillRule="evenodd"
-              />
-            </svg>
-            <p>
-              <Link className ="hover:text-blue" eventName={"PhoneNumber"} href={`tel:${entity.mainPhone}`} rel="noopener noreferrer">
-              <span style={{color:"green"}}>  {entity.mainPhone}</span>
-              </Link>
-            </p>
-          </div>}
-         
-          <div className="store-link flex pt-0">
-          {/* <Link
+            {entity.mainPhone && <div className="store-phone m-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23.987"
+                height="23.987"
+                viewBox="0 0 23.987 23.987"
+              >
+                <path
+                  d="M19.64,17.328c-.617,1.876-3.036,2.812-4.764,2.656A15.194,15.194,0,0,1,8,17.14,22.652,22.652,0,0,1,.885,8.652C-.22,6.3-.468,3.411,1.176,1.268A2.827,2.827,0,0,1,3.429,0C4.8-.063,4.992.721,5.463,1.943c.351.913.819,1.845,1.08,2.792C7.032,6.5,5.321,6.575,5.105,8.019c-.133.911.969,2.132,1.468,2.781A13.473,13.473,0,0,0,10.051,14c.76.479,1.984,1.341,2.853.865,1.339-.733,1.213-2.991,3.084-2.227a30.12,30.12,0,0,1,2.833,1.463c1.431.769,1.364,1.567.819,3.223h0"
+                  transform="translate(4.5) rotate(13)"
+                  fill="blue"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <p>
+                <Link className="hover:text-blue" eventName={"PhoneNumber"} href={`tel:${entity.mainPhone}`} rel="noopener noreferrer">
+                  <span style={{ color: "green" }}>  {entity.mainPhone}</span>
+                </Link>
+              </p>
+            </div>}
+
+            <div className="store-link flex pt-0">
+              {/* <Link
             data-ya-track="getdirections"
             eventName={`getdirections`}
             className="direction button before-icon"
@@ -429,7 +434,7 @@ const City: Template<TemplateRenderProps> = ({
           >
             <> Directions </>
           </Link> */}
-            {/* <Link
+              {/* <Link
               className="direction"
               onClick={() => {
                 getDirectionUrl(result.rawData);
@@ -452,38 +457,38 @@ const City: Template<TemplateRenderProps> = ({
               </svg>{" "}
               Get Directions 
             </Link>  */}
-            <a className="view-details text-center" href={`/${detailPageUrl}`}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22.403"
-                // height="14"
-                viewBox="0 0 22.403 14"
-              >
-                <g transform="translate(-15.975 -106)">
-                  <path
-                    d="M27.176,120a10.337,10.337,0,0,1-4.387-1.05,16.655,16.655,0,0,1-3.481-2.249,21.287,21.287,0,0,1-3.183-3.253.742.742,0,0,1,0-.9,21.288,21.288,0,0,1,3.183-3.253,16.655,16.655,0,0,1,3.481-2.249A10.337,10.337,0,0,1,27.176,106a10.337,10.337,0,0,1,4.387,1.05,16.655,16.655,0,0,1,3.481,2.249,21.023,21.023,0,0,1,3.183,3.253.742.742,0,0,1,0,.9,21.287,21.287,0,0,1-3.183,3.253,16.655,16.655,0,0,1-3.481,2.249A10.337,10.337,0,0,1,27.176,120Zm-9.492-7c1.171,1.386,5.04,5.507,9.492,5.507S35.5,114.386,36.669,113c-1.171-1.386-5.04-5.507-9.492-5.507S18.856,111.614,17.684,113Z"
-                    transform="translate(0 0)"
-                    fill="green"
-                  />
-                  <path
-                    d="M187.36,190.72a3.36,3.36,0,1,1,3.36-3.36A3.364,3.364,0,0,1,187.36,190.72Zm0-5.227a1.867,1.867,0,1,0,1.867,1.867A1.866,1.866,0,0,0,187.36,185.493Z"
-                    transform="translate(-160.184 -74.36)"
-                    fill="blue"
-                  />
-                </g>
-              </svg>{" "}
-              View Details
-            </a>
+              <a className="view-details text-center" href={`/${detailPageUrl}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22.403"
+                  // height="14"
+                  viewBox="0 0 22.403 14"
+                >
+                  <g transform="translate(-15.975 -106)">
+                    <path
+                      d="M27.176,120a10.337,10.337,0,0,1-4.387-1.05,16.655,16.655,0,0,1-3.481-2.249,21.287,21.287,0,0,1-3.183-3.253.742.742,0,0,1,0-.9,21.288,21.288,0,0,1,3.183-3.253,16.655,16.655,0,0,1,3.481-2.249A10.337,10.337,0,0,1,27.176,106a10.337,10.337,0,0,1,4.387,1.05,16.655,16.655,0,0,1,3.481,2.249,21.023,21.023,0,0,1,3.183,3.253.742.742,0,0,1,0,.9,21.287,21.287,0,0,1-3.183,3.253,16.655,16.655,0,0,1-3.481,2.249A10.337,10.337,0,0,1,27.176,120Zm-9.492-7c1.171,1.386,5.04,5.507,9.492,5.507S35.5,114.386,36.669,113c-1.171-1.386-5.04-5.507-9.492-5.507S18.856,111.614,17.684,113Z"
+                      transform="translate(0 0)"
+                      fill="green"
+                    />
+                    <path
+                      d="M187.36,190.72a3.36,3.36,0,1,1,3.36-3.36A3.364,3.364,0,0,1,187.36,190.72Zm0-5.227a1.867,1.867,0,1,0,1.867,1.867A1.866,1.866,0,0,0,187.36,185.493Z"
+                      transform="translate(-160.184 -74.36)"
+                      fill="blue"
+                    />
+                  </g>
+                </svg>{" "}
+                View Details
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      
-      {/* </AnalyticsScopeProvider>
+
+
+        {/* </AnalyticsScopeProvider>
       </AnalyticsProvider> */}
       </>
     );
-          
+
     // function direction(){
     //   getDirectionUrl(result.rawData)
     //  }
@@ -492,11 +497,11 @@ const City: Template<TemplateRenderProps> = ({
     //   const someButton = document.getElementById("direct");
     //   someButton?.addEventListener("click", direction);
     //   });
-     
+
     //  let string = renderToString(MarkerContent);
     //  City.current.setContent(string);
   });
- 
+
   c_globalData &&
     c_globalData.map((i: any) => {
       address = i.address ? i.address : [];
@@ -553,7 +558,7 @@ const City: Template<TemplateRenderProps> = ({
   });
   return (
     <>
-    <JsonLd<Organization>
+      <JsonLd<Organization>
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -574,26 +579,26 @@ const City: Template<TemplateRenderProps> = ({
           itemListElement: breadcrumbScheme,
         }}
       /> */}
-     <AnalyticsProvider
+      <AnalyticsProvider
         templateData={templateData}
         enableDebugging={AnalyticsEnableDebugging}
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
         <AnalyticsScopeProvider name={""}>
-      {/* <Header></Header> */}
-      <Header _site={_site}/>
-      {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
-      <BreadCrumbs
-        name={name}
-        parents={dm_directoryParents}
-        baseUrl={relativePrefixToRoot}
-        address={{}}
-      ></BreadCrumbs>
-        <PhotoSlider _site={_site} />
-       <div className="header-title ">
-          {/* <Herobanner c_bannerTitle={_site.c_bannerTitle}></Herobanner> */}
-        </div>
-      {/* <Banner
+          {/* <Header></Header> */}
+          <Header _site={_site} />
+          {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
+          <BreadCrumbs
+            name={name}
+            parents={dm_directoryParents}
+            baseUrl={relativePrefixToRoot}
+            address={{}}
+          ></BreadCrumbs>
+          <PhotoSlider _site={_site} />
+          <div className="header-title ">
+            {/* <Herobanner c_bannerTitle={_site.c_bannerTitle}></Herobanner> */}
+          </div>
+          {/* <Banner
         Name={document.dm_directoryParents ? document.dm_directoryParents : []}
         TagLine={""}
         BackgroundImage={bannerImage}
@@ -601,26 +606,26 @@ const City: Template<TemplateRenderProps> = ({
         text={name ? name : ""}
         template={"city"}
       /> */}
-      <h1 className="sec_heading mt-12" style={{ textAlign: "center", color:"Highlight" }}>
-        Available Stores in {name}, {document.dm_directoryParents[2].name},{" "}
-        {document.dm_directoryParents[1].name}{" "}
-      </h1>
-      <div className="directory-country nearby-sec">
-        <div className="container">
-          <div className="flex  flex-wrap justify-center -mx-[15px]">
-            {childrenDivs}
+          <h1 className="sec_heading mt-12" style={{ textAlign: "center", color: "Highlight" }}>
+            Available Stores in {name}, {document.dm_directoryParents[2].name},{" "}
+            {document.dm_directoryParents[1].name}{" "}
+          </h1>
+          <div className="directory-country nearby-sec">
+            <div className="container">
+              <div className="flex  flex-wrap justify-center -mx-[15px]">
+                {childrenDivs}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <Footer _site={_site}/>
+          <Footer _site={_site} />
 
-      {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}
+          {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}
      helpSupport={_site.c_helpSupport} helpSupportcta={_site.c_helpSupportcta} vodafoneUK={_site.c_vodafoneUK} vodafoneUKCta={_site.c_vodafoneUKCta} c_cPIChanges={_site.c_cPIChanges}
      c_cPIChangesDescription1={_site.c_cPIChangesDescription1} vodafoneDetails={_site.c_vodafoneDetails}
      ></Footer> */}
-      </AnalyticsScopeProvider>
+        </AnalyticsScopeProvider>
       </AnalyticsProvider>
-{/* 
+      {/* 
       <Footer
         data={c_footerLinks ? c_footerLinks : []}
         address={address ? address : {}}

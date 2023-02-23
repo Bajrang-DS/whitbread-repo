@@ -1,10 +1,10 @@
 {
   "bundlePaths": {
     "404": "assets/server/404.b0031df8.js",
-    "city": "assets/server/city.41507d83.js",
-    "country": "assets/server/country.b26d696f.js",
-    "location": "assets/server/location.682aa58c.js",
-    "locator": "assets/server/locator.73d70b52.js",
+    "city": "assets/server/city.fe9aba9e.js",
+    "country": "assets/server/country.426cfea8.js",
+    "location": "assets/server/location.61c07a9f.js",
+    "locator": "assets/server/locator.b29d48a0.js",
     "robots": "assets/server/robots.d960f3a3.js",
     "root": "assets/server/root.5b517ddf.js",
     "state": "assets/server/state.099b2561.js"
@@ -26,10 +26,6 @@
         "_server.browser-43c2596a.js"
       ]
     },
-    "src/images/MGMpin.svg": {
-      "file": "assets/static/MGMpin-a97be63c.svg",
-      "src": "src/images/MGMpin.svg"
-    },
     "src/images/map.svg": {
       "file": "assets/static/map-05379a2e.svg",
       "src": "src/images/map.svg"
@@ -37,6 +33,10 @@
     "src/images/phone.svg": {
       "file": "assets/static/phone-057118a0.svg",
       "src": "src/images/phone.svg"
+    },
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-a97be63c.svg",
+      "src": "src/images/MGMpin.svg"
     },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-5e24b2b8.svg",
@@ -58,6 +58,10 @@
       "file": "assets/static/dots-c532748f.svg",
       "src": "src/images/dots.svg"
     },
+    "src/images/shape-t.svg": {
+      "file": "assets/static/shape-t-4e865b2a.svg",
+      "src": "src/images/shape-t.svg"
+    },
     "src/images/minus-sym.svg": {
       "file": "assets/static/minus-sym-f0f517fd.svg",
       "src": "src/images/minus-sym.svg"
@@ -65,10 +69,6 @@
     "src/images/shape-b.svg": {
       "file": "assets/static/shape-b-bdecdd2a.svg",
       "src": "src/images/shape-b.svg"
-    },
-    "src/images/shape-t.svg": {
-      "file": "assets/static/shape-t-4e865b2a.svg",
-      "src": "src/images/shape-t.svg"
     },
     "src/images/newsletter-bg.png": {
       "file": "assets/static/newsletter-bg-6b390772.png",
@@ -101,7 +101,7 @@
       ]
     },
     "dist/hydration_templates/city.tsx": {
-      "file": "assets/hydrate/city.f139de23.js",
+      "file": "assets/hydrate/city.fb4e6d8a.js",
       "src": "dist/hydration_templates/city.tsx",
       "isEntry": true,
       "imports": [
@@ -116,7 +116,7 @@
       ]
     },
     "src/templates/city.tsx": {
-      "file": "assets/server/city.41507d83.js",
+      "file": "assets/server/city.fe9aba9e.js",
       "src": "src/templates/city.tsx",
       "isEntry": true,
       "imports": [
@@ -129,7 +129,7 @@
       ]
     },
     "dist/hydration_templates/country.tsx": {
-      "file": "assets/hydrate/country.47dfb933.js",
+      "file": "assets/hydrate/country.0aec47d8.js",
       "src": "dist/hydration_templates/country.tsx",
       "isEntry": true,
       "imports": [
@@ -144,7 +144,7 @@
       ]
     },
     "src/templates/country.tsx": {
-      "file": "assets/server/country.b26d696f.js",
+      "file": "assets/server/country.426cfea8.js",
       "src": "src/templates/country.tsx",
       "isEntry": true,
       "imports": [
@@ -157,7 +157,7 @@
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.74377f9f.js",
+      "file": "assets/hydrate/location.edea1e84.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -176,7 +176,7 @@
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.682aa58c.js",
+      "file": "assets/server/location.61c07a9f.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -200,7 +200,7 @@
       ]
     },
     "dist/hydration_templates/locator.tsx": {
-      "file": "assets/hydrate/locator.b7165000.js",
+      "file": "assets/hydrate/locator.37c42fcf.js",
       "src": "dist/hydration_templates/locator.tsx",
       "isEntry": true,
       "imports": [
@@ -217,7 +217,7 @@
       ]
     },
     "src/templates/locator.tsx": {
-      "file": "assets/server/locator.73d70b52.js",
+      "file": "assets/server/locator.b29d48a0.js",
       "src": "src/templates/locator.tsx",
       "isEntry": true,
       "imports": [
@@ -390,13 +390,13 @@
         "assets/static/MGMpin-a97be63c.svg"
       ]
     },
-    "src/templates/locator.css": {
-      "file": "assets/static/locator-7e1d7cb8.css",
-      "src": "src/templates/locator.css"
-    },
     "PhotoSlider.css": {
       "file": "assets/static/PhotoSlider-55d13414.css",
       "src": "PhotoSlider.css"
+    },
+    "src/templates/locator.css": {
+      "file": "assets/static/locator-7e1d7cb8.css",
+      "src": "src/templates/locator.css"
     },
     "header.css": {
       "file": "assets/static/header-331b8acb.css",
