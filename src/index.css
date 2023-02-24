@@ -578,7 +578,7 @@ body .ps__rail-y{ @apply opacity-100 mt-4 !bg-gray-light w-4}
 body .ps__thumb-y{ @apply bg-gray-dark opacity-100 right-1 w-2}
 body .ps__rail-y:hover .ps__thumb-y{ @apply w-2 bg-gray-dark}
 table.day-hrs{  @apply border-none w-full mb-4}
-table.day-hrs td{ @apply   text-right  }
+table.day-hrs td{ @apply   text-right pr-3}
 .storelocation-openCloseTime table.day-hrs{  @apply bg-white xl:max-w-md 2xl:max-w-lg border   mx-auto xl:right-3.5 relative}
 .storelocation-openCloseTime table.day-hrs .dayName{  @apply w-auto}
 .storelocation-openCloseTime table.day-hrs .time-group{  @apply w-full justify-between }
@@ -591,9 +591,9 @@ table.day-hrs td{ @apply   text-right  }
 } */
 
 table.day-hrs tr:last-child td{  @apply border-b-0}
-table.day-hrs .dayName{ @apply text-lg md:text-lg capitalize pl-0 py-0 text-left}
-table.day-hrs .currentDay .dayName{  @apply relative  py-1}
-table.day-hrs .currentDay{  @apply font-bold text-black bg-hover-btn}
+table.day-hrs .dayName{ @apply text-lg md:text-lg capitalize pl-3 py-0 text-left}
+table.day-hrs .currentDay .dayName{  @apply relative  py-1 pl-3}
+table.day-hrs .currentDay{  @apply font-medium text-white bg-[#232374]}
 
 /* table.day-hrs .currentDay .dayName .checked{  @apply absolute top-1/2 -mt-2 left-0 bg-red rounded-sm w-4 h-4 z-0}
 table.day-hrs .currentDay .dayName .checked:after{  @apply content-[''] border-b-2 border-l-2 border-white transform -rotate-45 z-0 w-2.5 h-1.5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -mt-1} */
@@ -650,7 +650,7 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
 }
 
 .icon-row{
-  @apply pl-7 relative mb-3 flex flex-col
+  @apply pl-7 relative mb-3 mt-3 flex flex-col
 }
 .hours-labels.icon-row {
   @apply pl-0
@@ -858,7 +858,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .nearby-sec{@apply bg-transparent md:bg-light-grey w-full pt-7 pb-0 md:py-[3.75rem] }
 .nearby-sec-inner{@apply sm:mx-auto sm:max-w-[33.5rem] lg:mx-auto lg:max-w-none flex flex-col lg:flex-row gap-4 justify-center pb-0 xl:pb-0 }
 .nearby-sec .splide__slide{@apply xl:px-4}
-.nearby-card{@apply w-full bg-white overflow-hidden  z-10 relative shadow-sm last:mb-0 lg:last:mb-6  mb-6 lg:mt-6  lg:relative p-3 md:p-5 border border-box-border
+.nearby-card{@apply w-full bg-white overflow-hidden  z-10 relative shadow-sm last:mb-0 lg:last:mb-6  mb-6 lg:mt-6  lg:relative p-3 md:p-5 border border-box-border border-double border-[#030372]
 }
 .nearby-card .red-dot{ @apply !justify-start}
 .nearby-card .icon-row{ @apply pl-0}

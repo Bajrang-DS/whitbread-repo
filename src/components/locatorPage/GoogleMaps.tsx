@@ -531,7 +531,7 @@ function UnwrappedGoogleMaps({
       <div className="icon"> <img className=" " src={Phones} width="20" height="20" alt="" />
       </div>
       <div className="content-col">
-        <h6>Telephone</h6>
+        {/* <h6>Telephone</h6> */}
         <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
           {result.rawData.mainPhone}</a>
       </div>
