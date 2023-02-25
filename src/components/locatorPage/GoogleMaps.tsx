@@ -321,6 +321,7 @@ function UnwrappedGoogleMaps({
       setHover(false);
       if (!info) {
         markers1.current[i].setIcon(Hovermap);
+      
       }
       locationResults.map((result, index) => {
         if (i == index) {

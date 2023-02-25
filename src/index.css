@@ -64,6 +64,9 @@ nav .active{ @apply bg-light-red}
   margin-right: auto;
   margin-left: auto;
 }
+.font-main-font {
+  font-family: cursive;
+}
 /* Header */
 /* .site-header{   @apply pt-0 lg:pt-6 relative}
 .site-header .header-top{  @apply border-b border-border-light border-opacity-[0.45] text-nav-link}
@@ -640,7 +643,10 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
   @apply relative pr-0 md:pr-[6.25rem] leading-5 mb-2.5 flex !flex-row justify-between items-center md:flex-col 
 }
 .location-name-miles h2{  @apply text-3xl md:text-lg leading-[1.375rem] text-red md:leading-tight}
-.location-name-miles h2 a{ @apply text-[1.375rem] text-gray font-second-main-font}
+.location-name-miles h2 a{ @apply text-[1.375rem] text-gray }
+.location-name-miles h2 a{
+  font-family:"Nunito", sans-serif;
+}
 
 .location-name-miles .distance{
   @apply sm:absolute sm:-top-0.5 right-0 text-base md:text-lg mt-1 sm:mt-0
@@ -673,7 +679,12 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
 
 
 .gm-style-iw{ @apply  !px-0 max-w-full md:!max-w-[24.312rem] lg:!max-w-full}
-.gm-style .gm-style-iw-c{@apply !rounded-none }
+.gm-style .gm-style-iw-c{@apply !rounded-[1.8rem]}
+.gm-style .gm-style-iw-c {
+  background: honeydew;
+  border: groove;
+  border-color: ghostwhite;
+}
 .gm-style-iw-d .button-bx{@apply !justify-start flex-row }
 .gm-style-iw-d .button-bx .getdirection{@apply !bg-transparent !text-gray underline }
 .gm-style-iw-d .button-bx .getdirection1{@apply !bg-transparent  !text-gray underline }
@@ -813,7 +824,10 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 /* services sec */
 .services-sec{@apply bg-white w-full pt-8 pb-16 md:py-9 }
 .sec-title{@apply mb-4 md:mb-7}
-.sec-title h2, .sec-title h1{@apply text-center text-2xl font-second-main-font md:text-[1.75rem] text-red  }
+.sec-title h2, .sec-title h1{@apply text-center text-2xl md:text-[1.75rem] text-red  }
+.sec-title h2, .sec-title h1{
+  font-family:"Nunito", sans-serif;
+}
 .sec-title h1{@apply mb-5}
 .services-inner{@apply flex flex-wrap  }
 .services-inner .service-icon{@apply  m-0 }
@@ -860,10 +874,16 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .nearby-sec .splide__slide{@apply xl:px-4}
 .nearby-card{@apply w-full bg-white overflow-hidden  z-10 relative shadow-sm last:mb-0 lg:last:mb-6  mb-6 lg:mt-6  lg:relative p-3 md:p-5 border border-box-border border-double border-[#030372]
 }
+.nearby-card{
+border-radius: 50px 0px 50px 0px;;
+}
 .nearby-card .red-dot{ @apply !justify-start}
 .nearby-card .icon-row{ @apply pl-0}
 .nearby-card .OpenDot{ @apply  font-second-main-font  text-lg}
-.nearby-card h2 a{ @apply font-second-main-font  !text-lg text-black }
+.nearby-card h2 a{ @apply   !text-lg text-black }
+.nearby-card h2 a{
+  font-family:"Nunito", sans-serif;
+}
 .nearby-card .distance{ @apply absolute right-0 md:right-2 top-0 md:-top-0.5}
 .near-address{ @apply flex mt-2 items-start min-h-[90px]}
 .nearby-card .address { @apply text-lg }
