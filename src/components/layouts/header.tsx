@@ -62,18 +62,18 @@ const Header = (HeaderItem: any) => {
                 </li>
               ))}
               <li style={{ marginTop: "8px" }}> <a style={{ height: "20px" }} href="javascript:;"><svg role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="20"><path d="M2 7a4.951 4.951 0 015-5 4.951 4.951 0 015 5 4.951 4.951 0 01-5 5 4.951 4.951 0 01-5-5zm12.3 8.7a.99.99 0 001.4-1.4l-3.1-3.1A6.847 6.847 0 0014 7a6.957 6.957 0 00-7-7 6.957 6.957 0 00-7 7 6.957 6.957 0 007 7 6.847 6.847 0 004.2-1.4z" fill="blue"></path></svg></a>
-                {/* <div className="sub-menu" id="sp-search">
+                <div className="search-menu" id="bg-search">
                   <ul className="wrap sub-mega-menu">
                     <li>
                       <h5 style={{ color: "#002d72" }}>Search</h5>
                       <form role="search" method="get" className="search-form" action="#">
-                        <label htmlFor="search-form-1" className="screen-reader-text">Search for:</label>
-                        <input type="search" id="search-form-1" className="search-field" placeholder="Enter keywords" value="" name="text" />
+                        <label htmlFor="search-form-1" className="search-reader-text">Search for:</label>
+                        <input type="text" id="search-form-1" className="search-field" placeholder="Enter keywords" name="text" />
                         <input type="submit" className="search-submit" value="Go" />
                       </form>
                     </li>
                   </ul>
-                </div> */}
+                </div>
               </li>
             </ul>
           </nav>

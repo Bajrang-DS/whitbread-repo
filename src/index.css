@@ -510,7 +510,7 @@ body.menu-opened{ @apply overflow-hidden lg:overflow-auto;}
 .hero-section .hero-content .banner-text.banner-dark-bg h1{  @apply text-2xl md:text-[1.75rem] mb-1.5 font-normal}
 .hero-section .hero-content .banner-text.banner-dark-bg h3{  @apply text-xl md:text-2xl font-normal}
 .timer .box{  @apply text-base md:text-xl}
-.for-allow{  @apply inline-block w-full mb-2.5 text-red}
+.for-allow{  @apply inline-block w-full mb-2.5 text-[#ff0000]}
 
 /* Mobile btns */
 .mobile-btns{  @apply flex md:hidden justify-between w-full mb-3.5 float-left}
@@ -1715,9 +1715,9 @@ p.meta a {
 
 /* for search */
 
-/* @media (min-width: 1024px)
-{.sitenav > .menu > li:hover > .sub-menu, .sitenav > .menu > li:active > .sub-menu, .sitenav > .menu > li:focus > .sub-menu {
-    margin-top: 0;
+@media (min-width: 1024px)
+{.sitenav > .menu > li:hover > .search-menu, .sitenav > .menu > li:active > .search-menu, .sitenav > .menu > li:focus > .search-menu {
+    margin-top: 35px;
     height: auto;
     visibility: visible;
     z-index: 99999;
@@ -1728,7 +1728,7 @@ p.meta a {
 }
 }
 @media (min-width: 1024px)
-{.sitenav > ul > li > .sub-menu {
+{.sitenav > ul > li > .search-menu {
     display: block !important;
     padding: 50px 0 25px 0;
     background: #fff;
@@ -1742,13 +1742,13 @@ p.meta a {
     z-index: -1;
 }}
 @media (min-width: 1024px)
-{.sitenav > ul > li > .sub-menu > ul {
+{.sitenav > ul > li > .search-menu > ul {
  
  
     flex-wrap: wrap;
 }}
 @media (min-width: 1024px)
-{.sitenav #sp-search li {
+{.sitenav #bg-search li {
 
     display: flex;
  
@@ -1756,21 +1756,19 @@ p.meta a {
     width: 100%;
 }}
 @media (min-width: 1024px)
-{.sitenav > ul > li > .sub-menu li {
+{.sitenav > ul > li > .search-menu li {
     margin: 0;
-    opacity: .5;
+    /* opacity: .5; */
 }}
 @media (min-width: 1024px)
-{.sitenav #sp-search li h5 {
-    width: 25%;
-    margin: 1px 0 0 0;
+{.sitenav #bg-search li h5 {
+  width: 25%;
+  margin: 15px 0 0 0;
+  font-weight: 200;
+  color: #045ee9;
 }}
-@media (min-width: 1024px)
-{.sitenav #sp-search li h5 {
-    width: 25%;
-    margin: 1px 0 0 0;
-}}
-.screen-reader-text {
+
+.search-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   white-space: nowrap;
@@ -1779,7 +1777,7 @@ p.meta a {
   overflow: hidden;
 }
 
-.screen-reader-text {
+.search-reader-text {
   border: 0;
  
   clip-path: inset(50%);
@@ -1791,44 +1789,54 @@ p.meta a {
   word-wrap: normal!important;
 }
 @media (min-width: 1024px)
-{.sitenav #sp-search li form input[type="search"] {
-    width: calc(80% - 94px);
-    margin-right: 20%;
-    padding-top: 10px;
-    border-bottom: 1px solid #d0d0d1;
-    border-radius: 0;
+{.sitenav #bg-search li form input[type="text"] {
+  width: calc(80% - 94px);
+  margin-right: 20%;
+  padding-top: 0px;
+  border-bottom: 1px solid #060606;
+  border-radius: 0;
+}}
+@media (min-width: 1024px)
+{.sitenav #bg-search li form {
+    width: 75%;
+    font-family: "Metropolis-Regular", sans-serif;
+    font-size: 1.8rem;
+    margin: -6px 0 5px 0;
+    color: #646566;
+    overflow: hidden;
 }}
 
+
 @media (min-width: 1024px)
-{.sitenav #sp-search li form input {
+{.sitenav #bg-search li form input {
     float: left;
     height: 39px;
     font-family: "Metropolis-Regular", sans-serif;
-    font-size: 1.8rem;
-    color: #646566;
+    font-size: 1.2rem;
+    color: #060606;
     border: none;
     background: transparent;
     -webkit-appearance: none;
 }}
 @media (min-width: 1024px)
-{.sitenav #sp-search li form input[type="submit"] {
-    width: 94px;
+{.sitenav #bg-search li form input[type="submit"] {
+    width: 80px;
     font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 1.2rem;
     text-align: left;
     text-transform: uppercase;
     color: #72246c;
-    padding-left: 22px;
+    padding-left: 15px;
     border: 2px solid #72246c;
-    background: transparent url(../assets/images/arrow-go.svg) 58px center no-repeat;
+    background: transparent url(https://www.whitbread.co.uk/wp-content/themes/whitbread/assets/images/arrow-go.svg) 58px center no-repeat;
     cursor: pointer;
 }}
 
 @media (min-width: 1024px)
-{.sitenav #sp-search li form input {
+{.sitenav #bg-search li form input {
     float: left;
     height: 39px;
 
     -webkit-appearance: none;
-}} */
+}}
