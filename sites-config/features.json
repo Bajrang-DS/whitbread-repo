@@ -71,7 +71,7 @@
       ],
       "filter": {
         "entityIds": [
-          "global-data"
+          "globaldata"
         ]
       },
       "localization": {
