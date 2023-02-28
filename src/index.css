@@ -1714,17 +1714,31 @@ p.meta a {
 
 
 /* for search */
+.sitenav > .menu > li.menu-item-34:hover > a{
+  color: #fff;
+  background: #064b84;
+  text-decoration: none;
+}
 
 @media (min-width: 1024px)
-{.sitenav > .menu > li:hover > .search-menu, .sitenav > .menu > li:active > .search-menu, .sitenav > .menu > li:focus > .search-menu {
-    margin-top: 35px;
-    height: auto;
-    visibility: visible;
-    z-index: 99999;
-    -webkit-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-    -webkit-transition-delay: .2s;
-    transition-delay: .2s;
+{.sitenav > .menu > li:hover > .search-menu{
+ 
+  /* -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s; */
+  display: block !important;
+  padding: 50px 0 25px 0;
+  background: #fff;
+  border-top: 1px solid #d0d0d1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 35px;
+  height: auto;
+  z-index: 99999;
+  visibility: visible;
+ 
 }
 }
 @media (min-width: 1024px)
@@ -1736,10 +1750,13 @@ p.meta a {
     position: absolute;
     left: 0;
     right: 0;
-    margin-top: 0;
-    height: 0;
+    margin-top: 35px;
+    height: auto;
+    z-index: 99999;
     visibility: hidden;
-    z-index: -1;
+   
+
+
 }}
 @media (min-width: 1024px)
 {.sitenav > ul > li > .search-menu > ul {
