@@ -103,7 +103,7 @@ function UnwrappedGoogleMaps({
   const [downinfo, setDownInfo] = useState(true);
   const [hover, setHover] = useState(true);
   const loading = useSearchState((s) => s.searchStatus.isLoading);
- 
+
   let isHover = true;
   const searchZoom: number | number | null | undefined = null;
   let currentMapZoom: number | undefined = 0;
@@ -130,21 +130,21 @@ function UnwrappedGoogleMaps({
 
   locationResults.length > 0
     ? locationResults.map((result: any, i: number) => {
-        if (i == 0 && result) {
-          center = {
-            lat: result.rawData.yextDisplayCoordinate
-              ? result.rawData.yextDisplayCoordinate.latitude
-              : result.rawData.displayCoordinate.latitude,
-            lng: result.rawData.yextDisplayCoordinate
-              ? result.rawData.yextDisplayCoordinate.longitude
-              : result.rawData.displayCoordinate.longitude,
-          };
-        }
-      })
+      if (i == 0 && result) {
+        center = {
+          lat: result.rawData.yextDisplayCoordinate
+            ? result.rawData.yextDisplayCoordinate.latitude
+            : result.rawData.displayCoordinate.latitude,
+          lng: result.rawData.yextDisplayCoordinate
+            ? result.rawData.yextDisplayCoordinate.longitude
+            : result.rawData.displayCoordinate.longitude,
+        };
+      }
+    })
     : (center = {
-        lat: centerLatitude,
-        lng: centerLongitude,
-      });
+      lat: centerLatitude,
+      lng: centerLongitude,
+    });
 
   let info = false;
   const cssClasses = useComposedCssClasses(builtInCssClasses, customCssClasses);
@@ -223,7 +223,7 @@ function UnwrappedGoogleMaps({
     if (mapMarkerClusterer) {
       mapMarkerClusterer.clearMarkers();
     }
-  } catch (e) {}
+  } catch (e) { }
   let i = 0;
   for (const result of locationResults) {
     i++;
@@ -234,7 +234,7 @@ function UnwrappedGoogleMaps({
       icon: Mapicon2,
       label: {  //open letter
         text: String(i),
-        color: "black",
+        color: "white",
       },
       animation: google.maps.Animation.DROP
     });
@@ -249,7 +249,8 @@ function UnwrappedGoogleMaps({
 
     mapMarkerClusterer = new MarkerClusterer({
       map,
-      markers})
+      markers
+    })
     //   renderer: {
     //     render: ({ markers, position: position }) => {
     //       return new google.maps.Marker({
@@ -321,7 +322,7 @@ function UnwrappedGoogleMaps({
       setHover(false);
       if (!info) {
         markers1.current[i].setIcon(Hovermap);
-      
+
       }
       locationResults.map((result, index) => {
         if (i == index) {
@@ -453,7 +454,7 @@ function UnwrappedGoogleMaps({
                 }
                 document
                   .querySelectorAll(".result")
-                  [index].classList.add("fixed-hover");
+                [index].classList.add("fixed-hover");
                 addActiveGrid(index);
                 const position = {
                   lat: result.rawData.yextDisplayCoordinate
@@ -500,7 +501,7 @@ function UnwrappedGoogleMaps({
       let countrycode = `${result.rawData?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
       let statecode = `${result.rawData?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
       let citycode = `${result.rawData?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
-       url = `${countrycode+"/"+statecode+"/"+citycode+"/"+result.rawData.slug?.toString()}`;
+      url = `${countrycode + "/" + statecode + "/" + citycode + "/" + result.rawData.slug?.toString()}`;
     }
 
     const MarkerContent = (
@@ -511,7 +512,7 @@ function UnwrappedGoogleMaps({
             {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
         alt="" /></div> */}
             <h2>
-              <a style={{color:"red"}} className="inline-block notHighlight" href={`/${url}`}>
+              <a className="inline-block notHighlight text-[#002d72] hover:underline" href={`/${url}`}>
                 {result.rawData.name}
               </a>
             </h2>
@@ -519,7 +520,7 @@ function UnwrappedGoogleMaps({
           <div className="content-col info-window-content">
             <Address address={result.rawData.address} />
             {result.distance ? (
-              <div style={{color:"green"}} className="distance">
+              <div style={{ color: "green" }} className="distance">
                 {metersToMiles(result.distance ?? 0)}{" "}
                 <span >{StaticData.miles}</span>
               </div>
@@ -527,16 +528,16 @@ function UnwrappedGoogleMaps({
               ""
             )}
           </div>
-          {result.rawData.mainPhone?   //open for phone
-    <div className="icon-row">
-      <div className="icon"> <img className=" " src={Phones} width="20" height="20" alt="" />
-      </div>
-      <div className="content-col">
-        {/* <h6>Telephone</h6> */}
-        <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
-          {result.rawData.mainPhone}</a>
-      </div>
-    </div>:''}   
+          {result.rawData.mainPhone ?   //open for phone
+            <div className="icon-row">
+              <div className="icon"> <img className=" " src={Phones} width="20" height="20" alt="none" />
+              </div>
+              <div className="content-col">
+                {/* <h6>Telephone</h6> */}
+                <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
+                  {result.rawData.mainPhone}</a>
+              </div>
+            </div> : ''}
 
           {result.rawData.hours && result.rawData.hours.reopenDate ? (
             ""
@@ -571,42 +572,42 @@ function UnwrappedGoogleMaps({
             </div>
           )}
         </div>
-        <div  className="button-bx !ml-4 !mb-0">
-          <Link style={{background:"green"}} type="button" href={`/${url}`} className="btn">
+        <div className="button-bx !ml-4 !mb-0">
+          <Link type="button" href={`/${url}`} className="btn">
             {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
             {StaticData.StoreDetailbtn}
           </Link>
           {result.rawData.displayCoordinate ? (
-              <a
-              style={{color:"blue !important"}}
-                data-listener="false"
-                data-latitude={result.rawData.displayCoordinate.latitude}
-                data-longitude={result.rawData.displayCoordinate.longitude}
-                className="cursor-pointer  getdirection btn"
-                rel="noopener noreferrer"
-                data-city={result.rawData.address.city}
-                data-country={result.rawData.address.countryCode}
-                data-region={result.rawData.address.region}
-              >
-                <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
-                {StaticData.getDirection}
-              </a>
-            ) : (
-              <a
-              style={{color:"blue !important"}}
-                data-listener="false"
-                data-latitude={result.rawData.yextDisplayCoordinate.latitude}
-                data-longitude={result.rawData.yextDisplayCoordinate.longitude}
-                data-city={result.rawData.address.city}
-                data-country={result.rawData.address.countryCode}
-                data-region={result.rawData.address.region}
-                className="cursor-pointer getdirection1 btn"
-                rel="noopener noreferrer"
-              >
-                <div dangerouslySetInnerHTML={{ __html: Directionsvg }}/>
-                {StaticData.getDirection}
-              </a>
-            )}
+            <a
+              style={{ color: "blue !important" }}
+              data-listener="false"
+              data-latitude={result.rawData.displayCoordinate.latitude}
+              data-longitude={result.rawData.displayCoordinate.longitude}
+              className="cursor-pointer  getdirection btn"
+              rel="noopener noreferrer"
+              data-city={result.rawData.address.city}
+              data-country={result.rawData.address.countryCode}
+              data-region={result.rawData.address.region}
+            >
+              <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
+              {StaticData.getDirection}
+            </a>
+          ) : (
+            <a
+              style={{ color: "blue !important" }}
+              data-listener="false"
+              data-latitude={result.rawData.yextDisplayCoordinate.latitude}
+              data-longitude={result.rawData.yextDisplayCoordinate.longitude}
+              data-city={result.rawData.address.city}
+              data-country={result.rawData.address.countryCode}
+              data-region={result.rawData.address.region}
+              className="cursor-pointer getdirection1 btn"
+              rel="noopener noreferrer"
+            >
+              <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
+              {StaticData.getDirection}
+            </a>
+          )}
           {/* <Link
             data-ya-track="getdirections"
             eventName={`getdirections`}
@@ -620,25 +621,25 @@ function UnwrappedGoogleMaps({
             <> Direction </>
           </Link> */}
 
-        
+
         </div>
       </>
     );
     // function direction(){
-     
+
     //   GetDirection(result.rawData)
-      
+
     //  }
 
     // google.maps.event.addListener(infoWindow.current, 'domready', (e: any) => {
     //   const someButton = document.getElementById("direct");
     //   someButton?.addEventListener("click", direction);
-     
-    
+
+
     //   });
-     
-      const string = renderToString(MarkerContent);
-      infoWindow.current.setContent(string);
+
+    const string = renderToString(MarkerContent);
+    infoWindow.current.setContent(string);
   }
   google.maps.event.addListener(infoWindow.current, "domready", () => {
     let inputs;
@@ -649,7 +650,7 @@ function UnwrappedGoogleMaps({
     for (let i = 0; i < inputs.length; i++) {
       inputs[i].addEventListener("click", GetDirection);
     }
-  }); 
+  });
 
   function GetDirection(e: any) {
     let origin: any = null;
