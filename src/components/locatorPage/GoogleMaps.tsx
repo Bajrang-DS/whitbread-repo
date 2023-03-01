@@ -234,7 +234,7 @@ function UnwrappedGoogleMaps({
       icon: Mapicon2,
       label: {  //open letter
         text: String(i),
-        color: "white",
+        color: "black",
       },
       animation: google.maps.Animation.DROP
     });

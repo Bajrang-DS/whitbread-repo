@@ -19,7 +19,7 @@ type props = {
   coords: any;
   slug: any;
   c_heading: any;
-  services:any;
+  services: any;
 
 };
 const metersToMiles = (meters: number) => {
@@ -30,7 +30,7 @@ const metersToMiles = (meters: number) => {
 export default function Nearby(props: any) {
 
   const [neabyData, setnearbyData] = React.useState(props?.externalApiData?.response?.results);
- 
+
 
   return (
 

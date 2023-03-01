@@ -15,7 +15,7 @@ const Footer = (props: any) => {
 
                 <div id="media_image-2" className="site-widget widget_media_image">
 
-                  <img style={{marginTop:"-20px"}} src={props._site.c_footerlogo.url} alt="logo" />
+                  <img  src={props._site.c_footerlogo.url} alt="logo" />
                 </div>
 
                 <div id="nav_menu-4" className="site-widget widget_nav_menu">
@@ -24,7 +24,7 @@ const Footer = (props: any) => {
                       {props._site?.c_footerlink1?.map((item: any, index: number) => (
 
                         <li key={index} id="menu-item-1597" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597">
-                          <a href="#">{item.label}</a>
+                          <a className="hover:underline" href="#">{item.label}</a>
 
                         </li>
                       ))}
@@ -37,7 +37,7 @@ const Footer = (props: any) => {
               <div className="wb-2">
                 <img src={props._site.c_careers.photo.url} width="500" height="229" alt="" />
 
-                <a className="btn style-white" href="#" target="_blank">
+                <a className="btn style-white hover:underline" href="#" target="_blank">
                   {props._site.c_careers.cta.label}
                   <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                   </svg>
@@ -53,7 +53,7 @@ const Footer = (props: any) => {
                   <ul id="menu-policies" className="menu">
                     {props._site?.c_footerlink2?.map((item: any, index: number) => (
                       <li id="menu-item-42" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
-                        <a href="#">{item.label}</a>
+                        <a className="hover:underline" href="#">{item.label}</a>
                       </li>
                     ))}
                   </ul>
@@ -67,7 +67,7 @@ const Footer = (props: any) => {
                   <ul id="menu-footer-menu" className="menu">
                     {props._site?.c_footerlink3?.map((item: any, index: number) => (
                       <li id="menu-item-43" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
-                        <a href="#">
+                        <a className="hover:underline" href="#">
                           {item.label}
                         </a>
                       </li>
@@ -80,9 +80,9 @@ const Footer = (props: any) => {
               <ul className="soc">
                 {props._site?.c_socialitems?.image.map((item: any, index: number) => (
                   <li>
-                    <a href="#" target="_blank">
+                    <a   href="#" target="_blank">
 
-                      <img style={{ height: "30px", width: "30px" }} src={item.url} alt="icons" />
+                      <img className="bg-white hover:bg-[#ffa400]" style={{ height: "30px", width: "30px" }} src={item.url} alt="icons" />
 
                     </a>
                   </li>
@@ -90,7 +90,7 @@ const Footer = (props: any) => {
               </ul>
               <p className="credit">
                 {props._site.c_socialitems.heading}
-                <a className="bir" href="#" target="_blank" rel="noopener"><br />
+                <a className="bir hover:underline" href="#" target="_blank" rel="noopener"><br />
                   {props._site.c_socialitems?.cTA?.label}
                 </a>
               </p>

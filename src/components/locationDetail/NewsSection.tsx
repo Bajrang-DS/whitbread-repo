@@ -27,12 +27,12 @@ export default function NewsSection(props: any) {
                                 <strong>
                                     {c_brandfirst.date}
                                 </strong>
-                                <a href="#" rel="category tag">
+                                <a className="hover:underline" href="#" rel="category tag">
                                     {c_brandfirst.brandcta.label}
                                 </a>
                             </p>
                             <h3>
-                                <a href="#">
+                                <a className="hover:underline" href="#">
                                     {c_brandfirst.ctalong.label}
                                 </a>
                             </h3>
@@ -44,12 +44,12 @@ export default function NewsSection(props: any) {
                                 <strong>
                                     {c_brandsecond.date}
                                 </strong>
-                                <a href="#" rel="category tag">
+                                <a className="hover:underline" href="#" rel="category tag">
                                     {c_brandsecond.brand2.label}
                                 </a>
                             </p>
                             <h3>
-                                <a href="#">
+                                <a className="hover:underline" href="#">
                                     {c_brandsecond.ctalong2.label}
                                 </a>
                             </h3>
@@ -63,9 +63,9 @@ export default function NewsSection(props: any) {
                                         <img className="bg" src={item.images.url} alt="" />
                                         <p className="meta">
                                             <strong>{item.date}</strong>
-                                            <a href="#" rel="category tag"> {item.brand3.label}</a></p>
+                                            <a className="hover:underline" href="#" rel="category tag"> {item.brand3.label}</a></p>
                                         <h3>
-                                            <a href="#"> {item.ctalong3.label}</a>
+                                            <a className="hover:underline" href="#"> {item.ctalong3.label}</a>
                                         </h3>
                                         <p className="excerpt">{item.description}</p>
                                     </li>

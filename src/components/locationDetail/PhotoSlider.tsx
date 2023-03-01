@@ -23,7 +23,7 @@ const options = {
           <h2>{element.description}</h2>
           <p>{element.details}</p>
      
-            <a className="btn style-outline-white" href="#">{props._site.c_bannerlink.label}</a>
+            <a className="btn style-outline-white hover:bg-white hover:text-black" href="#">{props._site.c_bannerlink.label}</a>
      
         </div>
       </div>

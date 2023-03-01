@@ -4,7 +4,6 @@ import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, A
 import getDirectionUrl from "../components/commons/GetDirection";
 import Header from "../../src/components/layouts/header";
 import BreadCrumbs from "../components/layouts/Breadcrumb";
-// import { AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie } from "../types/constants";
 import {
   AnalyticsProvider,
   AnalyticsScopeProvider,
@@ -26,7 +25,6 @@ import {
 
 import { JsonLd } from "react-schemaorg";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
-// import Herobanner from "../components/commons/Herobanner";
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
@@ -302,9 +300,9 @@ const City: Template<TemplateRenderProps> = ({
       let countrycode = `${entity?.address?.countryCode?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
       let statecode = `${entity?.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
       let citycode = `${entity?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
-       detailPageUrl = `${countrycode+"/"+statecode+"/"+citycode+"/"+entity.slug?.toString()}`;
+      detailPageUrl = `${countrycode + "/" + statecode + "/" + citycode + "/" + entity.slug?.toString()}`;
     }
-  
+
     return (
       <>
 
@@ -348,58 +346,6 @@ const City: Template<TemplateRenderProps> = ({
                 <br />
               </p>
             </div>
-            {/* <div className="store-phone w3w">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21.23"
-              height="30"
-              viewBox="0 0 21.23 30"
-            >
-              <g id="map-pin-icon" transform="translate(0 0)">
-                <path
-                  id="Path_8"
-                  data-name="Path 8"
-                  d="M6.789,23.576c1.079,1.719,2.246,3.8,3.4,5.825.427.747.813.859,1.326-.027,1.113-1.931,2.207-3.931,3.359-5.8,3.5-5.661,9.223-11.181,4.67-18.8C15.5-1.987,4.5-1.265,1.216,5.034c-3.769,7.219,2.117,13.039,5.574,18.542Z"
-                  fill="#d61a0c"
-                  fillRule="evenodd"
-                />
-                <rect
-                  id="Rectangle_230"
-                  data-name="Rectangle 230"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 8.186, 5.075)"
-                  fill="#fff"
-                />
-                <rect
-                  id="Rectangle_231"
-                  data-name="Rectangle 231"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 12.186, 5.075)"
-                  fill="#fff"
-                />
-                <rect
-                  id="Rectangle_232"
-                  data-name="Rectangle 232"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 16.186, 5.075)"
-                  fill="#fff"
-                />
-              </g>
-            </svg>
-            <a
-              target="_blank"
-              href={
-                entity.what3WordsAddress
-                  ? `https://what3words.com/${entity.what3WordsAddress} `
-                  : ""
-              }
-            >
-              What3Words
-            </a>
-          </div> */}
             {entity.mainPhone && <div className="store-phone m-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -422,41 +368,6 @@ const City: Template<TemplateRenderProps> = ({
             </div>}
 
             <div className="store-link flex pt-0">
-              {/* <Link
-            data-ya-track="getdirections"
-            eventName={`getdirections`}
-            className="direction button before-icon"
-            onClick={() => getDirectionUrl(result.rawData)}
-            href="javascript:void(0);"
-            id="some-button"
-            rel="noopener noreferrer"
-            // conversionDetails={conversionDetails_direction}
-          >
-            <> Directions </>
-          </Link> */}
-              {/* <Link
-              className="direction"
-              onClick={() => {
-                getDirectionUrl(result.rawData);
-              }}
-              href="javascript:void(0);"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path d="M0,0H24V24H0Z" fill="none" />
-                <path
-                  d="M22.43,10.59,13.42,1.58a2.051,2.051,0,0,0-2.83,0l-9,9a1.992,1.992,0,0,0,0,2.82l9,9a2,2,0,0,0,2.82,0l8.99-8.99A1.992,1.992,0,0,0,22.43,10.59ZM12.01,20.99l-9-9,9-9,9,9ZM8,11v4h2V12h4v2.5L17.5,11,14,7.5V10H9A1,1,0,0,0,8,11Z"
-                  fill="#fff"
-                />
-              </svg>{" "}
-              Get Directions 
-            </Link>  */}
               <a className="view-details text-center" href={`/${detailPageUrl}`}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -484,22 +395,10 @@ const City: Template<TemplateRenderProps> = ({
         </div>
 
 
-        {/* </AnalyticsScopeProvider>
-      </AnalyticsProvider> */}
       </>
     );
 
-    // function direction(){
-    //   getDirectionUrl(result.rawData)
-    //  }
 
-    // google.maps.event.addListener(City.current, 'domready', (e: any) => {
-    //   const someButton = document.getElementById("direct");
-    //   someButton?.addEventListener("click", direction);
-    //   });
-
-    //  let string = renderToString(MarkerContent);
-    //  City.current.setContent(string);
   });
 
   c_globalData &&
@@ -558,7 +457,7 @@ const City: Template<TemplateRenderProps> = ({
   });
   return (
     <>
-      <JsonLd<Organization>
+      {/* <JsonLd<Organization>
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -570,24 +469,17 @@ const City: Template<TemplateRenderProps> = ({
             "https://www.facebook.com/WhitbreadUK"
           ],
         }}
-      />
-      {/* <JsonLd<BreadcrumbList>
-        item={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-
-          itemListElement: breadcrumbScheme,
-        }}
       /> */}
+
       <AnalyticsProvider
         templateData={templateData}
         enableDebugging={AnalyticsEnableDebugging}
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
         <AnalyticsScopeProvider name={""}>
-          {/* <Header></Header> */}
+
           <Header _site={_site} />
-          {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
+
           <BreadCrumbs
             name={name}
             parents={dm_directoryParents}
@@ -595,17 +487,6 @@ const City: Template<TemplateRenderProps> = ({
             address={{}}
           ></BreadCrumbs>
           <PhotoSlider _site={_site} />
-          <div className="header-title ">
-            {/* <Herobanner c_bannerTitle={_site.c_bannerTitle}></Herobanner> */}
-          </div>
-          {/* <Banner
-        Name={document.dm_directoryParents ? document.dm_directoryParents : []}
-        TagLine={""}
-        BackgroundImage={bannerImage}
-        CtaButton={""}
-        text={name ? name : ""}
-        template={"city"}
-      /> */}
           <h1 className="sec_heading mt-12" style={{ textAlign: "center", color: "Highlight" }}>
             Available Stores in {name}, {document.dm_directoryParents[2].name},{" "}
             {document.dm_directoryParents[1].name}{" "}
@@ -619,23 +500,9 @@ const City: Template<TemplateRenderProps> = ({
           </div>
           <Footer _site={_site} />
 
-          {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}
-     helpSupport={_site.c_helpSupport} helpSupportcta={_site.c_helpSupportcta} vodafoneUK={_site.c_vodafoneUK} vodafoneUKCta={_site.c_vodafoneUKCta} c_cPIChanges={_site.c_cPIChanges}
-     c_cPIChangesDescription1={_site.c_cPIChangesDescription1} vodafoneDetails={_site.c_vodafoneDetails}
-     ></Footer> */}
         </AnalyticsScopeProvider>
       </AnalyticsProvider>
-      {/* 
-      <Footer
-        data={c_footerLinks ? c_footerLinks : []}
-        address={address ? address : {}}
-        c_companyrn={c_companyrn ? c_companyrn : ""}
-        c_phoneNumber={c_phoneNumber ? c_phoneNumber : ""}
-        facebookPageUrl={facebookPageUrl ? facebookPageUrl : ""}
-        instagramHandle={instagramHandle ? instagramHandle : ""}
-        twitterHandle={twitterHandle ? twitterHandle : ""}
-        c_tikTok={c_tikTok ? c_tikTok : ""}
-      /> */}
+
     </>
   );
 };

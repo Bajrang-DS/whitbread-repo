@@ -1,7 +1,7 @@
 import * as React from "react";
 import Cta from "../commons/cta";
 import Hours from "../commons/hours";
-import woodtexture from "../../images/wood-texture.jpg";
+// import woodtexture from "../../images/wood-texture.jpg";
 import mapimage from "../../images/map.svg";
 import Phonesvg from "../../images/phone.svg";
 import Address from "../commons/Address";
@@ -27,7 +27,7 @@ const Contact = (props: any) => {
   return (
     <>
       <div className="address-main-sec">
-        <h4 style={{color:"black"}} className="box-title">{c_storeInfoHeading?c_storeInfoHeading:"Store Details"}</h4>
+        <h4 className="box-title text-[#0c1c8f]">{c_storeInfoHeading ? c_storeInfoHeading : "Store Details"}</h4>
 
         <div className="icon-row content-col">
           <div className="icon">
@@ -58,10 +58,10 @@ const Contact = (props: any) => {
           ""
         )}
 
-        <ul  className="">
-          <li  className="button-bx direction-button">
+        <ul className="">
+          <li className="button-bx direction-button">
             <GetDirection
-              buttonText={c_getDirectionsCTAText?c_getDirectionsCTAText:StaticData.getDirection}
+              buttonText={c_getDirectionsCTAText ? c_getDirectionsCTAText : StaticData.getDirection}
               address={address}
               latitude={latitude}
               longitude={longitude}
@@ -79,7 +79,7 @@ const Contact = (props: any) => {
         <div className="hours">
           <div className="hours-sec">
             <div className="title-with-link-1">
-              <h4 style={{color:"black"}} className="box-title">{"Store Opening Hours"}</h4>
+              <h4 className="box-title">{"Store Opening Hours"}</h4>
             </div>
             <div className="hours-div mb-5 md:mb-1 flex flex-col">
               {hours.holidayHours && typeof hours.reopenDate == "undefined" ? (
@@ -93,14 +93,10 @@ const Contact = (props: any) => {
               ) : (
                 ""
               )}
-
-              {/* <div className="title-with-link-1">
-        <h4 className="box-title">{"Store Hours"}</h4>        
-      </div> */}
               {hours && (
                 <Hours
-               
-                  title= {"Store Opening Hours"}
+
+                  title={"Store Opening Hours"}
                   additionalHoursText={additionalHoursText}
                   hours={hours}
                   c_specific_day={c_specific_day}

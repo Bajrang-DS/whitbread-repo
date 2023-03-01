@@ -3,7 +3,7 @@ import { CardComponent } from "@yext/search-ui-react";
 import { Location } from "../../types/search/locations";
 import GetDirection from "../commons/GetDirection";
 import redmapimage from "../../images/red-map.svg";
-import timesvg from "../../images/watch-icn.svg"
+// import timesvg from "../../images/watch-icn.svg"
 import Address from "../commons/Address";
 import OpenClose from "../commons/openClose";
 import { StaticData } from "../../../sites-global/staticData";
@@ -89,10 +89,10 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                         </svg></button>
                       </div>
                       <div className={timeStatus + " daylist"} >
-                      <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText} />
+                        <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText} />
+                      </div>
                     </div>
-                    </div>
-                   
+
                   </div>
 
                 </div>

@@ -1,26 +1,13 @@
 import * as React from "react";
 import Header from "../../src/components/layouts/header";
 import Footer from "../components/layouts/footer";
-// import Banner from "../components/banner";
-// import Header from "../../src/components/layouts/footer";
-// import Footer from "../../src/components/layouts/header";
-// import favicon from "../images/Whitbread-favicon.ico";
-
 import BreadCrumbs from "../components/layouts/Breadcrumb";
 import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
-
-// import { AnalyticsEnableTrackingCookie,  AnalyticsEnableDebugging} from "../types/constants";
-// import { stagingBaseurl } from "../constants";
-//import bannerImage from "../images/app-bg.png";
 import {
   AnalyticsProvider,
   AnalyticsScopeProvider,
 } from "@yext/pages/components";
 import "../index.css";
-// import "../main.css";
-//import favicon from "../images/favicon-live.png";
-// import favicon from "../images/Whitbread-favIcon.ico";
-
 import {
   Template,
   GetPath,
@@ -32,11 +19,9 @@ import {
   HeadConfig,
 } from "@yext/pages";
 import { Link } from "@yext/pages/components";
-// import { stagingBaseurl } from "../config/globalConfig";
 import { JsonLd } from "react-schemaorg";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
-// import Herobanner from "../components/commons/Herobanner";
-//import Logo from "../images/logo.svg";
+
 var currentUrl = "";
 
 export const config: TemplateConfig = {
@@ -103,10 +88,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
 
-  let metaDescription ="Find your nearest Whitbread store and which services are available." + document.name;
+  let metaDescription = "Find your nearest Whitbread store and which services are available." + document.name;
   let metaTitle = `Whitbread Store in ${document.name} | Find a Local Store`;
-  let canonicalURL = document._site ? document._site + document.dm_directoryParents[1].name.toLowerCase() +"/"+  document.slug + ".html"
-  : stagingBaseurl +  document.slug + ".html"
+  let canonicalURL = document._site ? document._site + document.dm_directoryParents[1].name.toLowerCase() + "/" + document.slug + ".html"
+    : stagingBaseurl + document.slug + ".html"
   let ogmetaImage = document._site.url ? document._site.url : "https://cdn.Whitbread.co.uk/en/assets/images/large/IMG_10480.jpg"
 
   return {
@@ -129,7 +114,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${metaDescription}`,
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -144,7 +129,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: " Whitbread",
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -152,7 +137,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: "noindex, nofollow",
         },
       },
-      
+
       {
         type: "link",
         attributes: {
@@ -161,7 +146,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         },
       },
       ///og tags
-      
+
       {
         type: "meta",
         attributes: {
@@ -169,7 +154,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${canonicalURL}`,
         },
       },
-      
+
       {
         type: "meta",
         attributes: {
@@ -191,9 +176,9 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${ogmetaImage}`
         },
       },
-      
+
       /// twitter tag
-     
+
 
       {
         type: "meta",
@@ -282,17 +267,17 @@ const State: Template<TemplateRenderProps> = ({
             <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
               <Link
                 key={entity.slug}
-                href={slug + "/" + entity.slug +"/" + entity.dm_directoryChildren[0].slug }
+                href={slug + "/" + entity.slug + "/" + entity.dm_directoryChildren[0].slug}
                 //href={slug + "/" + entity.slug + ".html"}
                 className="text-blue hover:text-red"
                 eventName={entity.name}
               >
-              {entity.name} ({entity.dm_directoryChildrenCount})
+                {entity.name} ({entity.dm_directoryChildrenCount})
               </Link>
             </div>
           );
         }
-         else {
+        else {
           let name: any = entity.dm_directoryChildren[0].name.toLowerCase();
           let string: any = name.toString();
           let removeSpecialCharacters = string.replace(
@@ -304,13 +289,13 @@ const State: Template<TemplateRenderProps> = ({
           url = `${entity.dm_directoryChildren[0].id}-${finalString}.html`;
           return (
             <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
-              <Link key={entity.slug} href={slug +"/"+entity.slug + url} className="text-blue hover:text-red" rel="noopener noreferrer" eventName={`LocationName`}>
+              <Link key={entity.slug} href={slug + "/" + entity.slug + url} className="text-blue hover:text-red" rel="noopener noreferrer" eventName={`LocationName`}>
                 {entity.name} ({entity.dm_directoryChildrenCount})
               </Link>
             </div>
           );
         }
-      } 
+      }
       else {
         return (
           <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
@@ -326,8 +311,8 @@ const State: Template<TemplateRenderProps> = ({
         );
       }
     });
-    let templateData = { document: document, __meta: __meta };
-    let breadcrumbScheme: any = [];
+  let templateData = { document: document, __meta: __meta };
+  let breadcrumbScheme: any = [];
   let currentIndex: any = 0;
   dm_directoryParents &&
     dm_directoryParents.map((i: any, index: any) => {
@@ -353,9 +338,7 @@ const State: Template<TemplateRenderProps> = ({
   });
   return (
     <>
-     {/* <Header></Header>
-      */}
-       <JsonLd<Organization>
+      {/* <JsonLd<Organization>
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -367,71 +350,39 @@ const State: Template<TemplateRenderProps> = ({
             "https://www.facebook.com/WhitbreadUK"
           ],
         }}
-      />
-
-      {/* <JsonLd<BreadcrumbList>
-        item={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: breadcrumbScheme,
-        }}
       /> */}
+
       <AnalyticsProvider
         templateData={templateData}
         enableDebugging={AnalyticsEnableDebugging}
         enableTrackingCookie={AnalyticsEnableTrackingCookie}
       >
         <AnalyticsScopeProvider name={""}>
-        <Header _site={_site}/>
-      {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
-      <BreadCrumbs
-        name={name}
-        parents={dm_directoryParents}
-        baseUrl={relativePrefixToRoot}
-        address={{}}
-      
-      ></BreadCrumbs>
-        <PhotoSlider _site={_site} />
-       <div className="header-title ">
-          {/* <Herobanner c_bannerTitle={_site.c_bannerTitle}></Herobanner> */}
-        </div>
-      {/* <Banner
-        Name={document.dm_directoryParents[1].name}
-        TagLine={""}
-        BackgroundImage={bannerImage}
-        CtaButton={""}
-        text={name}
-        template={"state"}
-      /> */}
+          <Header _site={_site} />
+          <BreadCrumbs
+            name={name}
+            parents={dm_directoryParents}
+            baseUrl={relativePrefixToRoot}
+            address={{}}
 
-      <h1 className="sec_heading mt-12" style={{ textAlign: "center", color:"Highlight" }}>
-        Cities in {name}, {document.dm_directoryParents[1].name}{" "}
-      </h1>
-      <div className="directory-country nearby-sec">
-        <div className="container">
-          <div className="flex flex-wrap justify-center -mx-[15px]">
-            <div className="w-full text-center"></div>
-            {childrenDivs}
+          ></BreadCrumbs>
+          <PhotoSlider _site={_site} />
+
+          <h1 className="sec_heading mt-12" style={{ textAlign: "center", color: "Highlight" }}>
+            Cities in {name}, {document.dm_directoryParents[1].name}{" "}
+          </h1>
+          <div className="directory-country nearby-sec">
+            <div className="container">
+              <div className="flex flex-wrap justify-center -mx-[15px]">
+                <div className="w-full text-center"></div>
+                {childrenDivs}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <Footer _site={_site}/>
-     {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}
-     helpSupport={_site.c_helpSupport} helpSupportcta={_site.c_helpSupportcta} WhitbreadUK={_site.c_WhitbreadUK} WhitbreadUKCta={_site.c_WhitbreadUKCta} c_cPIChanges={_site.c_cPIChanges}
-     c_cPIChangesDescription1={_site.c_cPIChangesDescription1} WhitbreadDetails={_site.c_WhitbreadDetails}
-     ></Footer> */}
-     </AnalyticsScopeProvider>
+          <Footer _site={_site} />
+
+        </AnalyticsScopeProvider>
       </AnalyticsProvider>
-      {/* <Footer
-        data={c_globalData[0].c_footerLinks}
-        address={c_globalData[0].address}
-        c_companyrn={c_globalData[0].c_companyrn}
-        c_phoneNumber={c_globalData[0].c_phoneNumber}
-        facebookPageUrl={c_globalData[0].facebookPageUrl}
-        instagramHandle={c_globalData[0].instagramHandle}
-        twitterHandle={c_globalData[0].twitterHandle}
-        c_tikTok={c_globalData[0].c_tikTok}
-      /> */}
     </>
   );
 };

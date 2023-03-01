@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect } from "react";
 import { StaticData } from "../../../sites-global/staticData";
 import Timer from "../locationDetail/countdown";
-// import OpenCloseBlock from "./OpenCloseBlock";
+
 
 export const OpenStausFunctions = {
   formatOpenNowString: (hoursData: any, timeZone: any) => {

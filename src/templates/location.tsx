@@ -8,8 +8,6 @@ import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
 import { JsonLd } from "react-schemaorg";
 import Opening from "../components/commons/openClose";
 import { nearByLocation } from "../types/nearByLocation";
-// import Logo from "../images/logo-header.svg"
-// import offerBanner from "../images/offer-banner.jpg"
 import IframeMap from "../components/locationDetail/IframeMap";
 import "../index.css";
 import {
@@ -123,9 +121,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   } else {
     url += `${document.slug.toString()}`;
   }
- return url;
+  return url;
 };
-  // return document.id;
+// return document.id;
 /**
  * Defines a list of paths which will redirect to the path created by getPath.
  *
@@ -254,7 +252,6 @@ export const transformProps: TransformProps<ExternalApiData> = async (
   var location = `${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.latitude : data.document.displayCoordinate.latitude},${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.longitude : data.document.displayCoordinate.longitude}`;
 
   const url = `${AnswerExperienceConfig.endpoints.verticalSearch}?experienceKey=${AnswerExperienceConfig.experienceKey}&api_key=${AnswerExperienceConfig.apiKey}&v=20220511&version=${AnswerExperienceConfig.experienceVersion}&locale=${AnswerExperienceConfig.locale}&location=${location}&locationRadius=${AnswerExperienceConfig.locationRadius}&verticalKey=${AnswerExperienceConfig.verticalKey}&limit=6&retrieveFacets=true&skipSpellCheck=false&sessionTrackingEnabled=true&source=STANDARD`;
-  // const url = `https://liveapi-sandbox.yext.com/v2/accounts/me/entities/geosearch?radius=1000&location=${data.document.yextDisplayCoordinate.latitude},${data.document.yextDisplayCoordinate.longitude}&api_key=3a58affb71208da4872659791cb78e07&v=20181201&resolvePlaceholders=true&entityTypes=location&limit=4`
   console.log(url)
   const externalApiData = (await fetch(url).then((res: any) =>
     res.json()
@@ -262,8 +259,6 @@ export const transformProps: TransformProps<ExternalApiData> = async (
   )) as nearByLocation;
   return { ...data, externalApiData };
 };
-
-
 
 type ExternalApiRenderData = TemplateRenderProps & {
   externalApiData: nearByLocation;
@@ -451,16 +446,6 @@ const Location: Template<ExternalApiRenderData> = ({
           url: `${c_canonical ? c_canonical : stagingBaseurl}${slug ? slug : `${name}`}.html`
         }}
       />
-      {/* <JsonLd<BreadcrumbList>
-        item={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-
-          itemListElement: breadcrumbScheme,
-        }}
-      />
-       */}
-
 
       <AnalyticsProvider
         templateData={templateData}
@@ -470,17 +455,14 @@ const Location: Template<ExternalApiRenderData> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <PageLayout _site={_site}>
-          <BreadCrumbs
-        name={name}
-        parents={dm_directoryParents}
-        baseUrl={relativePrefixToRoot}
-        address={{}}
-      ></BreadCrumbs>
+            <BreadCrumbs
+              name={name}
+              parents={dm_directoryParents}
+              baseUrl={relativePrefixToRoot}
+              address={{}}
+            ></BreadCrumbs>
 
             <PhotoSlider _site={_site} />
-
-
-
             <div className="container">
               <div className='banner-text banner-dark-bg justify-center text-center'>
                 <h1 style={{ color: "#002d72" }} className=""> {name}</h1>
@@ -510,11 +492,11 @@ const Location: Template<ExternalApiRenderData> = ({
               <div className="container">
                 <div className="sec-title"><h2 style={{ color: "#002d72" }} className="">{StaticData.NearStoretext}</h2></div>
                 <div className="nearby-sec-inner">
-                
-              {yextDisplayCoordinate || cityCoordinate || displayCoordinate ?
-                <Nearby externalApiData={externalApiData} /> 
-             : ''}
-            
+
+                  {yextDisplayCoordinate || cityCoordinate || displayCoordinate ?
+                    <Nearby externalApiData={externalApiData} />
+                    : ''}
+
                 </div>
               </div>
 

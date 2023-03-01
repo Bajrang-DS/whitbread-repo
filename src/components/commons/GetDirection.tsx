@@ -4,40 +4,41 @@ import { conversionDetailsDirection, conversionDetailsPhone, Directionsvg } from
 
 type Cta = {
   buttonText: string;
-  address :object;
+  address: object;
   latitude?: number;
   longitude?: number;
+  // GetDirection?:any;
 };
 
 const GetDirection = (props: GetDirection) => {
-  const { 
-    buttonText, 
+  const {
+    buttonText,
     latitude,
-	address,
-    longitude 
+    address,
+    longitude
   } = props;
 
-  
+
   const getDirectionUrl = () => {
     var origin: any = null;
     if (address.city) {
       origin = address.city;
     } else if (address.region) {
       origin = address.region;
-    }  else {
+    } else {
       origin = address.country;
     }
     if (navigator.geolocation) {
       const error = (error: any) => {
         var getDirectionUrl =
-        "https://www.google.com/maps/dir/?api=1&destination=" +
-       latitude +
-        "," +
-        longitude +
-        "&origin=" +
-        origin +"," +'UK';
+          "https://www.google.com/maps/dir/?api=1&destination=" +
+          latitude +
+          "," +
+          longitude +
+          "&origin=" +
+          origin + "," + 'UK';
 
-      window.open(getDirectionUrl, "_blank");
+        window.open(getDirectionUrl, "_blank");
       };
       navigator.geolocation.getCurrentPosition(
         function (position) {
@@ -46,9 +47,9 @@ const GetDirection = (props: GetDirection) => {
           let currentLongitude = position.coords.longitude;
           let getDirectionUrl =
             "https://www.google.com/maps/dir/?api=1&destination=" +
-           latitude +
+            latitude +
             "," +
-           longitude +
+            longitude +
             "&origin=" +
             currentLatitude +
             "," +
@@ -63,28 +64,21 @@ const GetDirection = (props: GetDirection) => {
     }
   };
   const conversionDetails_direction = conversionDetailsDirection;
-  // const conversionDetails_phone = conversionDetailsPhone;
 
   return (
-    <>   
-     <Link style={{color:"blue"}}
-                      data-ya-track="getdirections"
-                      eventName={`getdirections`}
-                      className="btn notHighligh"
-                      onClick={getDirectionUrl}
-                      href="javascript:void(0);"
-                      rel="noopener noreferrer"
-                      conversionDetails={conversionDetails_direction}
-                    >
-                      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> 
-                        {buttonText}
-                    </Link>
-    {/* <a
-     onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >
-      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> 
-    
-    
-     </a> */}
+    <>
+      <Link style={{ color: "blue" }}
+        data-ya-track="getdirections"
+        eventName={`getdirections`}
+        className="btn notHighligh"
+        onClick={getDirectionUrl}
+        href="javascript:void(0);"
+        rel="noopener noreferrer"
+        conversionDetails={conversionDetails_direction}
+      >
+        <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
+        {buttonText}
+      </Link>
     </>
 
   );

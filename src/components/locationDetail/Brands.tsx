@@ -10,7 +10,7 @@ export default function Brands(props: any) {
       <div className="brands"><h4>{c_brands.title}</h4>
         <ul>
         {c_brands.images?.map((item: any, index: number) => (
-          <li>
+          <li className="hover:border-[#ffa400]">
             <a className="brand" target="_blank" href="#">
               <img width="98" height="98" src={item.url} className="attachment-full size-full" alt="Preier Inn 98x98" decoding="async" loading="lazy" />
             </a>

@@ -35,10 +35,10 @@ export default function About(props: any) {
               </div>
             </div>
           
-            <a className="btn style-white int" href="#" target="_self">{c_about.cta1.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+            <a className="btn style-white int hover:underline" href="#" target="_self">{c_about.cta1.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
             </a><br />
             
-            <a className="btn style-white int" href="#" target="_blank">{c_about.cta2.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+            <a className="btn style-white int hover:underline" href="#" target="_blank">{c_about.cta2.label} <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
             </a>
           </div>
         </div>
