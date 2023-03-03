@@ -22,7 +22,7 @@ type props = {
   services: any;
 
 };
-const metersToMiles = (meters: number) => {
+const metersToMiles = (meters: number) => {    //function to show distance in miles
 
   const miles = meters * 0.000621371;
   return miles.toFixed(2);

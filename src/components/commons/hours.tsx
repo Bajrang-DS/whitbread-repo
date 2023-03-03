@@ -95,7 +95,7 @@ const defaultSorter: { [key: string]: number } = {
   saturday: 6,
 };
 var cuurentdaynum: number;
-function sortByDay(week: Week): Week {
+function sortByDay(week: Week): Week {   //to sorting the name of day's
   const currentdayuk = useCallback(
     () => {
       return new Date(

@@ -1,5 +1,4 @@
 import { Wrapper } from "@googlemaps/react-wrapper";
-// import { Result, useAnswersState } from '@yext/answers-headless-react';
 import {
   useSearchState,
   Result,
@@ -235,6 +234,7 @@ function UnwrappedGoogleMaps({
       label: {  //open letter
         text: String(i),
         color: "white",
+        
       },
       animation: google.maps.Animation.DROP
     });

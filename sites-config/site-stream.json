@@ -17,7 +17,11 @@
     "description",
     "c_socialitems",
     "photoGallery",
-    "c_bannerlink"
+    "c_bannerlink",
+    "c_grid1",
+    "c_grid2",
+    "c_grid3"
+
   ],
   "localization": {
     "locales": ["en"],

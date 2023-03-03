@@ -77,6 +77,86 @@
 			"url": "http://a.mktgcdn.com/p-sandbox/D9nDWLExHRXGT2ycOIfQbfGUisTvKL7Sz_NFvRZNrX0/302x68.png",
 			"width": 302
 		},
+		"c_grid1": [
+			{
+				"cta1": {
+					"label": "About us overview",
+					"linkType": "URL"
+				},
+				"text": "Premier Inn is the UK’s biggest hotel brand, offering quality accommodation at affordable prices with over 800 hotels in great locations."
+			},
+			{
+				"cta1": {
+					"label": "Sustainability overview",
+					"linkType": "URL"
+				},
+				"cta2": {
+					"label": "Read our 2021/22 ESG report here.",
+					"linkType": "URL"
+				},
+				"text": "Our ‘Force for Good’ sustainability programme focuses on enabling people to live and work well whilst having a positive impact on the world around us."
+			}
+		],
+		"c_grid2": [
+			{
+				"cta": [
+					{
+						"label": "Our business model and strategy",
+						"linkType": "URL"
+					},
+					{
+						"label": "Our brands",
+						"linkType": "URL"
+					},
+					{
+						"label": "Management",
+						"linkType": "URL"
+					}
+				]
+			},
+			{
+				"cta": [
+					{
+						"label": "Our strategy and targets",
+						"linkType": "URL"
+					},
+					{
+						"label": "Sustainability Reports \u0026 Policies",
+						"linkType": "URL"
+					}
+				]
+			}
+		],
+		"c_grid3": [
+			{
+				"cta": [
+					{
+						"label": "Our history",
+						"linkType": "URL"
+					},
+					{
+						"label": "Awards",
+						"linkType": "URL"
+					}
+				]
+			},
+			{
+				"cta": [
+					{
+						"label": "Opportunity",
+						"linkType": "URL"
+					},
+					{
+						"label": "Community",
+						"linkType": "URL"
+					},
+					{
+						"label": "Responsibility",
+						"linkType": "URL"
+					}
+				]
+			}
+		],
 		"c_headerlink": [
 			{
 				"label": "About us",

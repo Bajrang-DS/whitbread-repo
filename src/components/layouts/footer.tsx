@@ -1,4 +1,6 @@
 import * as React from "react";
+import CookieConsent from "react-cookie-consent";
+import { cookieText } from "../../../sites-global/global";
 
 const Footer = (props: any) => {
   const { c_footerlink1, c_footerlink2, c_footerlink3, c_footerlogo, c_socialitems, description } = props;
@@ -97,6 +99,19 @@ const Footer = (props: any) => {
             </div>
           </div>
         </div>
+        {/* <CookieConsent
+
+        buttonText={"Accept all cookies"}
+          buttonStyle={{
+            marginLeft: "100px",
+          }}
+        >
+          <div className="text-xl font-bold pb-1">Cookie Policy</div>
+          <div
+            className="text-base"
+            dangerouslySetInnerHTML={{ __html: cookieText ? cookieText : "" }}
+          ></div>
+        </CookieConsent> */}
       </footer>
     </>
   );
