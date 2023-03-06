@@ -65,7 +65,9 @@ export interface FilterSearchProps {
   params: any;
   displaymsg:any;
   setDisplaymsg:any;
-  setSearchInputValue:any
+  setSearchInputValue:any;
+  text : any;
+  type:any;
 }
 
 type FilterHandle = {
@@ -87,7 +89,8 @@ const FilterSearch = React.forwardRef<FilterHandle, FilterSearchProps>(
       params,
       displaymsg,
       setDisplaymsg,
-      setSearchInputValue
+      setSearchInputValue,
+      text
     }: FilterSearchProps,
     ref
   ): JSX.Element => {

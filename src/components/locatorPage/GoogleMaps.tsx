@@ -532,9 +532,9 @@ function UnwrappedGoogleMaps({
             <div className="icon-row">
               <div className="icon"> <img className=" " src={Phones} width="20" height="20" alt="none" />
               </div>
-              <div className="content-col">
+              <div className="content-col ">
                 {/* <h6>Telephone</h6> */}
-                <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
+                <a id="address" className="notHighlight hover:underline hover:text-[#1685b1]" href={`tel:${result.rawData.mainPhone}`}>
                   {result.rawData.mainPhone}</a>
               </div>
             </div> : ''}

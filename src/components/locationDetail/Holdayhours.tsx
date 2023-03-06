@@ -35,7 +35,7 @@ import { useEffect } from "react";
          
           
            return(
-            <div className="pop-up-holyhrs">
+            <div className="pop-up-holyhrs text-black">
                 <div>{join(new Date(res.date), a, '-') }</div>         
                 <div>{weeks[day]}</div> 
                 {console.log(res)}  

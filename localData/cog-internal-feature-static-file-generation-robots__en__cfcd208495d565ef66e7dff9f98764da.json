@@ -95,6 +95,20 @@
 					"linkType": "URL"
 				},
 				"text": "Our ‘Force for Good’ sustainability programme focuses on enabling people to live and work well whilst having a positive impact on the world around us."
+			},
+			{
+				"cta1": {
+					"label": "Governance overview",
+					"linkType": "URL"
+				},
+				"text": "Our corporate governance framework is integral to delivering our strategic priorities and creating long-term value for all stakeholders, from investors to employees."
+			},
+			{
+				"cta1": {
+					"label": "Investors overview",
+					"linkType": "URL"
+				},
+				"text": "We have three strategic priorities to support the ongoing success and growth of the business; to grow and innovate in our core UK businesses; to focus on our strengths to grow in Germany; and to build the capability and infrastructure to support long-term growth."
 			}
 		],
 		"c_grid2": [
@@ -125,6 +139,41 @@
 						"linkType": "URL"
 					}
 				]
+			},
+			{
+				"cta": [
+					{
+						"label": "Reports and policies",
+						"linkType": "URL"
+					},
+					{
+						"label": "Section 172",
+						"linkType": "URL"
+					},
+					{
+						"label": "Information security"
+					}
+				]
+			},
+			{
+				"cta": [
+					{
+						"label": "Why invest?",
+						"linkType": "URL"
+					},
+					{
+						"label": "Results, reports and presentations",
+						"linkType": "URL"
+					},
+					{
+						"label": "News, events and alerts",
+						"linkType": "URL"
+					},
+					{
+						"label": "Share price information",
+						"linkType": "URL"
+					}
+				]
 			}
 		],
 		"c_grid3": [
@@ -152,6 +201,30 @@
 					},
 					{
 						"label": "Responsibility",
+						"linkType": "URL"
+					}
+				]
+			},
+			{
+				"cta": [
+					{
+						"label": "MANAGEMENT",
+						"linkType": "URL"
+					}
+				]
+			},
+			{
+				"cta": [
+					{
+						"label": "Shareholder centre",
+						"linkType": "URL"
+					},
+					{
+						"label": "Corporate debt",
+						"linkType": "URL"
+					},
+					{
+						"label": "Analyst coverage and company compiled consensus",
 						"linkType": "URL"
 					}
 				]

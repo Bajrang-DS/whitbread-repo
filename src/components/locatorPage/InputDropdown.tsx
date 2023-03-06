@@ -49,6 +49,7 @@ interface Props {
   cssClasses?: InputDropdownCssClasses;
   handleSetUserShareLocation: (value: string, userShareStatus: boolean) => void;
   handleInputValue: () => void;
+  text : any ;
 }
 
 interface State {

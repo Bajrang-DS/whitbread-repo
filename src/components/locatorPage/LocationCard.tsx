@@ -10,6 +10,7 @@ import { StaticData } from "../../../sites-global/staticData";
 import { Link } from "@yext/pages/components";
 import Hours from "../commons/hours";
 import hours from "../commons/hours";
+import Model from "../locationDetail/Model";
 
 const metersToMiles = (meters: number) => {
   const miles = meters * 0.000621371;
@@ -28,7 +29,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
     }
   }
 
-  const { address, hours, additionalHoursText, mainPhone, timezone } = result.rawData;
+  const { address, hours, additionalHoursText, mainPhone, timezone, c_specific_day } = result.rawData;
 
   //   var name: any = result.rawData.name?.toLowerCase();
   //   var country: any = result.rawData.address.countryCode?.toLowerCase();
@@ -52,6 +53,8 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
   let statecode = `${result.rawData.address?.region?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
   let citycode = `${result.rawData?.address?.city?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`;
   let url = `${countrycode + "/" + statecode + "/" + citycode + "/" + result.rawData.slug?.toString()}`;
+
+  
   return (
     <div className={`location result-list-inner-${result.id} result`} id={`result-${result.id}`} key={`result-${result.rawData.id}`}>
       <div className="result-inner ">
@@ -74,6 +77,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
             <div className="icon-row content-col address-with-availablity notHighlight">
               <Address address={address} />
+
               <div className="open-close ">
                 <div className="hours-sec onhighLight">
                   <div className="OpenCloseStatus ">
@@ -89,6 +93,10 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                         </svg></button>
                       </div>
                       <div className={timeStatus + " daylist"} >
+                        <div>
+                        <Model name={StaticData.Holdiay}
+                          holidayHours={hours.holidayHours}
+                          /></div>
                         <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText} />
                       </div>
                     </div>

@@ -1,9 +1,36 @@
 import * as React from "react";
 import "../../index.css";
+
 type props = {
   prop: any;
   id: any;
+
 };
+
+function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = React.useState(null);
+
+  React.useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+        setScrollDirection(direction);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    }
+  }, [scrollDirection]);
+
+  return scrollDirection;
+};
+
+
 const Header = (HeaderItem: any) => {
   const { c_logo, c_headerlink, c_uppersection, id, c_grid1, c_grid2, c_grid3 } = HeaderItem;
 
@@ -15,10 +42,10 @@ const Header = (HeaderItem: any) => {
       x.style.visibility = "visible";
     }
   }
-
+  const scrollDirection = useScrollDirection();
   //   const searchFunction = (res:any|string)=>{
-  // if ("text"== res.id){
-  //   return res.di;
+  // if ("text"== res.entity.id){
+  //   return res.slug;
   // }else{
   //   return 0;
   // }
@@ -43,7 +70,7 @@ const Header = (HeaderItem: any) => {
                 id="menu-item-55"
                 className="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"
               >
-                <a href="#" className="no-underline hover:underline text-white hover:text-[#ffa400]"><span>{item.label}</span></a>
+                <a href="#" className="no-underline hover:underline text-white hover:text-[#ffa400]"><span>{item.label ? item.label : ""}</span></a>
               </li>
             ))}
             <li id="menu-item-55"
@@ -53,12 +80,12 @@ const Header = (HeaderItem: any) => {
           </ul>
         </div>
       </div>
-      <header className="header sticky nav-down" id="top">
+      <header className={`header sticky nav-down ${ scrollDirection === "down" ? "hide" : "show"}`} id="top">
         <div className="wrap">
           <div id="branding">
 
             <a href="#" className="custom-logo-link" >
-              <img src={HeaderItem?._site?.c_logo?.url} alt="logo" />
+              <img src={HeaderItem?._site?.c_logo?.url ? HeaderItem?._site?.c_logo?.url : ""} alt="logo" />
             </a>
           </div>
           <div id="nav-expander" className="nav-expander" style={{ cursor: "pointer" }}>
@@ -70,11 +97,11 @@ const Header = (HeaderItem: any) => {
               {HeaderItem._site?.c_headerlink?.map((item: any, index: number) => (
                 <li className="menu-item-34" key={index}>
                   <a href="#">
-                    {item.label}
+                    {item.label ? item.label : ""}
 
                   </a>
                   {/* from here to line no. 143- for sub menu section after hover on header menu */}
-                  {index <= 3 ? (
+                  {index <= 3 ? (   // condition to stop sub menu after index 3
                     <>
                       <div className="sub-menu">
                         <ul id="mega-menu-34" className="wrap sub-mega-menu">
@@ -86,11 +113,11 @@ const Header = (HeaderItem: any) => {
 
                                     <div className="textwidget">
 
-                                      <a className="button hover:underline" href="#">{item.cta1.label}</a><br />
+                                      <a className="button hover:underline" href="#">{item.cta1.label ? item.cta1.label : ""}</a><br />
                                       <p>
                                         {item.text}
                                       </p>
-                                      <a className="button hover:underline" href="#">{item?.cta2?.label}</a>
+                                      <a className="button hover:underline" href="#">{item?.cta2?.label ? item?.cta2?.label : ""}</a>
                                     </div>
                                   </li>
                                 </>
@@ -104,11 +131,11 @@ const Header = (HeaderItem: any) => {
                               <ul id="menu-mm-about-submenu-left" className="menu">
                                 {HeaderItem._site?.c_grid2?.map((item: any, indexes: number) => (
                                   <>
-                                    {index == indexes ? (
+                                    {index == indexes ? (   // condition to show data of sub menu according to there index number
                                       <>
                                         <li id="menu-item-3954" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954">
                                           {item.cta?.map((data: any) => (
-                                            <p>  <a className=" hover:underline" href="#">{data.label}</a></p>
+                                            <p>  <a className=" hover:underline" href="#">{data.label ? data.label : ""}</a></p>
                                           ))}
                                         </li><br />
                                       </>
@@ -125,11 +152,12 @@ const Header = (HeaderItem: any) => {
                               <ul id="menu-mm-about-submenu-right" className="menu">
                                 {HeaderItem._site?.c_grid3?.map((item: any, indexes: number) => (
                                   <>
-                                    {index == indexes ? (
+                                    {index == indexes ? (  // condition to show data of sub menu according to there index number
                                       <>
                                         <li id="menu-item-3958" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3958">
                                           {item.cta?.map((data: any) => (
-                                            <p> <a className={index == 2 ? "third-button" : "hover:underline"} href="#">{data.label}</a></p>
+                                            <p> <a className={index == 2 ? "third-button" : "hover:underline"} href="#">
+                                              {data.label ? data.label : ""}</a></p>
                                           ))}
                                         </li><br />
                                       </>
@@ -162,7 +190,7 @@ const Header = (HeaderItem: any) => {
                   <ul className="wrap sub-mega-menu">
                     <li>
                       <h5 style={{ color: "#002d72" }}>Search</h5>
-                      <form role="search" method="get" className="search-form" action="#">
+                      <form role="search" method="get" className="search-form" action="https://master-deftly--dusty--bonobo-sbx-pgsdemo-com.sbx.preview.pagescdn.com/">
                         <label htmlFor="search-form-1" className="search-reader-text">Search for:</label>
                         <input type="text" id="search-form-1" className="search-field" placeholder="Enter keywords" name="text" />
                         <input type="submit" className="search-submit" value="Go" />

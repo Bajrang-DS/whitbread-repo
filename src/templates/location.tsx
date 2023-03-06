@@ -298,6 +298,7 @@ const Location: Template<ExternalApiRenderData> = ({
     c_brandthird,
     c_bannerlink,
     dm_directoryParents,
+    c_specific_day
   } = document;
 
   let templateData = { document: document, __meta: __meta };
@@ -474,7 +475,7 @@ const Location: Template<ExternalApiRenderData> = ({
             <div className="location-information">
               <Contact address={address}
                 phone={mainPhone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
-                yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} ></Contact>
+                yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude}  hours={hours} additionalHoursText={additionalHoursText} ></Contact>
               {
                 hours ?
                   <div className="map-sec" id="map_canvas">
@@ -498,6 +499,7 @@ const Location: Template<ExternalApiRenderData> = ({
                     : ''}
 
                 </div>
+                <Faq />
               </div>
 
             </div>

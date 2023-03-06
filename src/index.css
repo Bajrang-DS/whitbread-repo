@@ -564,7 +564,7 @@ body .ps:hover .ps__rail-y{@apply opacity-100}
 body .ps__rail-y{ @apply opacity-100 mt-4 !bg-gray-light w-4}
 body .ps__thumb-y{ @apply bg-gray-dark opacity-100 right-1 w-2}
 body .ps__rail-y:hover .ps__thumb-y{ @apply w-2 bg-gray-dark}
-table.day-hrs{  @apply border-none w-full mb-4}
+table.day-hrs{  @apply border-none w-full mb-4 mt-[10px]}
 table.day-hrs td{ @apply   text-right pr-3}
 .storelocation-openCloseTime table.day-hrs{  @apply bg-white xl:max-w-md 2xl:max-w-lg border   mx-auto xl:right-3.5 relative}
 .storelocation-openCloseTime table.day-hrs .dayName{  @apply w-auto}
@@ -596,7 +596,7 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
   @apply overflow-hidden
 }
 .ReactModal__Content{ 
-  @apply max-w-[94%] md:max-w-3xl w-full max-h-[80%] !mr-0 !p-0 !pb-8 !border-none  !rounded-none
+  @apply max-w-[94%] md:max-w-2xl w-full max-h-[80%] !mr-0 !p-0 !pb-4 !border-none  !rounded-[25px]
 }
 .ReactModal__Overlay{
   @apply !bg-black bg-opacity-80 z-[999]
@@ -604,14 +604,20 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
 .ReactModal__Content .closeButton {@apply absolute right-4 top-2 cursor-pointer}
 .pop-up-holyhrs{@apply flex flex-row border border-dark-gray mx-4  border-b-0 last:border-b}
 .pop-up-holyhrs > div{@apply flex-[1_1_0] p-1.5 md:p-2.5}
-.pop-up-holyhrs.heading{@apply bg-dark-gray text-white}
+.pop-up-holyhrs.heading{@apply bg-[#040d64] text-white mt-[10px] mr-[16px] mb-[-16px] ml-0}
+.pop-up-holyhrs{
+  border: #040d64;
+    border-style: inset;
+    border-width: thin;
+margin-top: -1px;
+}
 .holytime-sec{@apply w-48 flex justify-evenly}
 .spac-bx{@apply w-8 text-center}
 .op-time{@apply w-8  lowercase}
-.cl-time{@apply w-8 lowercase}
+.cl-time{@apply w-[14rem] capitalize mt-[10px] pl-[28px]}
 .days-sec{@apply w-8 lowercase}
 .closeButton{
-  @apply bg-red flex items-center justify-center rounded-full hover:opacity-80
+  @apply bg-[#0c125c] flex items-center justify-center rounded-full hover:opacity-80
 }
 .closeButton svg{
   @apply w-3.5
@@ -635,9 +641,9 @@ table.day-hrs .time-b{  @apply text-lg md:text-lg  w-auto leading-[1.875rem] rou
 .location-name-miles .distance{
   @apply sm:absolute sm:-top-0.5 right-0 text-base md:text-lg mt-1 sm:mt-0
 }
-.icon-row a{
+/* .icon-row a{
   @apply hover:underline
-}
+} */
 
 .icon-row{
   @apply pl-7 relative mb-3 mt-3 flex flex-col
@@ -752,7 +758,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .title-with-link .box-title{ @apply mb-0}
 .title-with-link-1{@apply flex justify-between items-center mb-4}
 .title-with-link-1 .box-title{ @apply mb-0 text-[#0c1c8f]}
-.text-link{ @apply relative cursor-pointer capitalize text-red hover:text-black after:content-[""] after:bg-black after:h-px after:absolute after:left-0 after:bottom-0 after:w-0 after:transition-all after:duration-500 after:hover:w-full before:content-[""] before:bg-red before:h-px before:absolute before:left-0 before:bottom-0 before:w-full  }
+.text-link{ @apply relative cursor-pointer capitalize text-[white] text-center bg-[#020262] hover:text-[#020262] hover:bg-[white] hover:underline }
 .address-bx{@apply text-base }
 .address-bx, .phone-bx{ @apply text-base  }
 .address-bx h4{@apply text-red font-normal text-base uppercase }
@@ -1055,7 +1061,7 @@ border-radius: 50px 0px 50px 0px;;
   .storelocation-openCloseTime .day-hrs td.dayName{@apply pl-6}
   .storelocation-openCloseTime table.day-hrs .currentDay .dayName .checked{@apply left-1}
 }
-.active.daylist{ @apply  !block pl-[50px]}
+.active.daylist{ @apply  !block pl-[50px] pt-[5px]}
 .OpenCloseStatus .daylist{@apply hidden}
 .location .location-info .open-close{ @apply flex items-start   flex-row justify-between pl-0  sm:pl-0 md:pl-0 xl:pl-0 2xl:pl-0  leading-7}
 .location .location-info .open-close .OpenCloseStatus{@apply pr-5 pl-0   w-[300px]   relative   xl:pr-4 2xl:pr-5 border-none text-sm xl:text-xs 2xl:text-sm } 
@@ -1849,7 +1855,7 @@ p.meta a {
 /* for sub menu */
 .sitenav > ul > li > .sub-menu{
   display: block !important;
-    padding: 40px 0 30px 0;
+    padding: 50px 0 30px 0;
     background: #fff;
     border-top: 1px solid #d0d0d1;
     position: absolute;

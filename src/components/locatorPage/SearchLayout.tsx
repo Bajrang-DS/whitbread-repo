@@ -57,7 +57,9 @@ const SearchLayout = (props: any): JSX.Element => {
 
   var searchKey: any;
   var target;
-
+var type  : any;
+var text : any;
+var value: any;
   var firstTimeRunners = true;
 
   const FirstLoad = () => {
