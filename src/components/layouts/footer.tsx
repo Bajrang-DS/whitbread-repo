@@ -41,7 +41,7 @@ const Footer = (props: any) => {
 
                 <a className="btn style-white hover:underline" href="#" target="_blank">
                   {props._site.c_careers.cta.label ? props._site.c_careers.cta.label : ""}
-                  <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                  <svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M11 5.414H1" stroke="white" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </a>
               </div>

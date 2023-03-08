@@ -7,7 +7,7 @@ import { OpenStausFunctions } from "./openClose";
 
 type Hours = {
   title?: string;
-  hours?: Week;
+  hours?: Week|any;
   c_specific_day: any;
   additionalHoursText?: string;
   children?: React.ReactNode;
@@ -33,9 +33,9 @@ type OpenIntervals = {
   end: string;
 };
 
-const now = new Date();
+// const now = new Date();
 
-
+const now = new Date().getDay();
 /**
  * Dynamically creates a sort order based on today's day.
  */
@@ -99,7 +99,7 @@ function sortByDay(week: Week): Week {   //to sorting the name of day's
   const currentdayuk = useCallback(
     () => {
       return new Date(
-        now.toLocaleString("en-US", { timeZone: "Europe/London" })
+        now.toLocaleString()
       ).getDay();
 
     },
@@ -255,7 +255,7 @@ const DayRow = (props: DayRow) => {
         }
       );
 
-      const dataAccordintToMe = {};
+      const dataAccordintToMe : any= {};
       for (let index = 0; index < keysFromDataUnique.length; index++) {
         const element = keysFromDataUnique[index];
 

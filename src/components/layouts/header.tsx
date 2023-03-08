@@ -7,28 +7,6 @@ type props = {
 
 };
 
-function useScrollDirection() {
-  const [scrollDirection, setScrollDirection] = React.useState(null);
-
-  React.useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
-        setScrollDirection(direction);
-      }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-    };
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
-    return () => {
-      window.removeEventListener("scroll", updateScrollDirection); // clean up
-    }
-  }, [scrollDirection]);
-
-  return scrollDirection;
-};
 
 
 const Header = (HeaderItem: any) => {
@@ -42,6 +20,29 @@ const Header = (HeaderItem: any) => {
       x.style.visibility = "visible";
     }
   }
+  function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = React.useState(null);
+  
+    React.useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+  
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+          setScrollDirection(direction);
+        }
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection); // add event listener
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection); // clean up
+      }
+    }, [scrollDirection]);
+  
+    return scrollDirection;
+  };
+  
   const scrollDirection = useScrollDirection();
   //   const searchFunction = (res:any|string)=>{
   // if ("text"== res.entity.id){
@@ -113,7 +114,7 @@ const Header = (HeaderItem: any) => {
 
                                     <div className="textwidget">
 
-                                      <a className="button hover:underline" href="#">{item.cta1.label ? item.cta1.label : ""}</a><br />
+                                      <a className="button hover:underline" href="#">{item.cta1.label ? item.cta1.label : ""}</a>
                                       <p>
                                         {item.text}
                                       </p>
@@ -137,7 +138,7 @@ const Header = (HeaderItem: any) => {
                                           {item.cta?.map((data: any) => (
                                             <p>  <a className=" hover:underline" href="#">{data.label ? data.label : ""}</a></p>
                                           ))}
-                                        </li><br />
+                                        </li>
                                       </>
                                     ) : (
                                       " "
@@ -159,7 +160,7 @@ const Header = (HeaderItem: any) => {
                                             <p> <a className={index == 2 ? "third-button" : "hover:underline"} href="#">
                                               {data.label ? data.label : ""}</a></p>
                                           ))}
-                                        </li><br />
+                                        </li>
                                       </>
                                     ) : (
                                       " "

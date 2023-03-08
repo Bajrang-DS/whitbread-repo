@@ -261,7 +261,7 @@ export interface Location {
 	dineInHours?: Hours,
 	driveThroughHours?: Hours,
 	fullyVaccinatedStaff?: boolean,
-	name?: string,
+	// name?: string,
 	happyHours?: Hours,
 	holidayHoursConversationEnabled?: boolean,
 	kitchenHours?: Hours,
@@ -344,4 +344,5 @@ export interface Location {
 	yextRoutableCoordinate?: Coordinate,
 	yextWalkableCoordinate?: Coordinate,
 	videos?: ComplexVideo[],
+	c_specific_day?:any,
 }

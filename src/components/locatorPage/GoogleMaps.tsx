@@ -11,9 +11,9 @@ import {
   useComposedCssClasses,
 } from "../../hooks/useComposedCssClasses";
 import Mapicon2 from "../../images/MGMpin.svg";
-import clustericon from "../../images/cluster.png";
-import mapimage from "../../images/map.svg";
-import timesvg from "../../images/watch-icn.svg";
+// import clustericon from "../../images/cluster.png";
+// import mapimage from "../../images/map.svg";
+// import timesvg from "../../images/watch-icn.svg";
 import Hovermap from "../../images/MGMhover1.svg"
 import Hours from "../commons/hours";
 import reactElementToJSXString from "react-element-to-jsx-string";
@@ -105,7 +105,7 @@ function UnwrappedGoogleMaps({
 
   let isHover = true;
   const searchZoom: number | number | null | undefined = null;
-  let currentMapZoom: number | undefined = 0;
+  let currentMapZoom : number | undefined = 0;
   let stopAnimation = false;
   // if(!infoWindow){ infoWindow = new google.maps.InfoWindow();}
   let center: any = {
@@ -174,11 +174,11 @@ function UnwrappedGoogleMaps({
     strokeWeight: 1,
     labelOrigin: new google.maps.Point(21, 22),
   };
-  function zoomMapTo(zoomTo, centerToSet = false) {
-    currentMapZoom = map.getZoom();
+  function zoomMapTo(zoomTo: number, centerToSet : false) {
+    currentMapZoom = map?.getZoom();
     const newZoom =
-      currentMapZoom > zoomTo ? currentMapZoom - 1 : currentMapZoom + 1;
-    map.setZoom(newZoom);
+    currentMapZoom > zoomTo ? currentMapZoom - 1 : currentMapZoom + 1;
+    map?.setZoom(newZoom);
     if (newZoom != zoomTo && !stopAnimation)
       sleep(200).then(() => {
         zoomMapTo(zoomTo, centerToSet);
@@ -186,10 +186,10 @@ function UnwrappedGoogleMaps({
     if (newZoom == zoomTo) {
       stopAnimation = false;
       if (centerToSet) {
-        if (typeof map.panTo != "undefined") {
+        if (typeof map?.panTo != "undefined") {
           map.panTo(centerToSet);
         } else {
-          map.setCenter(centerToSet);
+          map?.setCenter(centerToSet);
         }
       }
     }
@@ -324,7 +324,7 @@ function UnwrappedGoogleMaps({
         markers1.current[i].setIcon(Hovermap);
 
       }
-      locationResults.map((result, index) => {
+      locationResults.map((result: any, index: number) => {
         if (i == index) {
           const resultelement = document.querySelectorAll(
             `.result-list-inner-${index + 1}`
@@ -334,7 +334,7 @@ function UnwrappedGoogleMaps({
             resultelement[index].classList.add("fixed-hover");
           }
           const position = getPosition(locationResults[index]);
-          map.setCenter(position);
+          map?.setCenter(position);
           Infowindow(i, result);
           scrollToRow(index);
         }
@@ -366,7 +366,7 @@ function UnwrappedGoogleMaps({
       setHover(true);
       info = false;
       infoWindow.current.close();
-      locationResults.map((result, index) => {
+      locationResults.map((result: any, index: number) => {
         const resultelement = document.querySelectorAll(
           `.result-list-inner-${index + 1}`
         );
@@ -383,7 +383,7 @@ function UnwrappedGoogleMaps({
   }
 
   const hours = (result: any) => {
-    return <Hours hours={result} />;
+    return <Hours hours={result} c_specific_day={undefined} />;
   };
   function addActiveGrid(index: any) {
     const elements = document.querySelectorAll(".result");
@@ -445,7 +445,7 @@ function UnwrappedGoogleMaps({
             }
             $(".result").removeClass("fixed-hover");
             // console.log('refLocationResults', refLocationResults);
-            refLocationResults.current.map((result, i) => {
+            refLocationResults?.current?.map((result :any, i: number) => {
               if (i == index) {
                 setHover(false);
                 isHover = false;

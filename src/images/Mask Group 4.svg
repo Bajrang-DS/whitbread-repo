@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="375" viewBox="0 0 440 375">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_281" data-name="Rectangle 281" width="440" height="375" rx="11" transform="translate(-5613 936)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <rect id="Rectangle_281" data-name="Rectangle 281" width="440" height="375" rx="11" transform="translate(-5613 936)" fill="#fff" stroke="#fff" strokeWidth="1"/>
     </clipPath>
     <linearGradient id="linear-gradient" x1="0.7" y1="0.155" x2="0.167" y2="0.736" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#eb0000" stop-opacity="0.58"/>
@@ -21,7 +21,7 @@
     </linearGradient>
   </defs>
   <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(5613 -936)" clip-path="url(#clip-path)">
-    <g id="Rectangle_279" data-name="Rectangle 279" transform="translate(-5613 936)" fill="#fff" stroke="#fff" stroke-width="1">
+    <g id="Rectangle_279" data-name="Rectangle 279" transform="translate(-5613 936)" fill="#fff" stroke="#fff" strokeWidth="1">
       <rect width="440" height="375" rx="11" stroke="none"/>
       <rect x="0.5" y="0.5" width="439" height="374" rx="10.5" fill="none"/>
     </g>

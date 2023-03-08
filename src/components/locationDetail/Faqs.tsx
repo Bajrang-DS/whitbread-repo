@@ -35,7 +35,7 @@ export default function Faq(props: any) {
   function setclass(e: any) {
     setCurrent(e.target.id);
   }
-  const renderedQuestionsAnswers = props.faqs?.map((item: any, index: Number) => {
+  const renderedQuestionsAnswers = props.faqs?.map((item: any, index: any) => {
     const showDescription = index === activeIndex ? "current" : "hidden";
     const background = index === activeIndex ? "active" : "";
     const fontWeightBold = index === activeIndex ? " font-weight-bold  py-0 mt-2" : "";

@@ -23,7 +23,7 @@ import ViewMore from "./ViewMore";
 import VerticalResults from "../VerticalResults";
 import ResultsCount from "./ResultsCount";
 import useFetchResults from "../../hooks/useFetchResults";
-import { Link } from "@mui/material";
+// import { Link } from "@mui/material";
 import { AnswerExperienceConfig } from "../../config/answersHeadlessConfig";
 import PageLayout from "../layouts/PageLayout";
 

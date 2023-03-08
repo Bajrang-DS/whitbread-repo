@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
 import newsletterlogo from "../../images/newsletter-logo.png"
-import ReCAPTCHA from "react-google-recaptcha";
-import Modal from 'react-modal';
+// import ReCAPTCHA from "react-google-recaptcha";
+// import Modal from 'react-modal';
 export default function Newsletter(){
     const [status, setStatus] = React.useState<string | null>(null)
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -40,7 +40,7 @@ export default function Newsletter(){
       }
       
     }
-    function onChange(value) {
+    function onChange(value: any) {
         console.log("Captcha value:", value);
       }
   

@@ -74,7 +74,7 @@ export default function NewsSection(props: any) {
                         </div>
 
                     </div>
-                    <a className="btn aligncenter style-col int" href="#" target="_self">{c_newsheading.presslink.label}<svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 5.414H1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path></svg>
+                    <a className="btn aligncenter style-col int" href="#" target="_self">{c_newsheading.presslink.label}<svg role="img" aria-hidden="true" width="13" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.415l4 4-4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M11 5.414H1" stroke="#fff" strokeWidth="2" strokeLinecap="round"></path></svg>
                     </a>
                 </div>
             </div>

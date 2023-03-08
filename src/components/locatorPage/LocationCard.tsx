@@ -95,9 +95,10 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                       <div className={timeStatus + " daylist"} >
                         <div>
                         <Model name={StaticData.Holdiay}
-                          holidayHours={hours.holidayHours}
+                          holidayHours={hours?.holidayHours}
+                          c_specific_day={c_specific_day}
                           /></div>
-                        <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText} />
+                        <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText} c_specific_day={undefined} />
                       </div>
                     </div>
 

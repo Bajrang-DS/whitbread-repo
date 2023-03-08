@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import * as React from "react";
 import { useState, useEffect, useRef } from "react";
 
 export interface Option {
@@ -92,6 +93,7 @@ export default function DropdownSection({
       [cssClasses.focusedOption ?? '']: isFocused && index === focusedOptionIndex
     });
     return (
+      <>
       <div
         key={index}
         className={optionContainterCssClasses}
@@ -101,6 +103,7 @@ export default function DropdownSection({
       >
         {option.display}
       </div>
+      </>
     );
   }
 

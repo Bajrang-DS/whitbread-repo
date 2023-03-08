@@ -113,7 +113,7 @@ export const logo = `<svg class="hidden lg:block" xmlns="http://www.w3.org/2000/
 </svg>`;
 
 export const humburgerIcon =`<svg class="humburger-i" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<g stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
   <path d="M21,18 C21.5522847,18 22,18.4477153 22,19 C22,19.5522847 21.5522847,20 21,20 L3,20 C2.44771525,20 2,19.5522847 2,19 C2,18.4477153 2.44771525,18 3,18 L21,18 Z M21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L21,11 Z M21,4 C21.5522847,4 22,4.44771525 22,5 C22,5.55228475 21.5522847,6 21,6 L3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 L21,4 Z" id="Combined-Shape" fill="#383838" fill-rule="nonzero"></path>
 </g>
 </svg>
@@ -125,4 +125,4 @@ export const humburgerIcon =`<svg class="humburger-i" viewBox="0 0 24 24" versio
 	</g>
 </svg>`
 
-export const search_icn = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30.938 30.579"><g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)"><path id="Path_39" data-name="Path 39" d="M24.691,14.6A10.1,10.1,0,1,1,14.6,4.5,10.1,10.1,0,0,1,24.691,14.6Z" transform="translate(0 0)" fill="none" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path id="Path_40" data-name="Path 40" d="M35.066,34.707,24.975,24.975" transform="translate(-3.249 -3.249)" fill="yellow" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></g></svg>`;
+export const search_icn = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30.938 30.579"><g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)"><path id="Path_39" data-name="Path 39" d="M24.691,14.6A10.1,10.1,0,1,1,14.6,4.5,10.1,10.1,0,0,1,24.691,14.6Z" transform="translate(0 0)" fill="none" stroke="#111111" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></path><path id="Path_40" data-name="Path 40" d="M35.066,34.707,24.975,24.975" transform="translate(-3.249 -3.249)" fill="yellow" stroke="#111111" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></path></g></svg>`;

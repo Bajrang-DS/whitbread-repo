@@ -499,7 +499,7 @@ const Location: Template<ExternalApiRenderData> = ({
                     : ''}
 
                 </div>
-                <Faq />
+                {/* <Faq /> */}
               </div>
 
             </div>
