@@ -134,7 +134,7 @@ const Header = (HeaderItem: any) => {
                                   <>
                                     {index == indexes ? (   // condition to show data of sub menu according to there index number
                                       <>
-                                        <li id={`menu-item-${indexes}`}  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954">
+                                        <li   className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954">
                                           {item.cta?.map((data: any) => (
                                             <p>  <a className=" hover:underline" href="#">{data.label ? data.label : ""}</a></p>
                                           ))}
@@ -148,14 +148,14 @@ const Header = (HeaderItem: any) => {
                               </ul>
                             </div>
                           </li>
-                          <li id={`nav_menu-${index}`} className="widget widget_nav_menu">
+                          <li  className="widget widget_nav_menu">
                             <div className="menu-mm-about-submenu-right-container">
                               <ul id={`menu-mm-about-submenu-right${index}`} className="menu">
                                 {HeaderItem._site?.c_grid3?.map((item: any, indexes: number) => (
                                   <>
                                     {index == indexes ? (  // condition to show data of sub menu according to there index number
                                       <>
-                                        <li  id={`menu-item-${indexes}`} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3958">
+                                        <li  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3958">
                                           {item.cta?.map((data: any) => (
                                             <p> <a className={index == 2 ? "third-button" : "hover:underline"} href="#">
                                               {data.label ? data.label : ""}</a></p>

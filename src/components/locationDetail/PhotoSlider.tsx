@@ -15,7 +15,7 @@ const options = {
   const photos =props._site?.photoGallery?.map((element: any, index:number) => (
 
     <SplideSlide>
-      <div className="slider" id={`banner${index}`}>
+      <div className="slider" id="banner">
 
         <img src={element.image.url} alt="photoGallery" />
 
