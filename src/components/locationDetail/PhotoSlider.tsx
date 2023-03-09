@@ -12,10 +12,10 @@ const options = {
 
 
   const { photoGallery, c_bannerlink } = props;
-  const photos =props._site?.photoGallery?.map((element: any) => (
+  const photos =props._site?.photoGallery?.map((element: any, index:number) => (
 
     <SplideSlide>
-      <div className="slider" id="banner">
+      <div className="slider" id={`banner${index}`}>
 
         <img src={element.image.url} alt="photoGallery" />
 

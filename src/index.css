@@ -164,10 +164,15 @@ header {
   background: #fff;
  
   -webkit-box-shadow: 0 3px 25px 0 rgb(0 0 0 / 60%);
-  box-shadow: 0 0px 0px 0 rgb(0 0 0);
+  box-shadow: 0 3px 25px 0 rgb(0 0 0 / 60%);
   position: relative;
-  z-index: 10;
+  z-index: 9999;
   height: 113px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+
 }
 address, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
   display: block;
@@ -719,7 +724,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 /* locator page start  */
 
 /* breadcrumb */
-.breadcrumb{@apply  text-nav-link h-8 }
+.breadcrumb{@apply  text-nav-link h-8  bg-[wheat]}
 .breadcrumb ul{
   @apply flex flex-wrap items-center m-0
 }

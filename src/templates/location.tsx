@@ -86,6 +86,8 @@ export const config: TemplateConfig = {
       "dm_directoryParents.slug",
       "dm_directoryParents.dm_directoryChildrenCount",
       "dm_directoryParents.meta.entityType",
+      "c_faqs.question",
+      "c_faqs.answer",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -298,7 +300,8 @@ const Location: Template<ExternalApiRenderData> = ({
     c_brandthird,
     c_bannerlink,
     dm_directoryParents,
-    c_specific_day
+    c_specific_day,
+    c_faqs
   } = document;
 
   let templateData = { document: document, __meta: __meta };

@@ -68,13 +68,13 @@ const Header = (HeaderItem: any) => {
             {HeaderItem._site?.c_uppersection?.map((item: any, index: number) => (
               <li
                 key={index}
-                id="menu-item-55"
+                id = {`menu-item-${index}`}
                 className="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"
               >
                 <a href="#" className="no-underline hover:underline text-white hover:text-[#ffa400]"><span>{item.label ? item.label : ""}</span></a>
               </li>
             ))}
-            <li id="menu-item-55"
+            <li id="menu-item-3"
               className="menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
               <a className="no-underline hover:underline  text-white hover:text-[#ffa400]" href="/index.html">Find Store</a>
             </li>
@@ -105,12 +105,12 @@ const Header = (HeaderItem: any) => {
                   {index <= 3 ? (   // condition to stop sub menu after index 3
                     <>
                       <div className="sub-menu">
-                        <ul id="mega-menu-34" className="wrap sub-mega-menu">
+                        <ul id={`mega-menu-${index}`} className="wrap sub-mega-menu">
                           {HeaderItem._site?.c_grid1?.map((item: any, indexes: number) => (
                             <>
                               {index == indexes ? (
                                 <>
-                                  <li id="text-4" className="widget widget_text" key={indexes}>
+                                  <li id={`text-${indexes}`} className="widget widget_text" key={indexes}>
 
                                     <div className="textwidget">
 
@@ -127,14 +127,14 @@ const Header = (HeaderItem: any) => {
                               )}
                             </>
                           ))}
-                          <li id="nav_menu-13" className="widget widget_nav_menu">
+                          <li id={`nav_menu-${index}`} className="widget widget_nav_menu">
                             <div className="menu-mm-about-submenu-left-container">
-                              <ul id="menu-mm-about-submenu-left" className="menu">
+                              <ul id={`menu-mm-about-submenu-left${index}`} className="menu">
                                 {HeaderItem._site?.c_grid2?.map((item: any, indexes: number) => (
                                   <>
                                     {index == indexes ? (   // condition to show data of sub menu according to there index number
                                       <>
-                                        <li id="menu-item-3954" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954">
+                                        <li id={`menu-item-${indexes}`}  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954">
                                           {item.cta?.map((data: any) => (
                                             <p>  <a className=" hover:underline" href="#">{data.label ? data.label : ""}</a></p>
                                           ))}
@@ -148,14 +148,14 @@ const Header = (HeaderItem: any) => {
                               </ul>
                             </div>
                           </li>
-                          <li id="nav_menu-14" className="widget widget_nav_menu">
+                          <li id={`nav_menu-${index}`} className="widget widget_nav_menu">
                             <div className="menu-mm-about-submenu-right-container">
-                              <ul id="menu-mm-about-submenu-right" className="menu">
+                              <ul id={`menu-mm-about-submenu-right${index}`} className="menu">
                                 {HeaderItem._site?.c_grid3?.map((item: any, indexes: number) => (
                                   <>
                                     {index == indexes ? (  // condition to show data of sub menu according to there index number
                                       <>
-                                        <li id="menu-item-3958" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3958">
+                                        <li  id={`menu-item-${indexes}`} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3958">
                                           {item.cta?.map((data: any) => (
                                             <p> <a className={index == 2 ? "third-button" : "hover:underline"} href="#">
                                               {data.label ? data.label : ""}</a></p>

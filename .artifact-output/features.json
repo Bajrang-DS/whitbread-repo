@@ -171,7 +171,9 @@
         "dm_directoryParents.name",
         "dm_directoryParents.slug",
         "dm_directoryParents.dm_directoryChildrenCount",
-        "dm_directoryParents.meta.entityType"
+        "dm_directoryParents.meta.entityType",
+        "c_faqs.question",
+        "c_faqs.answer"
       ],
       "filter": {
         "entityTypes": [

@@ -3,7 +3,7 @@
     "404": "assets/server/404.8c774b56.js",
     "city": "assets/server/city.cbf86ebf.js",
     "country": "assets/server/country.32292640.js",
-    "location": "assets/server/location.d4c7f405.js",
+    "location": "assets/server/location.02fb93c0.js",
     "locator": "assets/server/locator.f7ce6e30.js",
     "robots": "assets/server/robots.61c08fee.js",
     "root": "assets/server/root.15aed567.js",
@@ -26,17 +26,17 @@
         "_server.browser-958757c1.js"
       ]
     },
-    "src/images/MGMpin.svg": {
-      "file": "assets/static/MGMpin-0004315e.svg",
-      "src": "src/images/MGMpin.svg"
+    "src/images/phone.svg": {
+      "file": "assets/static/phone-9b6b06ba.svg",
+      "src": "src/images/phone.svg"
     },
     "src/images/map.svg": {
       "file": "assets/static/map-e2876c61.svg",
       "src": "src/images/map.svg"
     },
-    "src/images/phone.svg": {
-      "file": "assets/static/phone-9b6b06ba.svg",
-      "src": "src/images/phone.svg"
+    "src/images/MGMpin.svg": {
+      "file": "assets/static/MGMpin-0004315e.svg",
+      "src": "src/images/MGMpin.svg"
     },
     "src/images/red-map.svg": {
       "file": "assets/static/red-map-8490383b.svg",
@@ -50,13 +50,13 @@
       "file": "assets/static/map-center-990b96bc.svg",
       "src": "src/images/map-center.svg"
     },
-    "src/images/plus-sym.svg": {
-      "file": "assets/static/plus-sym-ced7fa0b.svg",
-      "src": "src/images/plus-sym.svg"
-    },
     "src/images/dots.svg": {
       "file": "assets/static/dots-71abeed1.svg",
       "src": "src/images/dots.svg"
+    },
+    "src/images/plus-sym.svg": {
+      "file": "assets/static/plus-sym-ced7fa0b.svg",
+      "src": "src/images/plus-sym.svg"
     },
     "src/images/minus-sym.svg": {
       "file": "assets/static/minus-sym-8d4c47f3.svg",
@@ -157,7 +157,7 @@
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.2bc20b96.js",
+      "file": "assets/hydrate/location.6c46c2cb.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -176,7 +176,7 @@
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.d4c7f405.js",
+      "file": "assets/server/location.02fb93c0.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -326,7 +326,7 @@
         "_index-0ef72bf1.js"
       ],
       "css": [
-        "assets/static/header-5da67bc3.css"
+        "assets/static/header-da20d782.css"
       ],
       "assets": [
         "assets/static/dots-71abeed1.svg",
@@ -400,7 +400,7 @@
       "src": "PhotoSlider.css"
     },
     "header.css": {
-      "file": "assets/static/header-5da67bc3.css",
+      "file": "assets/static/header-da20d782.css",
       "src": "header.css"
     }
   }
