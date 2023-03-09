@@ -25,7 +25,7 @@ const Footer = (props: any) => {
                     <ul id="menu-about-submenu" className="menu">
                       {props._site?.c_footerlink1?.map((item: any, index: number) => (
 
-                        <li key={index} id={`menu-item-${index}`} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597">
+                        <li key={index} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597">
                           <a className="hover:underline" href="#">{item.label ? item.label : ""}</a>
 
                         </li>
@@ -50,7 +50,7 @@ const Footer = (props: any) => {
             </div>
 
             <div className="col col-2">
-              <div id="nav_menu-2" className="site-widget widget_nav_menu">
+              <div  className="site-widget widget_nav_menu">
                 <div className="menu-policies-container">
                   <ul id="menu-policies" className="menu">
                     {props._site?.c_footerlink2?.map((item: any, index: number) => (
@@ -64,11 +64,11 @@ const Footer = (props: any) => {
 
             </div>
             <div className="col col-3">
-              <div id="nav_menu-3" className="site-widget widget_nav_menu">
+              <div className="site-widget widget_nav_menu">
                 <div className="menu-footer-menu-container">
                   <ul id="menu-footer-menu" className="menu">
                     {props._site?.c_footerlink3?.map((item: any, index: number) => (
-                      <li id={`menu-item-${index}`} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
+                      <li  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
                         <a className="hover:underline" href="#">
                           {item.label ? item.label : ""}
                         </a>
