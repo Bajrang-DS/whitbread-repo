@@ -6,7 +6,7 @@ export const baseuRL = "https://liveapi-sandbox.yext.com/v2/accounts/me/entities
 export const apikey_for_entity = "a047eef1e2852d278bbac99473b39cce"
 export const favicon="https://companieslogo.com/img/orig/WTB.L-13ed7054.png?t=1652332938";
 export const apiKey = "f5db9f723a7d2fd5badfb2d57d1ab853";
-export const googleApikey = "";//AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18
+export const googleApikey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";//AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18
 export const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
 export const AnalyticsEnableDebugging  = true;
 export const AnalyticsEnableTrackingCookie  = true;

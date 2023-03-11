@@ -124,6 +124,22 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
     url += `${document.slug.toString()}`;
   }
   return url;
+  // var url: any = ""
+  // document.dm_directoryParents.map((i: any) => {
+  //   if (i.meta.entityType.id == 'ce_root') {
+  //     url = `${i.slug}`
+  //   }
+  //   else if (i.meta.entityType.id == 'ce_country') {
+  //     url = `${url}/${i.slug}`
+  //   }
+  //   else if (i.meta.entityType.id == 'ce_region') {
+  //     url = `${url}/${i.slug}/${document.slug.toString()}.html`
+  //   }
+  //   else if (i.meta.entityType.id == 'ce_city') {
+  //     url = `${url}/${i.slug}/${document.slug.toString()}.html`
+  //   }
+  // })
+  // return url;
 };
 // return document.id;
 /**
