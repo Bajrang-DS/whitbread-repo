@@ -35,7 +35,7 @@
     "domready": "^1.0.8",
     "env-cmd": "^10.1.0",
     "fetch-everywhere": "^1.0.5",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.4",
     "jsx-to-string": "^1.4.0",
     "mapbox-gl": "^2.10.0",
     "markdown-to-jsx": "^7.1.7",
@@ -57,8 +57,10 @@
     "smooth-scrollbar-react": "^2.4.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.16",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.10",
+    "@types/react-geocode": "^0.2.1",
     "@types/react-modal": "^3.13.1",
     "@types/react-transition-group": "^4.4.5",
     "@typescript-eslint/eslint-plugin": "^5.17.0",

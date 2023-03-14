@@ -524,7 +524,7 @@ border-radius: 0px 20px 20px 0px;
 
 }
 .search-bx .search-btn svg{ @apply mx-auto}
-.search-field input{@apply  w-full bg-white h-12 text-dark-gray placeholder:text-dark-gray  py-2 pr-20 sm:py-4 sm:pr-40 pl-4 leading-7  text-[1.0625rem] font-main-font  border border-[#8c8c8c] rounded-3xl}
+.search-field input{@apply  w-full bg-white h-12 text-dark-gray placeholder:text-dark-gray  py-2 pr-20 sm:py-4 sm:pr-0 pl-4 leading-7  text-[1.0625rem] font-main-font  border border-[#8c8c8c] rounded-3xl}
 .location p{ @apply mr-2 absolute rounded-lg -left-4 top-[0px] sm:top-[2px] xl:top-1}
 .search-bx .whitespace-nowrap{  @apply text-white !font-normal py-0 }
 .location{ @apply  border-b border-[#d8d8d8]  mt-2.5 bg-[#80808026] }
@@ -1550,7 +1550,7 @@ h1.has-text-align-center:after, h1.border:after, h2.has-text-align-center:after,
     justify-content: center;
 }}
 .latest-posts {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .latest-posts .post {
   display: block;
@@ -1642,7 +1642,7 @@ li.news-items {
 }
 img.bg {
   width: 100%;
-  height: 65%;
+  height: 55%;
 }
 li.news-items h3 {
   /* color: red; */
